@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WildTrack | Produto</title>
+
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <link rel="stylesheet" href="../../css/produto.css" />
+
+    <link rel="stylesheet" href="../../css/modal.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header class="topo">
+      <a href="index.html" class="logo"> WildTrack </a>
+
+      <nav>
+        <a href="../../index.html">Início</a>
+
+        <a href="../../index.html#produtos">Pulseiras</a>
+
+        <a href="../../index.html#missao">Missão</a>
+
+        <button id="abrirCarrinho" class="btn-carrinho">
+          🛒 Carrinho
+
+          <span id="contadorCarrinho"> 0 </span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ================= PRODUTO ================= -->
+
+    <main class="pagina-produto">
+      <section class="produto">
+        <div class="imagem-produto">
+          <img id="imagemProduto" src="" alt="Produto" />
+        </div>
+
+        <div class="informacoes">
+          <span id="categoriaProduto" class="categoria"></span>
+
+          <h1 id="nomeProduto"></h1>
+
+          <span id="statusProduto" class="status"></span>
+
+          <div class="preco" id="precoProduto"></div>
+
+          <p id="descricaoProduto"></p>
+
+          <h3>Características</h3>
+
+          <ul id="listaCaracteristicas"></ul>
+
+          <!-- Quantidade -->
+
+          <div class="quantidade">
+            <button id="menos">-</button>
+
+            <span id="qtd"> 1 </span>
+
+            <button id="mais">+</button>
+          </div>
+
+          <!-- Botões -->
+
+          <div class="acoes">
+            <button id="btnCarrinho" class="btn-verde">
+              Adicionar ao Carrinho
+            </button>
+
+            <button id="btnComprar" class="btn-azul">Comprar Agora</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Produtos relacionados -->
+
+      <section class="relacionados">
+        <h2>Você também pode gostar</h2>
+
+        <div id="produtosRelacionados" class="cards"></div>
+      </section>
+    </main>
+
+    <!-- ================= MODAL CARRINHO ================= -->
+
+    <aside id="modalCarrinho" class="modal-carrinho">
+      <div class="cabecalho-modal">
+        <h2>Meu Carrinho</h2>
+
+        <button id="fecharCarrinho">✕</button>
+      </div>
+
+      <div id="listaCarrinho" class="lista-carrinho"></div>
+
+      <div class="rodape-carrinho">
+        <h3>Total</h3>
+
+        <span id="valorTotal"> R$ 0,00 </span>
+
+        <button id="finalizarCompra" class="btn-verde">Finalizar Compra</button>
+      </div>
+    </aside>
+
+    <!-- Fundo escurecido -->
+
+    <div id="overlay" class="overlay"></div>
+
+    <!-- ================= MODAL PAGAMENTO ================= -->
+
+    <div id="modalPagamento" class="modal-pagamento">
+      <div class="conteudo-pagamento">
+        <button id="fecharPagamento" class="fechar">✕</button>
+
+        <h2>Escolha a forma de pagamento</h2>
+
+        <div class="opcoes">
+          <button class="opcao" data-pagamento="pix">PIX</button>
+
+          <button class="opcao" data-pagamento="credito">
+            Cartão de Crédito
+          </button>
+
+          <button class="opcao" data-pagamento="debito">
+            Cartão de Débito
+          </button>
+
+          <button class="opcao" data-pagamento="agiotagem">
+            Agiotagem
+          </button>
+
+          <button class="opcao" data-pagamento="mercado-negro">
+            Mercado Negro
+          </button>
+        </div>
+
+        <!-- PIX -->
+
+        <div id="pix" class="forma-pagamento">
+          <h3>Pagamento via PIX</h3>
+
+          <img src="./img/qrcode.png" alt="QR Code PIX" class="qr" />
+
+          <input readonly value="000201010212PIXWILDTRACK123456789" />
+
+          <button class="btn-verde">Copiar Código</button>
+        </div>
+
+        <!-- Cartão -->
+
+        <div id="cartao" class="forma-pagamento">
+          <input type="text" placeholder="Nome impresso no cartão" />
+
+          <input type="text" placeholder="Número do cartão" />
+
+          <div class="linha">
+            <input type="text" placeholder="MM/AA" />
+
+            <input type="text" placeholder="CVV" />
+          </div>
+
+          <button class="btn-azul">Confirmar Pagamento</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+
+    <script src="../../js/bancoDeDados.js"></script>
+
+    <script src="../../js/produto.js"></script>
+
+    <script src="../../js/carrinho.js"></script>
+
+    <script src="../../js/pagamento.js"></script>
+  </body>
+</html>

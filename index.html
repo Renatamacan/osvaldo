@@ -8,7 +8,7 @@
 
     <title>WildTrack | Pulseiras que Protegem</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -16,431 +16,118 @@
 
 </head>
 
-
-     <!--novo código-->
-     
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- HERO -->
 
-    <header>
-
-        <div class="logo">
-
-            WildTrack
-
-        </div>
+    <header class="hero">
 
         <nav>
 
-            <a href="#">Início</a>
+            <div class="logo">
 
-            <a href="#produtos">Produtos</a>
+                WildTrack
 
-            <a href="#missao">Missão</a>
+            </div>
 
-            <a href="#">Contato</a>
+            <ul>
+
+                <li><a href="#">Início</a></li>
+
+                <li><a href="#produtos">Pulseiras</a></li>
+
+                <li><a href="#missao">Missão</a></li>
+
+                <li><a href="#">Contato</a></li>
+
+            </ul>
 
         </nav>
 
-        <button id="abrirCarrinho" class="btn-carrinho">
-
-            🛒
-
-            <span id="contadorCarrinho">
-
-                0
-
-            </span>
-
-        </button>
-
-    </header>
-
-    <!-- ================= HERO ================= -->
-
-    <section class="hero">
-
         <div class="hero-content">
 
-            <h1>
-
-                Cada pulseira protege um animal.
-
-            </h1>
+            <h1>Cada pulseira protege um animal.</h1>
 
             <p>
 
-                Escolha uma pulseira inspirada em uma espécie ameaçada de extinção.
-                Parte da sua compra ajuda projetos de conservação e pesquisa.
+                Ao adquirir uma pulseira você ajuda projetos de conservação
+                e acompanha a jornada de um animal monitorado.
 
             </p>
 
-            <button onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">
+            <a href="#produtos" class="btn-principal">
 
                 Explorar Coleção
 
-            </button>
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ESTATÍSTICAS -->
+
+    <section class="estatisticas">
+
+        <div class="numero">
+
+            <h2>280+</h2>
+
+            <p>Animais Monitorados</p>
+
+        </div>
+
+        <div class="numero">
+
+            <h2>18</h2>
+
+            <p>Projetos Parceiros</p>
+
+        </div>
+
+        <div class="numero">
+
+            <h2>1500+</h2>
+
+            <p>Pulseiras Entregues</p>
 
         </div>
 
     </section>
 
-    <!-- ================= PRODUTOS ================= -->
+    <!-- PRODUTOS -->
 
     <section id="produtos" class="produtos">
 
-        <h2>
+        <h2>Escolha sua Pulseira</h2>
 
-            Escolha sua Pulseira
-
-        </h2>
-
-        <div class="cards">
-
-            <!-- Produto -->
-
-            <div class="card">
-
-                <img src="./img/pulseiraArarajuba.jpeg" alt="Guaruba">
-
-                <h3>
-
-                    Pulseira Guaruba
-
-                </h3>
-
-                <p>
-
-                    Espécie ameaçada da Amazônia.
-
-                </p>
-
-                <span class="preco">
-
-                    R$ 89,90
-
-                </span>
-
-                <div class="acoes">
-
-                    <a href="produto.html">
-
-                        <button>
-
-                            Ver Produto
-
-                        </button>
-
-                    </a>
-
-                    <button class="addCarrinho"
-
-                        data-nome="Pulseira Guaruba"
-
-                        data-preco="89.90">
-
-                        Carrinho
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- Produto -->
-
-            <div class="card">
-
-                <img src="./img/pulseiraGaviaoReal.jpeg" alt="Gavião">
-
-                <h3>
-
-                    Pulseira Gavião-Real
-
-                </h3>
-
-                <p>
-
-                    O maior predador das florestas brasileiras.
-
-                </p>
-
-                <span class="preco">
-
-                    R$ 109,90
-
-                </span>
-
-                <div class="acoes">
-
-                    <a href="produto.html">
-
-                        <button>
-
-                            Ver Produto
-
-                        </button>
-
-                    </a>
-
-                    <button class="addCarrinho"
-
-                        data-nome="Pulseira Gavião-Real"
-
-                        data-preco="109.90">
-
-                        Carrinho
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- Produto -->
-
-            <div class="card">
-
-                <img src="./img/pulseiraAraraAzul.jpeg" alt="Arara">
-
-                <h3>
-
-                    Pulseira Arara Azul
-
-                </h3>
-
-                <p>
-
-                    Um símbolo da conservação do Pantanal.
-
-                </p>
-
-                <span class="preco">
-
-                    R$ 94,90
-
-                </span>
-
-                <div class="acoes">
-
-                    <a href="produto.html">
-
-                        <button>
-
-                            Ver Produto
-
-                        </button>
-
-                    </a>
-
-                    <button class="addCarrinho"
-
-                        data-nome="Pulseira Arara Azul"
-
-                        data-preco="94.90">
-
-                        Carrinho
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- Produto -->
-
-            <div class="card">
-
-                <img src="./img/pulseiraOncaPintada.jpeg" alt="Onça">
-
-                <h3>
-
-                    Pulseira Onça-Pintada
-
-                </h3>
-
-                <p>
-
-                    O maior felino das Américas.
-
-                </p>
-
-                <span class="preco">
-
-                    R$ 119,90
-
-                </span>
-
-                <div class="acoes">
-
-                    <a href="produto.html">
-
-                        <button>
-
-                            Ver Produto
-
-                        </button>
-
-                    </a>
-
-                    <button class="addCarrinho"
-
-                        data-nome="Pulseira Onça-Pintada"
-
-                        data-preco="119.90">
-
-                        Carrinho
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
+        <div id="listaProdutos" class="cards"></div>
 
     </section>
 
-    <!-- ================= MISSÃO ================= -->
+    <!-- MISSÃO -->
 
     <section id="missao" class="missao">
 
-        <h2>
-
-            Nossa Missão
-
-        </h2>
+        <h2>Mais que uma pulseira.</h2>
 
         <p>
 
-            Cada pulseira representa um compromisso com a preservação da
-            biodiversidade. Ao adquirir uma pulseira, você apoia projetos
-            ambientais e ajuda pesquisadores a monitorar espécies ameaçadas.
+            Cada compra ajuda pesquisadores, institutos e projetos de
+            preservação da fauna brasileira.
+
+            Ao registrar sua pulseira você poderá acompanhar um animal
+            monitorado e conhecer sua história.
 
         </p>
 
     </section>
 
-    <!-- ================= MODAL CARRINHO ================= -->
-
-    <aside id="modalCarrinho" class="modal-carrinho">
-
-        <div class="topo">
-
-            <h2>
-
-                Carrinho
-
-            </h2>
-
-            <button id="fecharCarrinho">
-
-                ✕
-
-            </button>
-
-        </div>
-
-        <div id="listaCarrinho">
-
-            <!-- Itens serão adicionados via JavaScript -->
-
-        </div>
-
-        <div class="rodapeCarrinho">
-
-            <h3>
-
-                Total:
-
-                <span id="totalCarrinho">
-
-                    R$ 0,00
-
-                </span>
-
-            </h3>
-
-            <button id="finalizarCompra">
-
-                Finalizar Compra
-
-            </button>
-
-        </div>
-
-    </aside>
-
-    <!-- ================= MODAL PAGAMENTO ================= -->
-
-    <div id="modalPagamento" class="modal-pagamento">
-
-        <div class="caixa-pagamento">
-
-            <h2>
-
-                Forma de Pagamento
-
-            </h2>
-
-            <label>
-
-                <input type="radio" name="pagamento">
-
-                PIX
-
-            </label>
-
-            <label>
-
-                <input type="radio" name="pagamento">
-
-                Cartão de Crédito
-
-            </label>
-
-            <label>
-
-                <input type="radio" name="pagamento">
-
-                Cartão de Débito
-
-            </label>
-
-             <label>
-
-                <input type="radio" name="pagamento">
-
-               Agiotagem
-
-            </label>
-
-            <label>
-
-                <input type="radio" name="pagamento">
-
-                Mercado Negro
-
-            </label>
-
-            <button id="confirmarCompra">
-
-                Confirmar Compra
-
-            </button>
-
-        </div>
-
-    </div>
+    <!-- RODAPÉ -->
 
     <footer>
 
-        <h2>
-
-            WildTrack
-
-        </h2>
+        <h2>WildTrack</h2>
 
         <p>
 
@@ -450,7 +137,77 @@
 
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./js/bancoDeDados.js"></script>
+
+    <script>
+
+        const lista = document.getElementById("listaProdutos");
+
+        produtos.forEach(produto => {
+
+            lista.innerHTML += `
+
+                <div class="card">
+
+                    <img
+                        src="../../img/${produto.imagem}"
+                        alt="${produto.nome}"
+                    >
+
+                    <div class="card-body">
+
+                        <span class="categoria">
+
+                            ${produto.categoria}
+
+                        </span>
+
+                        <h3>
+
+                            ${produto.nome}
+
+                        </h3>
+
+                        <p>
+
+                            ${produto.descricao.substring(0,90)}...
+
+                        </p>
+
+                        <div class="status">
+
+                            ${produto.status}
+
+                        </div>
+
+                        <div class="rodape-card">
+
+                            <span class="preco">
+
+                                R$ ${produto.preco}
+
+                            </span>
+
+                            <a
+                                href="./pages/produto/produto.html?id=${produto.id}"
+                                class="btn-card acoes"
+                            >
+
+                                Ver Produto
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+    </script>
 
 </body>
 

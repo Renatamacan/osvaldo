@@ -1,0 +1,843 @@
+/* =====================================================
+   WILDTRACK
+   ESTILO PRINCIPAL — INDEX.HTML
+===================================================== */
+
+
+/* =====================================================
+   VARIÁVEIS
+===================================================== */
+
+:root {
+
+    --azul: #1E88E5;
+    --azul-escuro: #1565C0;
+    --azul-claro: #E3F2FD;
+
+    --verde: #2E7D32;
+    --verde-claro: #43A047;
+    --verde-suave: #E8F5E9;
+
+    --vermelho: #D32F2F;
+    --vermelho-claro: #FFEBEE;
+
+    --preto: #222222;
+    --cinza-escuro: #444444;
+    --cinza: #666666;
+    --cinza-claro: #E5E7EB;
+
+    --branco: #FFFFFF;
+    --fundo: #F5F7FA;
+
+    --sombra: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 15px 35px rgba(0, 0, 0, 0.14);
+
+    --raio: 18px;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    background: var(--fundo);
+
+    color: var(--preto);
+
+    line-height: 1.6;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 90vh;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(21, 101, 192, 0.82),
+            rgba(46, 125, 50, 0.68)
+        ),
+
+        url("../img/aguaViva.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: var(--branco);
+
+}
+
+
+/* =====================================================
+   NAVEGAÇÃO
+===================================================== */
+
+.hero nav {
+
+    width: 100%;
+
+    padding: 22px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+
+.logo {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+}
+
+.hero nav ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    list-style: none;
+
+}
+
+.hero nav ul li a {
+
+    color: var(--branco);
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    opacity: 0.9;
+
+    transition: 0.3s;
+
+}
+
+.hero nav ul li a:hover {
+
+    opacity: 1;
+
+    color: #E8F5E9;
+
+}
+
+
+/* =====================================================
+   CONTEÚDO DO HERO
+===================================================== */
+
+.hero-content {
+
+    flex: 1;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 80px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+.hero-content h1 {
+
+    max-width: 850px;
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    letter-spacing: -2px;
+
+}
+
+.hero-content p {
+
+    max-width: 700px;
+
+    margin-bottom: 40px;
+
+    font-size: 1.15rem;
+
+    opacity: 0.94;
+
+}
+
+
+/* =====================================================
+   BOTÃO PRINCIPAL
+===================================================== */
+
+.btn-principal {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 15px 34px;
+
+    border-radius: 12px;
+
+    background: var(--branco);
+
+    color: var(--azul-escuro);
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.btn-principal:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* =====================================================
+   ESTATÍSTICAS
+===================================================== */
+
+.estatisticas {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    padding: 55px 8%;
+
+    background: var(--branco);
+
+    border-bottom: 1px solid var(--cinza-claro);
+
+}
+
+.numero {
+
+    text-align: center;
+
+    padding: 10px;
+
+}
+
+.numero h2 {
+
+    margin-bottom: 5px;
+
+    color: var(--azul);
+
+    font-size: 2.5rem;
+
+    line-height: 1;
+
+}
+
+.numero p {
+
+    color: var(--cinza);
+
+    font-size: 0.95rem;
+
+}
+
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+
+section {
+
+    padding: 85px 8%;
+
+}
+
+section > h2 {
+
+    margin-bottom: 45px;
+
+    text-align: center;
+
+    color: var(--preto);
+
+    font-size: 2.2rem;
+
+    line-height: 1.2;
+
+}
+
+
+/* =====================================================
+   PRODUTOS
+===================================================== */
+
+.produtos {
+
+    background: var(--fundo);
+
+}
+
+#listaProdutos {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   GRID DE CARDS
+===================================================== */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 28px;
+
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card {
+
+    overflow: hidden;
+
+    background: var(--branco);
+
+    border: 1px solid var(--cinza-claro);
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--sombra-hover);
+
+}
+
+
+/* =====================================================
+   IMAGEM DO CARD
+===================================================== */
+
+.card > img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 270px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+
+}
+
+.card:hover > img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* =====================================================
+   CONTEÚDO DO CARD
+===================================================== */
+
+.card-body {
+
+    padding: 22px;
+
+}
+
+.card .categoria {
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: var(--azul-claro);
+
+    color: var(--azul-escuro);
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+}
+
+.card h3 {
+
+    margin-bottom: 10px;
+
+    color: var(--preto);
+
+    font-size: 1.2rem;
+
+}
+
+.card p {
+
+    min-height: 52px;
+
+    margin-bottom: 15px;
+
+    color: var(--cinza);
+
+    font-size: 0.88rem;
+
+}
+
+
+/* =====================================================
+   STATUS DO ANIMAL
+===================================================== */
+
+.card .status {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: var(--vermelho-claro);
+
+    color: var(--vermelho);
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   RODAPÉ DO CARD
+===================================================== */
+
+.rodape-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--cinza-claro);
+
+}
+
+.preco {
+
+    color: var(--verde);
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+}
+
+.btn-card {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 15px;
+
+    border-radius: 9px;
+
+    background: var(--azul);
+
+    color: var(--branco);
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+.btn-card:hover {
+
+    background: var(--azul-escuro);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================================
+   MISSÃO
+===================================================== */
+
+.missao {
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            110deg,
+            var(--azul-escuro),
+            var(--verde)
+        );
+
+    color: var(--branco);
+
+    text-align: center;
+
+}
+
+.missao h2 {
+
+    margin-bottom: 20px;
+
+    color: var(--branco);
+
+}
+
+.missao p {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    opacity: 0.95;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 55px 20px;
+
+    background: #153B50;
+
+    color: var(--branco);
+
+    text-align: center;
+
+}
+
+footer h2 {
+
+    margin-bottom: 10px;
+
+    font-size: 1.8rem;
+
+}
+
+footer p {
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 0.9rem;
+
+}
+
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.hero-content {
+
+    animation: aparecer 0.8s ease;
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero nav {
+
+        padding: 20px 5%;
+
+    }
+
+    .hero nav ul {
+
+        gap: 18px;
+
+    }
+
+    section {
+
+        padding: 70px 5%;
+
+    }
+
+    .estatisticas {
+
+        padding: 45px 5%;
+
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — CELULAR
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .hero {
+
+        min-height: 85vh;
+
+    }
+
+    .hero nav {
+
+        flex-direction: column;
+
+        gap: 18px;
+
+    }
+
+    .hero nav ul {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .hero-content {
+
+        padding: 60px 20px;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 2.5rem;
+
+        letter-spacing: -1px;
+
+    }
+
+    .hero-content p {
+
+        font-size: 1rem;
+
+    }
+
+    .estatisticas {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+    section {
+
+        padding: 60px 20px;
+
+    }
+
+    section > h2 {
+
+        font-size: 1.8rem;
+
+        margin-bottom: 35px;
+
+    }
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .card > img {
+
+        height: 280px;
+
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES PEQUENOS
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .hero-content h1 {
+
+        font-size: 2.1rem;
+
+    }
+
+    .hero nav ul {
+
+        font-size: 0.85rem;
+
+    }
+
+    .rodape-card {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+    .btn-card {
+
+        width: 100%;
+
+    }
+
+}

@@ -50,6 +50,7 @@ const confirmarCompra = document.getElementById("confirmarCompra");
 // ===============================
 
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+console.log (carrinho)
 
 // ===============================
 // SALVAR
@@ -75,10 +76,11 @@ function calcularTotal() {
   let total = 0;
 
   carrinho.forEach((produto) => {
-    total += produto.preco;
+    total += Number (produto.preco * 1000);
+    console.log (total)
   });
 
-  totalCarrinho.textContent = "R$ " + total.toFixed(2).replace(".", ",");
+  totalCarrinho.textContent = "US$ " + Number(total)
 }
 
 // ===============================
@@ -105,7 +107,7 @@ function renderizarCarrinho() {
 
                 <br>
 
-                R$ ${produto.preco.toFixed(2).replace(".", ",")}
+                US$ ${produto.preco}
 
             </div>
 
@@ -146,7 +148,7 @@ botoesCarrinho.forEach((botao) => {
     const produto = {
       nome: botao.dataset.nome,
 
-      preco: Number(botao.dataset.preco),
+      preco: botao.dataset.preco,
     };
 
     carrinho.push(produto);
