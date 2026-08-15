@@ -1,156 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>WildTrack | Pulseiras que Protegem</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- HERO -->
 
     <header class="hero">
+      <nav>
+        <div class="logo">WildTrack</div>
 
-        <nav>
+        <ul>
+          <li><a href="#">Início</a></li>
 
-            <div class="logo">
+          <li><a href="#produtos">Pulseiras</a></li>
 
-                WildTrack
+          <li><a href="#missoes">Missão</a></li>
 
-            </div>
+          <li><a href="#">Contato</a></li>
 
-            <ul>
+          <li><a href="#pelucias">Pelúcias</a></li>
 
-                <li><a href="#">Início</a></li>
+        </ul>
+      </nav>
 
-                <li><a href="#produtos">Pulseiras</a></li>
+      <div class="hero-content">
+        <h1>Cada pulseira protege um animal.</h1>
 
-                <li><a href="#missao">Missão</a></li>
+        <p>
+          Ao adquirir uma pulseira você ajuda projetos de conservação e
+          acompanha a jornada de um animal monitorado.
+        </p>
 
-                <li><a href="#">Contato</a></li>
-
-            </ul>
-
-        </nav>
-
-        <div class="hero-content">
-
-            <h1>Cada pulseira protege um animal.</h1>
-
-            <p>
-
-                Ao adquirir uma pulseira você ajuda projetos de conservação
-                e acompanha a jornada de um animal monitorado.
-
-            </p>
-
-            <a href="#produtos" class="btn-principal">
-
-                Explorar Coleção
-
-            </a>
-
-        </div>
-
+        <a href="#produtos" class="btn-principal"> Explorar Coleção </a>
+      </div>
     </header>
 
     <!-- ESTATÍSTICAS -->
 
     <section class="estatisticas">
+      <div class="numero">
+        <h2>280+</h2>
 
-        <div class="numero">
+        <p>Animais Monitorados</p>
+      </div>
 
-            <h2>280+</h2>
+      <div class="numero">
+        <h2>18</h2>
 
-            <p>Animais Monitorados</p>
+        <p>Projetos Parceiros</p>
+      </div>
 
-        </div>
+      <div class="numero">
+        <h2>1500+</h2>
 
-        <div class="numero">
-
-            <h2>18</h2>
-
-            <p>Projetos Parceiros</p>
-
-        </div>
-
-        <div class="numero">
-
-            <h2>1500+</h2>
-
-            <p>Pulseiras Entregues</p>
-
-        </div>
-
+        <p>Pulseiras Entregues</p>
+      </div>
     </section>
 
     <!-- PRODUTOS -->
 
     <section id="produtos" class="produtos">
+      <h2>Escolha sua Pulseira</h2>
 
-        <h2>Escolha sua Pulseira</h2>
-
-        <div id="listaProdutos" class="cards"></div>
-
+      <div id="listaProdutos" class="cards"></div>
     </section>
 
-    <!-- MISSÃO -->
+    <!-- ================= MISSÕES ================= -->
 
-    <section id="missao" class="missao">
+    <section id="missoes" class="missoes">
+      <h2>Nossas Missões</h2>
 
-        <h2>Mais que uma pulseira.</h2>
+      <p class="subtitulo-missoes">
+        Escolha onde começa a sua jornada pela conservação da vida selvagem.
+      </p>
 
-        <p>
+      <div class="cards">
+        <!-- MISSÃO AÉREA -->
 
-            Cada compra ajuda pesquisadores, institutos e projetos de
-            preservação da fauna brasileira.
+        <div class="card missao-card">
+          <img src="./img/araraAzulRosto.jpeg" alt="Animais aéreos" />
 
-            Ao registrar sua pulseira você poderá acompanhar um animal
-            monitorado e conhecer sua história.
+          <div class="missao-conteudo">
+            <span class="missao-tipo"> AÉREOS </span>
 
-        </p>
+            <h3>Missão Aérea</h3>
 
+            <p>
+              Conheça aves ameaçadas e descubra projetos dedicados à preservação
+              dos céus e das florestas.
+            </p>
+
+            <button class="btn-card" onclick="filtrarMissao('Aves')">
+              Explorar Aves
+            </button>
+          </div>
+        </div>
+
+        <!-- MISSÃO TERRESTRE -->
+
+        <div class="card missao-card">
+          <img src="./img/loboGuaraRosto.jpeg" alt="Animais terrestres" />
+
+          <div class="missao-conteudo">
+            <span class="missao-tipo"> TERRESTRES </span>
+
+            <h3>Missão Terrestre</h3>
+
+            <p>
+              Explore os animais que vivem nas florestas, campos e outros
+              ambientes terrestres.
+            </p>
+
+            <button class="btn-card" onclick="filtrarMissao('Mamíferos')">
+              Explorar Terrestres
+            </button>
+          </div>
+        </div>
+
+        <!-- MISSÃO AQUÁTICA -->
+
+        <div class="card missao-card">
+          <img src="./img/tubarãoBranco.jpeg" alt="Animais aquáticos" />
+
+          <div class="missao-conteudo">
+            <span class="missao-tipo"> AQUÁTICOS </span>
+
+            <h3>Missão Aquática</h3>
+
+            <p>
+              Mergulhe em uma jornada pelos oceanos, rios e outros ambientes
+              aquáticos.
+            </p>
+
+            <button class="btn-card" onclick="filtrarMissao('Marinhos')">
+              Explorar Aquáticos
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PELÚCIAS ================= -->
+
+    <section id="pelucias" class="pelucias">
+      <h2>Pelúcias dos Animais</h2>
+
+      <p class="subtitulo-pelucias">
+        Leve para casa uma representação do animal que você escolheu proteger.
+      </p>
+
+      <div id="listaPelucias" class="cards"></div>
     </section>
 
     <!-- RODAPÉ -->
 
     <footer>
+      <h2>WildTrack</h2>
 
-        <h2>WildTrack</h2>
-
-        <p>
-
-            Conectando pessoas à conservação da vida selvagem.
-
-        </p>
-
+      <p>Conectando pessoas à conservação da vida selvagem.</p>
     </footer>
 
     <script src="./js/bancoDeDados.js"></script>
 
     <script>
+      const lista = document.getElementById("listaProdutos");
 
-        const lista = document.getElementById("listaProdutos");
-
-        produtos.forEach(produto => {
-
-            lista.innerHTML += `
+      produtos.forEach((produto) => {
+        lista.innerHTML += `
 
                 <div class="card">
 
                     <img
-                        src="../../img/${produto.imagem}"
+                        src="${produto.imagem}"
                         alt="${produto.nome}"
                     >
 
@@ -170,7 +205,7 @@
 
                         <p>
 
-                            ${produto.descricao.substring(0,90)}...
+                            ${produto.descricao.substring(0, 90)}...
 
                         </p>
 
@@ -204,11 +239,71 @@
                 </div>
 
             `;
+      });
 
-        });
+      const listaPelucias = document.getElementById("listaPelucias");
 
+      pelucias.forEach((pelucia) => {
+        listaPelucias.innerHTML += `
+
+            <div class="card">
+
+                <img
+                    src="${pelucia.imagem}"
+                    alt="${pelucia.nome}"
+                >
+
+                <div class="card-body">
+
+                    <span class="categoria">
+
+                        ${pelucia.categoria}
+
+                    </span>
+
+                    <h3>
+
+                        ${pelucia.nome}
+
+                    </h3>
+
+                    <p>
+
+                        ${pelucia.descricao.substring(0, 90)}...
+
+                    </p>
+
+                    <div class="status">
+
+                        ${pelucia.estoque > 0 ? "Disponível" : "Esgotado"}
+
+                    </div>
+
+                    <div class="rodape-card">
+
+                        <span class="preco">
+
+                            R$ ${pelucia.preco.toFixed(2).replace(".", ",")}
+
+                        </span>
+
+                        <a
+                            href="produto.html?id=${pelucia.id}"
+                            class="btn-card"
+                        >
+
+                            Ver Produto
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+      });
     </script>
-
-</body>
-
+  </body>
 </html>

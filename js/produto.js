@@ -6,7 +6,14 @@ const parametros = new URLSearchParams(window.location.search);
 
 const idProduto = Number(parametros.get("id"));
 
-const produto = produtos.find(item => item.id === idProduto);
+const todosProdutos = [
+    ...produtos,
+    ...pelucias
+];
+
+const produto = todosProdutos.find(
+    item => item.id === idProduto
+);
 
 // Caso o produto não exista
 
@@ -88,7 +95,7 @@ function carregarProduto(){
 
     document.title = produto.nome + " | WildTrack";
 
-    imagemProduto.src = produto.imagem;
+    imagemProduto.src = `../../${produto.imagem}`;
 
     imagemProduto.alt = produto.nome;
 
@@ -150,7 +157,7 @@ function carregarRelacionados(){
             <div class="card">
 
                 <img
-                    src="${item.imagem}"
+                    src="../../${item.imagem}"
                     alt="${item.nome}"
                 >
 

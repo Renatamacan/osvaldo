@@ -14,7 +14,7 @@ const produtos = [
 
     status: "Vulnerável",
 
-    imagem: "../../img/pulseiraArarajuba.jpeg",
+    imagem: "./img/pulseiraArarajuba.jpeg",
 
     descricao:
       "A pulseira Guaruba representa uma das aves mais emblemáticas da Amazônia. Ao adquirir esta pulseira, você contribui para projetos de conservação e recebe acesso ao acompanhamento de um exemplar monitorado.",
@@ -43,7 +43,7 @@ const produtos = [
 
     status: "Quase ameaçado",
 
-    imagem: "../../img/pulseiraGaviaoReal.jpeg",
+    imagem: "./img/pulseiraGaviaoReal.jpeg",
 
     descricao:
       "Inspirada no maior predador das florestas brasileiras, esta pulseira ajuda a financiar programas de monitoramento da espécie.",
@@ -72,7 +72,7 @@ const produtos = [
 
     status: "Vulnerável",
 
-    imagem: "../../img/pulseiraAraraAzul.jpeg",
+    imagem: "./img/pulseiraAraraAzul.jpeg",
 
     descricao:
       "A pulseira Arara Azul representa uma das espécies mais conhecidas do Pantanal brasileiro.",
@@ -101,7 +101,7 @@ const produtos = [
 
     status: "Em perigo",
 
-    imagem: "../../img/pulseiraOncaPintada.jpeg",
+    imagem: "./img/pulseiraOncaPintada.jpeg",
 
     descricao:
       "Ajude a proteger o maior felino das Américas adquirindo uma pulseira exclusiva inspirada na Onça-Pintada.",
@@ -130,7 +130,7 @@ const produtos = [
 
     status: "Quase ameaçado",
 
-    imagem: "../../img/pulseiraLoboGuara.jpeg",
+    imagem: "./img/pulseiraLoboGuara.jpeg",
 
     descricao:
       "Uma pulseira criada para apoiar a preservação do maior canídeo da América do Sul.",
@@ -159,7 +159,7 @@ const produtos = [
 
     status: "Quase ameaçado",
 
-    imagem: "../../img/pulseiraGatoMaracaja.jpeg",
+    imagem: "./img/pulseiraGatoMaracaja.jpeg",
 
     descricao: "Ajude na conservação do discreto e ágil Gato-Maracajá.",
 
@@ -187,7 +187,7 @@ const produtos = [
 
     status: "Em perigo",
 
-    imagem: "../../img/pulseiraAriranha.jpeg",
+    imagem: "./img/pulseiraAriranha.jpeg",
 
     descricao:
       "Contribua com projetos que preservam um dos maiores mamíferos aquáticos da América do Sul.",
@@ -216,7 +216,7 @@ const produtos = [
 
     status: "Vulnerável",
 
-    imagem: "../../img/pulseiraTubaraoBranco.jpeg",
+    imagem: "./img/pulseiraTubaraoBranco.jpeg",
 
     descricao:
       "Ajude a proteger um dos animais marinhos mais importantes dos oceanos.",
@@ -245,7 +245,7 @@ const produtos = [
 
     status: "Vulnerável",
 
-    imagem: "../../img/pulseiraDeAbelha.jpeg",
+    imagem: "./img/pulseiraDeAbelha.jpeg",
 
     descricao:
       "Ajude a proteger um dos animais marinhos mais importantes dos oceanos.",
@@ -258,4 +258,179 @@ const produtos = [
       "Garantia de fábrica",
     ],
   },
+];
+
+const pelucias = [
+
+    {
+        id: 101,
+
+        nome: "Pelúcia Arara Azul",
+
+        animal: "Anodorhynchus hyacinthinus",
+
+        categoria: "Aves",
+
+        preco: 79.90,
+
+        estoque: 10,
+
+        imagem: "./img/peluciaArarinhaAzul.jpeg",
+
+        descricao:
+            "Uma pelúcia inspirada na Arara Azul, perfeita para acompanhar quem apoia a conservação da espécie."
+    },
+
+    {
+        id: 102,
+
+        nome: "Pelúcia Lobo-Guará",
+
+        animal: "Chrysocyon brachyurus",
+
+        categoria: "Mamíferos",
+
+        preco: 84.90,
+
+        estoque: 8,
+
+        imagem: "./img/peluciaLoboGuará.jpeg",
+
+        descricao:
+            "Uma representação carinhosa do Lobo-Guará, um dos animais mais característicos da fauna brasileira."
+    },
+
+    {
+        id: 103,
+
+        nome: "Pelúcia Onça-Pintada",
+
+        animal: "Panthera onca",
+
+        categoria: "Mamíferos",
+
+        preco: 89.90,
+
+        estoque: 6,
+
+        imagem: "./img/peluciaOnÇaPintada.jpeg",
+
+        descricao:
+            "Uma pelúcia inspirada na Onça-Pintada, símbolo da força e biodiversidade brasileira."
+    },
+
+    {
+        id: 104,
+
+        nome: "Pelúcia Ariranha",
+
+        animal: "Pteronura brasiliensis",
+
+        categoria: "Marinhos",
+
+        preco: 82.90,
+
+        estoque: 7,
+
+        imagem: "./img/peluciaAriranha.jpeg",
+
+        descricao:
+            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
+    },
+
+    {
+        id: 105,
+
+        nome: "Pelúcia Gato Maracajá",
+
+        animal: "Pteronura brasiliensis",
+
+        categoria: "Mamíferos",
+
+        preco: 82.90,
+
+        estoque: 7,
+
+        imagem: "./img/peluciaGatoMaracajá.jpeg",
+
+        descricao:
+            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
+    },
+
+    {
+        id: 106,
+
+        nome: "Pelúcia Gavião Real",
+
+        animal: "Pteronura brasiliensis",
+
+        categoria: "Aves",
+
+        preco: 82.90,
+
+        estoque: 7,
+
+        imagem: "./img/peluciagaviãoReal.jpeg",
+
+        descricao:
+            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
+    },
+
+    {
+        id: 107,
+
+        nome: "Pelúcia Guaruba",
+
+        animal: "Pteronura brasiliensis",
+
+        categoria: "Aves",
+
+        preco: 82.90,
+
+        estoque: 7,
+
+        imagem: "./img/peluciaGuaruba.jpeg",
+
+        descricao:
+            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
+    },
+
+    {
+        id: 108,
+
+        nome: "Pelúcia Tubarão",
+
+        animal: "Pteronura brasiliensis",
+
+        categoria: "Marinhos",
+
+        preco: 82.90,
+
+        estoque: 7,
+
+        imagem: "./img/peluciaTubarão.jpeg",
+
+        descricao:
+            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
+    },
+
+    {
+        id: 109,
+
+        nome: "PelúciaColmeia",
+
+        animal: "Pteronura brasiliensis",
+
+        categoria: "Insetos",
+
+        preco: 82.90,
+
+        estoque: 7,
+
+        imagem: "./img/peluciaColmeiaAbelha.jpeg",
+
+        descricao:
+            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
+    }
+
 ];
