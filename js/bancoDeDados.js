@@ -340,7 +340,7 @@ const pelucias = [
 
     estoque: 6,
 
-    imagem: "./img/PeluciaOnÇaPintada.jpeg",
+    imagem: "./img/PeluciaOnçaPintada.jpeg",
 
     descricao:
       "Uma pelúcia inspirada na Onça-Pintada, símbolo da força e biodiversidade brasileira.",
@@ -397,7 +397,7 @@ const pelucias = [
 
     estoque: 7,
 
-    imagem: "./img/PeluciagaviãoReal.jpeg",
+    imagem: "./img/PeluciaGaviãoReal.jpeg",
 
     descricao:
       "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
