@@ -1,0 +1,1193 @@
+/* =========================================================
+   WILDTRACK — PÁGINA DE MISSÕES
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS LOCAIS
+========================================================= */
+
+:root {
+
+    --azul-missao: #1E88E5;
+    --azul-escuro: #1565C0;
+
+    --verde-missao: #2E7D32;
+    --verde-claro: #43A047;
+
+    --vermelho-alerta: #D32F2F;
+    --vermelho-claro: #FFEBEE;
+
+    --preto-missao: #222222;
+    --cinza-missao: #666666;
+
+    --branco-missao: #FFFFFF;
+    --fundo-missao: #F5F7FA;
+
+    --borda-missao: #E2E8F0;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.topo-missoes {
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(255,255,255,.97);
+
+    border-bottom:1px solid var(--borda-missao);
+
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
+
+}
+
+
+/* LOGO */
+
+.topo-missoes .logo {
+
+    color:var(--verde-missao);
+
+    text-decoration:none;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+
+/* NAVEGAÇÃO */
+
+.topo-missoes nav {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.topo-missoes nav a {
+
+    color:var(--preto-missao);
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.25s;
+
+}
+
+.topo-missoes nav a:hover {
+
+    color:var(--azul-missao);
+
+}
+
+.topo-missoes nav a.ativo {
+
+    color:var(--azul-missao);
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-missoes {
+
+    min-height:620px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:80px 8%;
+
+    color:white;
+
+    background:
+
+        linear-gradient(
+
+            100deg,
+
+            rgba(21,101,192,.90),
+
+            rgba(46,125,50,.72)
+
+        ),
+
+        url("../img/fundoTigre.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.hero-missoes-conteudo {
+
+    max-width:750px;
+
+}
+
+
+.tag-missao {
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    margin-bottom:20px;
+
+    border:1px solid rgba(255,255,255,.45);
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+}
+
+
+.hero-missoes h1 {
+
+    margin-bottom:25px;
+
+    font-size:clamp(3rem,6vw,5.5rem);
+
+    line-height:1.05;
+
+}
+
+
+.hero-missoes p {
+
+    max-width:650px;
+
+    margin-bottom:35px;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+========================================================= */
+
+.btn-principal {
+
+    display:inline-block;
+
+    padding:15px 30px;
+
+    border-radius:30px;
+
+    background:var(--azul-missao);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.btn-principal:hover {
+
+    background:var(--azul-escuro);
+
+    transform:translateY(-3px);
+
+}
+
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
+
+.secao-missao {
+
+    padding:100px 8%;
+
+}
+
+
+.titulo-secao {
+
+    max-width:850px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+}
+
+
+.titulo-secao > span {
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:var(--verde-missao);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+
+.titulo-secao h2 {
+
+    margin-bottom:20px;
+
+    color:var(--preto-missao);
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    line-height:1.2;
+
+}
+
+
+.titulo-secao p {
+
+    color:var(--cinza-missao);
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   COMO DENUNCIAR
+========================================================= */
+
+.denunciar {
+
+    background:var(--branco-missao);
+
+}
+
+
+.passos-denuncia {
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+
+.passo {
+
+    display:flex;
+
+    gap:20px;
+
+    padding:30px;
+
+    background:var(--fundo-missao);
+
+    border:1px solid var(--borda-missao);
+
+    border-radius:18px;
+
+    transition:.3s;
+
+}
+
+
+.passo:hover {
+
+    transform:translateY(-5px);
+
+    border-color:var(--azul-missao);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+
+.numero-passo {
+
+    flex-shrink:0;
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--azul-missao);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+
+.passo h3 {
+
+    margin-bottom:8px;
+
+    color:var(--preto-missao);
+
+}
+
+
+.passo p {
+
+    color:var(--cinza-missao);
+
+    line-height:1.7;
+
+}
+
+
+/* ALERTA */
+
+.alerta-missao {
+
+    max-width:1100px;
+
+    margin:40px auto 0;
+
+    padding:25px 30px;
+
+    border-left:5px solid var(--vermelho-alerta);
+
+    background:var(--vermelho-claro);
+
+    border-radius:12px;
+
+}
+
+
+.alerta-missao strong {
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:var(--vermelho-alerta);
+
+}
+
+
+.alerta-missao p {
+
+    color:var(--preto-missao);
+
+}
+
+
+/* =========================================================
+   AÇÕES PARA EVITAR
+========================================================= */
+
+.acoes-evitar {
+
+    background:var(--fundo-missao);
+
+}
+
+
+.grid-acoes {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+.acao-card {
+
+    padding:35px 30px;
+
+    background:white;
+
+    border:1px solid var(--borda-missao);
+
+    border-radius:18px;
+
+    transition:.3s;
+
+}
+
+
+.acao-card:hover {
+
+    transform:translateY(-7px);
+
+    border-color:var(--verde-missao);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+
+.icone-acao {
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    border-radius:15px;
+
+    background:#E8F5E9;
+
+    font-size:28px;
+
+}
+
+
+.acao-card h3 {
+
+    margin-bottom:12px;
+
+    color:var(--preto-missao);
+
+}
+
+
+.acao-card p {
+
+    color:var(--cinza-missao);
+
+    line-height:1.7;
+
+}
+
+
+/* =========================================================
+   COMO FUNCIONA
+========================================================= */
+
+.funcionamento {
+
+    background:white;
+
+}
+
+
+.linha-projeto {
+
+    max-width:1250px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:stretch;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+
+.etapa-projeto {
+
+    flex:1;
+
+    min-width:180px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    border:1px solid var(--borda-missao);
+
+    border-radius:18px;
+
+    background:var(--fundo-missao);
+
+    transition:.3s;
+
+}
+
+
+.etapa-projeto:hover {
+
+    transform:translateY(-6px);
+
+    border-color:var(--azul-missao);
+
+}
+
+
+.icone-etapa {
+
+    width:65px;
+
+    height:65px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+
+        135deg,
+
+        var(--azul-missao),
+
+        var(--verde-missao)
+
+    );
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+
+.etapa-projeto h3 {
+
+    margin-bottom:12px;
+
+    font-size:17px;
+
+}
+
+
+.etapa-projeto p {
+
+    color:var(--cinza-missao);
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+
+.seta {
+
+    display:flex;
+
+    align-items:center;
+
+    color:var(--azul-missao);
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   SINAIS DE PERIGO
+========================================================= */
+
+.sinais-perigo {
+
+    background:var(--fundo-missao);
+
+}
+
+
+.conteudo-perigo {
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+
+
+.lista-sinais {
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+.sinal {
+
+    display:flex;
+
+    gap:18px;
+
+    padding:25px;
+
+    background:white;
+
+    border:1px solid var(--borda-missao);
+
+    border-radius:16px;
+
+}
+
+
+.sinal > span {
+
+    flex-shrink:0;
+
+    font-size:30px;
+
+}
+
+
+.sinal h3 {
+
+    margin-bottom:7px;
+
+    font-size:17px;
+
+}
+
+
+.sinal p {
+
+    color:var(--cinza-missao);
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   ALERTA DE PERIGO
+========================================================= */
+
+.alerta-perigo {
+
+    padding:35px;
+
+    border-radius:20px;
+
+    background:var(--vermelho-alerta);
+
+    color:white;
+
+    box-shadow:0 15px 35px rgba(211,47,47,.22);
+
+}
+
+
+.icone-alerta {
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:var(--vermelho-alerta);
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+
+.alerta-perigo h3 {
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+
+.alerta-perigo p {
+
+    margin-bottom:25px;
+
+    line-height:1.7;
+
+}
+
+
+.btn-alerta {
+
+    display:inline-block;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    background:white;
+
+    color:var(--vermelho-alerta);
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+.btn-alerta:hover {
+
+    background:#FFEBEE;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =========================================================
+   CHAMADA FINAL
+========================================================= */
+
+.chamada-final {
+
+    padding:100px 8%;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+
+        linear-gradient(
+
+            100deg,
+
+            var(--azul-escuro),
+
+            var(--verde-missao)
+
+        );
+
+}
+
+
+.chamada-final > div {
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+
+.chamada-final span {
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+
+.chamada-final h2 {
+
+    margin:15px 0;
+
+    font-size:clamp(2rem,4vw,3.5rem);
+
+    line-height:1.2;
+
+}
+
+
+.chamada-final p {
+
+    margin-bottom:30px;
+
+    font-size:1.1rem;
+
+}
+
+
+.chamada-final .btn-principal {
+
+    background:white;
+
+    color:var(--azul-escuro);
+
+}
+
+
+.chamada-final .btn-principal:hover {
+
+    background:#EAF4FF;
+
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+body > footer {
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    background:#153B50;
+
+    color:white;
+
+}
+
+
+body > footer h2 {
+
+    margin-bottom:10px;
+
+}
+
+
+body > footer p {
+
+    color:rgba(255,255,255,.8);
+
+}
+
+
+.copyright {
+
+    margin-top:20px;
+
+    font-size:13px;
+
+    opacity:.7;
+
+}
+
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
+
+.passo,
+.acao-card,
+.etapa-projeto,
+.sinal {
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    animation:entrada .6s ease forwards;
+
+}
+
+
+@keyframes entrada {
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media(max-width:1000px) {
+
+    .topo-missoes {
+
+        padding:18px 5%;
+
+    }
+
+
+    .grid-acoes {
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .linha-projeto {
+
+        flex-wrap:wrap;
+
+    }
+
+
+    .etapa-projeto {
+
+        flex:0 0 calc(50% - 35px);
+
+    }
+
+
+    .seta {
+
+        display:none;
+
+    }
+
+
+    .conteudo-perigo {
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media(max-width:700px) {
+
+    .topo-missoes {
+
+        position:relative;
+
+        flex-direction:column;
+
+        gap:18px;
+
+        padding:20px;
+
+    }
+
+
+    .topo-missoes nav {
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:12px 18px;
+
+    }
+
+
+    .topo-missoes nav a {
+
+        font-size:14px;
+
+    }
+
+
+    .hero-missoes {
+
+        min-height:550px;
+
+        padding:70px 25px;
+
+        text-align:center;
+
+        justify-content:center;
+
+    }
+
+
+    .hero-missoes p {
+
+        font-size:1rem;
+
+    }
+
+
+    .secao-missao {
+
+        padding:70px 20px;
+
+    }
+
+
+    .passos-denuncia {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .grid-acoes {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .linha-projeto {
+
+        flex-direction:column;
+
+    }
+
+
+    .etapa-projeto {
+
+        flex:1;
+
+        width:100%;
+
+    }
+
+
+    .lista-sinais {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .titulo-secao {
+
+        margin-bottom:40px;
+
+    }
+
+
+    .passo {
+
+        padding:22px;
+
+    }
+
+
+    .chamada-final {
+
+        padding:80px 25px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media(prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior:auto !important;
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+
+    }
+
+}

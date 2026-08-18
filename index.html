@@ -33,7 +33,6 @@
           <li><a href="#">Contato</a></li>
 
           <li><a href="#pelucias">Pelúcias</a></li>
-
         </ul>
       </nav>
 
@@ -82,7 +81,8 @@
     <!-- ================= MISSÕES ================= -->
 
     <section id="missoes" class="missoes">
-      <h2>Nossas Missões</h2>
+      <div>
+<h2>Nossas Missões</h2>
 
       <p class="subtitulo-missoes">
         Escolha onde começa a sua jornada pela conservação da vida selvagem.
@@ -152,6 +152,10 @@
           </div>
         </div>
       </div>
+      </div>
+      
+
+      <a class="btn-saiba-mais " href="./pages/missões/missoes.html">Saiba mais sobre as nossas missões</a>
     </section>
 
     <!-- ================= PELÚCIAS ================= -->
@@ -219,7 +223,7 @@
 
                             <span class="preco">
 
-                                R$ ${produto.preco}
+                               R$ ${produto.preco.toFixed(2).replace(".", ",")}
 
                             </span>
 
@@ -288,7 +292,7 @@
                         </span>
 
                         <a
-                            href="produto.html?id=${pelucia.id}"
+                            href="./pages/produto/produto.html?id=${pelucia.id}"
                             class="btn-card"
                         >
 

@@ -578,6 +578,10 @@ section > h2 {
 
 }
 
+.pelucias {
+    text-align: center;
+    padding-bottom: 30px;
+}
 
 /* =====================================================
    MISSÃO
@@ -623,6 +627,26 @@ section > h2 {
 
 }
 
+.btn-saiba-mais{
+    display:inline-block;
+
+    padding:25px 40px;
+
+    margin-top: 60px;
+    font-size: larger;
+ 
+    border-radius:30px;
+
+    background:var(--azul-escuro);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
 
 /* =====================================================
    FOOTER
@@ -850,6 +874,13 @@ footer p {
 
     background:#F5F7FA;
 
+    display:flex;
+
+    justify-content: center;
+
+    flex-direction: column;
+    align-items: center;
+
     padding:80px 8%;
 
 }
@@ -857,6 +888,7 @@ footer p {
 .missoes h2{
 
     margin-bottom:10px;
+    text-align: center;
 
 }
 

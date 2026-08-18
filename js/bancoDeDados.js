@@ -72,7 +72,7 @@ const produtos = [
 
     status: "Vulnerável",
 
-    imagem: "./img/pulseiraAraraAzul.jpeg",
+    imagem: "./img/pulseiraArara-Azul.jpeg",
 
     descricao:
       "A pulseira Arara Azul representa uma das espécies mais conhecidas do Pantanal brasileiro.",
@@ -258,179 +258,224 @@ const produtos = [
       "Garantia de fábrica",
     ],
   },
+ {
+    id: 9,
+
+    nome: "Pulseira Ararinha Azul",
+
+    animal: "Carcharodon carcharias",
+
+    categoria: "Aves",
+
+    preco: 114.9,
+
+    estoque: 5,
+
+    status: "Vulnerável",
+
+    imagem: "./img/pulseiraArarinha-Azul.jpeg",
+
+    descricao:
+      "Ajude a proteger um dos animais marinhos mais importantes dos oceanos.",
+
+    detalhes: [
+      "Pedra vulcânica",
+      "Aço inox",
+      "Código de rastreamento",
+      "Projeto internacional",
+      "Garantia de fábrica",
+    ],
+  },
 ];
 
 const pelucias = [
+  {
+    id: 101,
 
-    {
-        id: 101,
+    nome: "Pelúcia Arara Azul",
 
-        nome: "Pelúcia Arara Azul",
+    animal: "Anodorhynchus hyacinthinus",
 
-        animal: "Anodorhynchus hyacinthinus",
+    categoria: "Aves",
 
-        categoria: "Aves",
+    preco: 79.9,
 
-        preco: 79.90,
+    estoque: 10,
 
-        estoque: 10,
+    imagem: "./img/PeluciaArara-Azul.jpeg",
 
-        imagem: "./img/peluciaArarinhaAzul.jpeg",
+    descricao:
+      "Uma pelúcia inspirada na Arara Azul, perfeita para acompanhar quem apoia a conservação da espécie.",
+  },
 
-        descricao:
-            "Uma pelúcia inspirada na Arara Azul, perfeita para acompanhar quem apoia a conservação da espécie."
-    },
+  {
+    id: 102,
 
-    {
-        id: 102,
+    nome: "Pelúcia Lobo-Guará",
 
-        nome: "Pelúcia Lobo-Guará",
+    animal: "Chrysocyon brachyurus",
 
-        animal: "Chrysocyon brachyurus",
+    categoria: "Mamíferos",
 
-        categoria: "Mamíferos",
+    preco: 84.9,
 
-        preco: 84.90,
+    estoque: 8,
 
-        estoque: 8,
+    imagem: "./img/PeluciaLoboGuará.jpeg",
 
-        imagem: "./img/peluciaLoboGuará.jpeg",
+    descricao:
+      "Uma representação carinhosa do Lobo-Guará, um dos animais mais característicos da fauna brasileira.",
+  },
 
-        descricao:
-            "Uma representação carinhosa do Lobo-Guará, um dos animais mais característicos da fauna brasileira."
-    },
+  {
+    id: 103,
 
-    {
-        id: 103,
+    nome: "Pelúcia Onça-Pintada",
 
-        nome: "Pelúcia Onça-Pintada",
+    animal: "Panthera onca",
 
-        animal: "Panthera onca",
+    categoria: "Mamíferos",
 
-        categoria: "Mamíferos",
+    preco: 89.9,
 
-        preco: 89.90,
+    estoque: 6,
 
-        estoque: 6,
+    imagem: "./img/PeluciaOnÇaPintada.jpeg",
 
-        imagem: "./img/peluciaOnÇaPintada.jpeg",
+    descricao:
+      "Uma pelúcia inspirada na Onça-Pintada, símbolo da força e biodiversidade brasileira.",
+  },
 
-        descricao:
-            "Uma pelúcia inspirada na Onça-Pintada, símbolo da força e biodiversidade brasileira."
-    },
+  {
+    id: 104,
 
-    {
-        id: 104,
+    nome: "Pelúcia Ariranha",
 
-        nome: "Pelúcia Ariranha",
+    animal: "Pteronura brasiliensis",
 
-        animal: "Pteronura brasiliensis",
+    categoria: "Marinhos",
 
-        categoria: "Marinhos",
+    preco: 82.9,
 
-        preco: 82.90,
+    estoque: 7,
 
-        estoque: 7,
+    imagem: "./img/PeluciaAriranha.jpeg",
 
-        imagem: "./img/peluciaAriranha.jpeg",
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
 
-        descricao:
-            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
-    },
+  {
+    id: 105,
 
-    {
-        id: 105,
+    nome: "Pelúcia Gato Maracajá",
 
-        nome: "Pelúcia Gato Maracajá",
+    animal: "Pteronura brasiliensis",
 
-        animal: "Pteronura brasiliensis",
+    categoria: "Mamíferos",
 
-        categoria: "Mamíferos",
+    preco: 82.9,
 
-        preco: 82.90,
+    estoque: 7,
 
-        estoque: 7,
+    imagem: "./img/PeluciaGatoMaracajá.jpeg",
 
-        imagem: "./img/peluciaGatoMaracajá.jpeg",
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
 
-        descricao:
-            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
-    },
+  {
+    id: 106,
 
-    {
-        id: 106,
+    nome: "Pelúcia Gavião Real",
 
-        nome: "Pelúcia Gavião Real",
+    animal: "Pteronura brasiliensis",
 
-        animal: "Pteronura brasiliensis",
+    categoria: "Aves",
 
-        categoria: "Aves",
+    preco: 82.9,
 
-        preco: 82.90,
+    estoque: 7,
 
-        estoque: 7,
+    imagem: "./img/PeluciagaviãoReal.jpeg",
 
-        imagem: "./img/peluciagaviãoReal.jpeg",
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
 
-        descricao:
-            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
-    },
+  {
+    id: 107,
 
-    {
-        id: 107,
+    nome: "Pelúcia Guaruba",
 
-        nome: "Pelúcia Guaruba",
+    animal: "Pteronura brasiliensis",
 
-        animal: "Pteronura brasiliensis",
+    categoria: "Aves",
 
-        categoria: "Aves",
+    preco: 82.9,
 
-        preco: 82.90,
+    estoque: 7,
 
-        estoque: 7,
+    imagem: "./img/PeluciaGuaruba.jpeg",
 
-        imagem: "./img/peluciaGuaruba.jpeg",
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
 
-        descricao:
-            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
-    },
+  {
+    id: 108,
 
-    {
-        id: 108,
+    nome: "Pelúcia Tubarão",
 
-        nome: "Pelúcia Tubarão",
+    animal: "Pteronura brasiliensis",
 
-        animal: "Pteronura brasiliensis",
+    categoria: "Marinhos",
 
-        categoria: "Marinhos",
+    preco: 82.9,
 
-        preco: 82.90,
+    estoque: 7,
 
-        estoque: 7,
+    imagem: "./img/PeluciaTubarão.jpeg",
 
-        imagem: "./img/peluciaTubarão.jpeg",
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
 
-        descricao:
-            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
-    },
+  {
+    id: 109,
 
-    {
-        id: 109,
+    nome: "Pelúcia Colmeia",
 
-        nome: "PelúciaColmeia",
+    animal: "Pteronura brasiliensis",
 
-        animal: "Pteronura brasiliensis",
+    categoria: "Insetos",
 
-        categoria: "Insetos",
+    preco: 82.9,
 
-        preco: 82.90,
+    estoque: 7,
 
-        estoque: 7,
+    imagem: "./img/PeluciaColmeiaAbelha.jpeg",
 
-        imagem: "./img/peluciaColmeiaAbelha.jpeg",
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
 
-        descricao:
-            "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul."
-    }
+  {
+    id: 110,
 
+    nome: "Pelúcia Ararinha Azul",
+
+    animal: "Pteronura brasiliensis",
+
+    categoria: "Aves",
+
+    preco: 82.9,
+
+    estoque: 7,
+
+    imagem: "./img/PeluciaArarinha-Azul.jpeg",
+
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  }
 ];
