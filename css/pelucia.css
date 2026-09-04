@@ -1,0 +1,736 @@
+/* ========================================
+   PÁGINA DE PELÚCIA
+   WildTrack
+======================================== */
+
+
+/* ========================================
+   PÁGINA
+======================================== */
+
+.pagina-pelucia {
+    background: var(--fundo-missao);
+}
+
+
+/* ========================================
+   PRODUTO
+======================================== */
+
+.produto-pelucia {
+    width: min(1150px, 90%);
+    margin: 0 auto;
+
+    padding: 80px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* ========================================
+   GALERIA
+======================================== */
+
+.galeria-pelucia {
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-principal {
+    width: 500px;
+    height: 350px;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.imagem-principal img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.3s ease;
+}
+
+
+/* ========================================
+   INFORMAÇÕES
+======================================== */
+
+.informacoes-pelucia {
+    max-width: 500px;
+}
+
+.categoria-produto {
+    color: var(--azul-missao);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.informacoes-pelucia h1 {
+    margin: 12px 0 15px;
+
+    font-size: 42px;
+
+    color: var(--preto-missao);
+
+    line-height: 1.15;
+}
+
+.descricao-pelucia {
+    color: var(--cinza-missao);
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   PREÇO
+======================================== */
+
+.preco-pelucia {
+    margin: 25px 0;
+}
+
+.preco-pelucia span {
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: var(--verde-missao);
+}
+
+
+/* ========================================
+   OPÇÕES
+======================================== */
+
+.opcoes-produto {
+    margin-top: 25px;
+}
+
+.opcoes-produto h2,
+.quantidade h2 {
+    font-size: 18px;
+
+    color: var(--preto-missao);
+
+    margin-bottom: 15px;
+}
+
+.opcoes-versao {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+
+/* ========================================
+   BOTÃO DE VERSÃO
+======================================== */
+
+.opcao-versao {
+    border: 2px solid var(--borda-missao);
+
+    background: var(--branco-missao);
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.opcao-versao:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--azul-missao);
+}
+
+.opcao-versao.selecionado {
+    border-color: var(--verde-missao);
+
+    box-shadow:
+        0 0 0 2px rgba(46, 125, 50, 0.1);
+}
+
+.icone-versao {
+    font-size: 28px;
+}
+
+.texto-versao {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.texto-versao strong {
+    color: var(--preto-missao);
+
+    font-size: 14px;
+}
+
+.texto-versao small {
+    color: var(--verde-missao);
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   QUANTIDADE
+======================================== */
+
+.quantidade {
+    margin-top: 25px;
+}
+
+.controle-quantidade {
+    display: inline-flex;
+
+    align-items: center;
+
+    border: 1px solid var(--borda-missao);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: white;
+}
+
+.controle-quantidade button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    background: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    color: var(--preto-missao);
+}
+
+.controle-quantidade button:hover {
+    background: #f0f4f8;
+}
+
+.controle-quantidade span {
+    width: 40px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   COMPRAR
+======================================== */
+
+.btn-comprar {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: var(--verde-missao);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn-comprar:hover {
+    background: var(--azul-missao);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   INFORMAÇÕES EXTRAS
+======================================== */
+
+.informacoes-extra {
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.info-extra {
+    padding: 18px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border-left: 4px solid var(--verde-missao);
+}
+
+.info-extra strong {
+    color: var(--preto-missao);
+}
+
+.info-extra p {
+    margin: 7px 0 0;
+
+    color: var(--cinza-missao);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   SOBRE O ANIMAL
+======================================== */
+
+.sobre-animal {
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    padding: 70px 0;
+}
+
+.sobre-animal .titulo-secao {
+    margin-bottom: 45px;
+}
+
+.informacoes-animal {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.informacoes-animal article {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    border: 1px solid var(--borda-missao);
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.informacoes-animal article > span {
+    font-size: 35px;
+}
+
+.informacoes-animal h3 {
+    margin: 15px 0 10px;
+
+    color: var(--preto-missao);
+}
+
+.informacoes-animal p {
+    margin: 0;
+
+    color: var(--cinza-missao);
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   VOLTAR
+======================================== */
+
+.voltar-produtos {
+    text-align: center;
+
+    padding: 20px 20px 80px;
+}
+
+.voltar-produtos .btn-principal {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    background: var(--azul-missao);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.voltar-produtos .btn-principal:hover {
+    background: var(--verde-missao);
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   MODAIS
+======================================== */
+
+.modal-carrinho,
+.modal-pagamento {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.modal-carrinho.aberto,
+.modal-pagamento.aberto {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* ========================================
+   CONTEÚDO DO MODAL
+======================================== */
+
+.conteudo-carrinho,
+.conteudo-pagamento {
+    position: relative;
+
+    width: min(500px, 100%);
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+
+    transform: translateY(20px);
+
+    transition:
+        transform 0.25s ease;
+}
+
+.modal-carrinho.aberto .conteudo-carrinho,
+.modal-pagamento.aberto .conteudo-pagamento {
+    transform: translateY(0);
+}
+
+.conteudo-carrinho h2,
+.conteudo-pagamento h2 {
+    margin-top: 0;
+
+    color: var(--preto-missao);
+}
+
+
+/* ========================================
+   FECHAR
+======================================== */
+
+.fechar-carrinho {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: var(--cinza-missao);
+}
+
+
+/* ========================================
+   ITEM DO CARRINHO
+======================================== */
+
+.item-carrinho {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--borda-missao);
+}
+
+.item-carrinho strong {
+    color: var(--preto-missao);
+}
+
+.item-carrinho small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--cinza-missao);
+}
+
+
+/* ========================================
+   TOTAL
+======================================== */
+
+.total-carrinho {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 2px solid var(--borda-missao);
+}
+
+.total-carrinho strong {
+    font-size: 22px;
+
+    color: var(--verde-missao);
+}
+
+
+/* ========================================
+   FINALIZAR
+======================================== */
+
+.btn-finalizar {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: var(--verde-missao);
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   PAGAMENTO
+======================================== */
+
+.opcoes-pagamento {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.opcoes-pagamento button {
+    padding: 16px;
+
+    border: 1px solid var(--borda-missao);
+
+    border-radius: 12px;
+
+    background: white;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.opcoes-pagamento button:hover {
+    border-color: var(--azul-missao);
+
+    background: #f5f9ff;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .produto-pelucia {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .galeria-pelucia {
+        width: 100%;
+    }
+
+    .informacoes-pelucia {
+        max-width: none;
+    }
+
+    .imagem-principal {
+        width: min(500px, 100%);
+    }
+
+    .informacoes-animal {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .produto-pelucia {
+        width: 92%;
+
+        padding: 50px 0;
+    }
+
+    .imagem-principal {
+        height: 300px;
+    }
+
+    .informacoes-pelucia h1 {
+        font-size: 34px;
+    }
+
+    .preco-pelucia span {
+        font-size: 28px;
+    }
+
+    .opcoes-versao {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-animal {
+        width: 92%;
+
+        padding: 50px 0;
+    }
+
+    .informacoes-animal article {
+        padding: 25px;
+    }
+
+}

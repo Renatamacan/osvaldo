@@ -1,0 +1,418 @@
+/* ========================================
+   MISSÕES — PÁGINAS DE DETALHES
+   WildTrack
+======================================== */
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero-missao-detalhe {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--branco-missao);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-missao-detalhe::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.38);
+}
+
+.hero-detalhe-conteudo {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+}
+
+.hero-detalhe-conteudo .tag-missao {
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.hero-detalhe-conteudo h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+}
+
+.hero-detalhe-conteudo p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   IMAGENS DOS HEROES
+======================================== */
+
+.hero-aerea {
+    background-image: url("../img/araraAzulRosto.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-terrestre {
+    background-image: url("../img/loboGuaraRosto.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-aquatica {
+    background-image: url("../img/tubarãoBranco.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+.conteudo-missao {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.conteudo-missao > .titulo-secao {
+    margin-bottom: 50px;
+}
+
+.titulo-secao {
+    color: var(--preto-missao);
+    text-align: center;
+}
+
+.titulo-secao h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.titulo-secao p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--cinza-missao);
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BLOCOS DE FATORES
+======================================== */
+
+.bloco-fatores {
+    margin-bottom: 70px;
+}
+
+.titulo-fator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.titulo-fator h2 {
+    margin: 0;
+    font-size: 28px;
+    color: var(--preto-missao);
+}
+
+.numero-fator {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--vermelho-alerta);
+    color: var(--branco-missao);
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.numero-fator.verde {
+    background: var(--verde-missao);
+}
+
+
+/* ========================================
+   LISTA DE FATORES
+======================================== */
+
+.lista-fatores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* ========================================
+   CARD DE FATOR
+======================================== */
+
+.fator {
+    background: var(--branco-missao);
+    border: 1px solid var(--borda-missao);
+    border-radius: 18px;
+    padding: 25px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.fator:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+    border-color: var(--azul-missao);
+}
+
+.fator h3 {
+    margin: 0 0 12px;
+    color: var(--preto-missao);
+    font-size: 20px;
+}
+
+.fator p {
+    margin: 0;
+    color: var(--cinza-missao);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+
+/* ========================================
+   DESTAQUE ENTRE FATORES
+======================================== */
+
+.bloco-fatores:first-of-type {
+    position: relative;
+}
+
+.bloco-fatores:first-of-type::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    margin-top: 70px;
+
+    background: var(--borda-missao);
+}
+
+
+/* ========================================
+   CHAMADA DE CONSERVAÇÃO
+======================================== */
+
+.chamada-conservacao {
+    margin-top: 30px;
+    padding: 45px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        var(--azul-missao),
+        var(--verde-missao)
+    );
+
+    color: var(--branco-missao);
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.chamada-conservacao h2 {
+    margin: 0 0 15px;
+    font-size: 30px;
+}
+
+.chamada-conservacao p {
+    max-width: 750px;
+    margin: 0 auto;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BOTÃO VOLTAR
+======================================== */
+
+.voltar-missoes {
+    text-align: center;
+    padding: 0 20px 80px;
+}
+
+.voltar-missoes .btn-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    background: var(--azul-missao);
+    color: var(--branco-missao);
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.voltar-missoes .btn-principal:hover {
+    background: var(--verde-missao);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   SEPARAÇÃO VISUAL
+======================================== */
+
+.bloco-fatores + .bloco-fatores {
+    margin-top: 20px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .hero-missao-detalhe {
+        min-height: 380px;
+        padding: 70px 20px;
+    }
+
+    .hero-detalhe-conteudo h1 {
+        font-size: 38px;
+    }
+
+    .hero-detalhe-conteudo p {
+        font-size: 16px;
+    }
+
+    .conteudo-missao {
+        padding: 60px 0;
+    }
+
+    .lista-fatores {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-fator h2 {
+        font-size: 25px;
+    }
+
+    .chamada-conservacao {
+        padding: 35px 25px;
+    }
+}
+
+
+/* ========================================
+   CELULARES
+======================================== */
+
+@media (max-width: 500px) {
+
+    .hero-missao-detalhe {
+        min-height: 350px;
+        padding: 60px 18px;
+    }
+
+    .hero-detalhe-conteudo h1 {
+        font-size: 32px;
+    }
+
+    .hero-detalhe-conteudo p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .conteudo-missao {
+        width: 92%;
+        padding: 50px 0;
+    }
+
+    .titulo-secao h2 {
+        font-size: 28px;
+    }
+
+    .titulo-fator {
+        gap: 12px;
+    }
+
+    .numero-fator {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 17px;
+    }
+
+    .titulo-fator h2 {
+        font-size: 22px;
+    }
+
+    .fator {
+        padding: 20px;
+    }
+
+    .fator h3 {
+        font-size: 18px;
+    }
+
+    .fator p {
+        font-size: 14px;
+    }
+
+    .chamada-conservacao {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .chamada-conservacao h2 {
+        font-size: 25px;
+    }
+
+    .chamada-conservacao p {
+        font-size: 15px;
+    }
+
+    .voltar-missoes {
+        padding-bottom: 60px;
+    }
+}

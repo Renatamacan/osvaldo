@@ -258,8 +258,8 @@ const produtos = [
       "Garantia de fábrica",
     ],
   },
- {
-    id: 9,
+  {
+    id: 10,
 
     nome: "Pulseira Ararinha Azul",
 
@@ -477,5 +477,5 @@ const pelucias = [
 
     descricao:
       "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  }
+  },
 ];
