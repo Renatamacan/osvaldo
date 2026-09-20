@@ -8,7 +8,7 @@ const produtos = [
 
     categoria: "Aves",
 
-    preco: 89.9,
+    preco: 630.89,
 
     estoque: 12,
 
@@ -24,7 +24,7 @@ const produtos = [
       "Cor predominante: Amarelo",
       "Código exclusivo para rastreamento",
       "Embalagem ecológica",
-      "Garantia de 12 meses",
+      "60 segundos de garantia",
     ],
   },
 
@@ -37,7 +37,7 @@ const produtos = [
 
     categoria: "Aves",
 
-    preco: 94.9,
+    preco: 650.8,
 
     estoque: 9,
 
@@ -54,6 +54,7 @@ const produtos = [
       "Código de rastreamento",
       "Projeto parceiro oficial",
       "Resistente à água",
+      "60 segundos de garantia",
     ],
   },
 
@@ -66,7 +67,7 @@ const produtos = [
 
     categoria: "Aves",
 
-    preco: 99.9,
+    preco: 610.9,
 
     estoque: 15,
 
@@ -82,7 +83,7 @@ const produtos = [
       "Aço inoxidável",
       "Código exclusivo",
       "Pulseira ajustável",
-      "Garantia de fábrica",
+      "60 segundos de garantia",
     ],
   },
 
@@ -95,7 +96,7 @@ const produtos = [
 
     categoria: "Mamíferos",
 
-    preco: 109.9,
+    preco: 640.89,
 
     estoque: 8,
 
@@ -112,6 +113,7 @@ const produtos = [
       "Resistente à água",
       "Código para rastreamento",
       "Projeto de conservação",
+      "60 segundos de garantia",
     ],
   },
 
@@ -124,7 +126,7 @@ const produtos = [
 
     categoria: "Mamíferos",
 
-    preco: 92.9,
+    preco: 695.5,
 
     estoque: 18,
 
@@ -141,6 +143,7 @@ const produtos = [
       "Código de rastreamento",
       "Material premium",
       "Embalagem reciclável",
+      "60 segundos de garantia",
     ],
   },
 
@@ -153,7 +156,7 @@ const produtos = [
 
     categoria: "Mamíferos",
 
-    preco: 95.9,
+    preco: 610.49,
 
     estoque: 11,
 
@@ -168,7 +171,7 @@ const produtos = [
       "Pedras naturais",
       "Código exclusivo",
       "Resistente à água",
-      "Garantia de 12 meses",
+      "60 segundos de garantia",
     ],
   },
 
@@ -181,7 +184,7 @@ const produtos = [
 
     categoria: "Marinhos",
 
-    preco: 96.9,
+    preco: 667.45,
 
     estoque: 7,
 
@@ -198,6 +201,7 @@ const produtos = [
       "Projeto parceiro",
       "Pulseira ajustável",
       "Embalagem sustentável",
+      "60 segundos de garantia",
     ],
   },
 
@@ -210,7 +214,7 @@ const produtos = [
 
     categoria: "Marinhos",
 
-    preco: 114.9,
+    preco: 800.99,
 
     estoque: 5,
 
@@ -226,7 +230,7 @@ const produtos = [
       "Aço inox",
       "Código de rastreamento",
       "Projeto internacional",
-      "Garantia de fábrica",
+      "60 segundos de garantia",
     ],
   },
 
@@ -239,7 +243,7 @@ const produtos = [
 
     categoria: "Insetos",
 
-    preco: 114.9,
+    preco: 789.99,
 
     estoque: 5,
 
@@ -255,7 +259,7 @@ const produtos = [
       "Aço inox",
       "Código de rastreamento",
       "Projeto internacional",
-      "Garantia de fábrica",
+      "60 segundos de garantia",
     ],
   },
   {
@@ -267,7 +271,7 @@ const produtos = [
 
     categoria: "Aves",
 
-    preco: 114.9,
+    preco: 4499.999,
 
     estoque: 5,
 
@@ -283,7 +287,7 @@ const produtos = [
       "Aço inox",
       "Código de rastreamento",
       "Projeto internacional",
-      "Garantia de fábrica",
+      "60 segundos de garantia",
     ],
   },
 ];
@@ -298,7 +302,7 @@ const pelucias = [
 
     categoria: "Aves",
 
-    preco: 79.9,
+    preco: 680.99,
 
     estoque: 10,
 
@@ -317,7 +321,7 @@ const pelucias = [
 
     categoria: "Mamíferos",
 
-    preco: 84.9,
+    preco: 700.57,
 
     estoque: 8,
 
@@ -325,23 +329,35 @@ const pelucias = [
 
     descricao:
       "Uma representação carinhosa do Lobo-Guará, um dos animais mais característicos da fauna brasileira.",
+
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
+
+        preco: 89.9,
+
+        imagem: "../img/PeluciaLoboGuará.jpeg",
+      },
+
+      croche: {
+        nome: "Crochê",
+
+        preco: 119.9,
+
+        imagem: "../img/LoboGuaráDeCrochê.jpeg",
+      },
+    },
   },
 
   {
     id: 103,
 
     nome: "Pelúcia Onça-Pintada",
-
     animal: "Panthera onca",
-
     categoria: "Mamíferos",
-
-    preco: 89.9,
-
+    preco: 650.8,
     estoque: 6,
-
     imagem: "./img/PeluciaOnçaPintada.jpeg",
-
     descricao:
       "Uma pelúcia inspirada na Onça-Pintada, símbolo da força e biodiversidade brasileira.",
   },
@@ -355,7 +371,7 @@ const pelucias = [
 
     categoria: "Marinhos",
 
-    preco: 82.9,
+    preco: 739.99,
 
     estoque: 7,
 
@@ -374,7 +390,7 @@ const pelucias = [
 
     categoria: "Mamíferos",
 
-    preco: 82.9,
+    preco: 800.51,
 
     estoque: 7,
 
@@ -393,7 +409,7 @@ const pelucias = [
 
     categoria: "Aves",
 
-    preco: 82.9,
+    preco: 680.75,
 
     estoque: 7,
 
@@ -412,7 +428,7 @@ const pelucias = [
 
     categoria: "Aves",
 
-    preco: 82.9,
+    preco: 650.39,
 
     estoque: 7,
 
@@ -431,7 +447,7 @@ const pelucias = [
 
     categoria: "Marinhos",
 
-    preco: 82.9,
+    preco: 999.999,
 
     estoque: 7,
 
@@ -450,7 +466,7 @@ const pelucias = [
 
     categoria: "Insetos",
 
-    preco: 82.9,
+    preco: 979.99,
 
     estoque: 7,
 
@@ -469,7 +485,7 @@ const pelucias = [
 
     categoria: "Aves",
 
-    preco: 82.9,
+    preco: 999.999,
 
     estoque: 7,
 
@@ -479,3 +495,196 @@ const pelucias = [
       "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
   },
 ];
+const peluciasCroche = [
+  {
+    id: 111,
+
+    nome: "Pelúcia Arara Azul",
+
+    animal: "Anodorhynchus hyacinthinus",
+
+    categoria: "Aves",
+
+    preco: 750.99,
+
+    estoque: 7,
+
+    imagem: "./img/Arara-AzulCrochê.jpeg",
+
+    descricao:
+      "Uma pelúcia inspirada na Arara Azul, perfeita para acompanhar quem apoia a conservação da espécie.",
+  },
+
+  {
+    id: 112,
+
+    nome: "Pelúcia Lobo Guará",
+
+    animal: "Chrysocyon brachyurus",
+
+    categoria: "Mamífero",
+
+    preco: 775.4,
+
+    estoque: 7,
+
+    imagem: "./img/LoboGuaráDeCrochê.jpeg",
+
+    descricao:
+      "Uma representação carinhosa do Lobo-Guará, um dos animais mais característicos da fauna brasileira.",
+  },
+
+  {
+    id: 113,
+
+    nome: "Pelúcia Onça-Pintada",
+
+    animal: "Panthera onca",
+
+    categoria: "Mamíferos",
+
+    preco: 950.9,
+
+    estoque: 6,
+
+    imagem: "./img/OnçaPintadaDeCrochê.jpeg",
+
+    descricao:
+      "Uma pelúcia inspirada na Onça-Pintada, símbolo da força e biodiversidade brasileira.",
+  },
+
+  {
+    id: 114,
+
+    nome: "Pelúcia Ariranha",
+
+    animal: "Pteronura brasiliensis",
+
+    categoria: "Marinhos",
+
+    preco: 860.78,
+
+    estoque: 7,
+
+    imagem: "./img/AriranhaDeCrochê.jpeg",
+
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
+
+  {
+    id: 115,
+
+    nome: "Pelúcia Gato Maracajá",
+
+    animal: "Pteronura brasiliensis",
+
+    categoria: "Mamíferos",
+
+    preco: 1058.999,
+
+    estoque: 7,
+
+    imagem: "./img/GatoMaracajáDeCrochê.jpeg",
+
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
+
+  {
+    id: 116,
+
+    nome: "Pelúcia Gavião Real",
+
+    animal: "Pteronura brasiliensis",
+
+    categoria: "Aves",
+
+    preco: 720.49,
+
+    estoque: 7,
+
+    imagem: "./img/GaviãoRealDeCrochê.jpeg",
+
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
+
+  {
+    id: 117,
+
+    nome: "Pelúcia Guaruba",
+
+    animal: "Pteronura brasiliensis",
+
+    categoria: "Aves",
+
+    preco: 699.99,
+
+    estoque: 7,
+
+    imagem: "./img/GuarubaDeCrochê.jpeg",
+
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
+
+  {
+    id: 118,
+
+    nome: "Pelúcia Tubarão",
+
+    animal: "Pteronura brasiliensis",
+
+    categoria: "Marinhos",
+
+    preco: 1199.999,
+
+    estoque: 7,
+
+    imagem: "./img/TubarãoDeCroChê.jpeg",
+
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
+
+  {
+    id: 119,
+
+    nome: "Pelúcia Colmeia",
+
+    animal: "Pteronura brasiliensis",
+
+    categoria: "Insetos",
+
+    preco: 1389.999,
+
+    estoque: 7,
+
+    imagem: "./img/ColmeiasDeCrochê.jpeg",
+
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
+
+  {
+    id: 120,
+
+    nome: "Pelúcia Ararinha Azul",
+
+    animal: "Pteronura brasiliensis",
+
+    categoria: "Aves",
+
+    preco: 11499.999,
+
+    estoque: 7,
+
+    imagem: "./img/Ararinha-AzulCrochê.jpeg",
+
+    descricao:
+      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+  },
+];
+
+const usuarios = [];

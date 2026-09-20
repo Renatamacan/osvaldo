@@ -2,46 +2,89 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pelúcia — WildTrack</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="stylesheet" href="../../../css/missoes.css">
-    <link rel="stylesheet" href="../../../css/pelucia.css">
+    <title>Pelúcia | WildTrack</title>
+
+    <link
+        rel="stylesheet"
+        href="../../../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../../css/missoes.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../../css/pelucia.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- ==============================
+
+    <!-- =================================
          CABEÇALHO
-    =============================== -->
+    ================================== -->
 
     <header class="topo-missoes">
 
-        <a href="index.html" class="logo">
+        <a
+            href="../../../index.html"
+            class="logo"
+        >
             WildTrack
         </a>
 
+
         <nav>
-            <a href="../../../index.html">Início</a>
-            <a href="../../../index.html#produtos">Pulseiras</a>
-            <a href="../../../index.html#missoes">Missões</a>
-            <a href="../../../index.html#pelucias" class="ativo">Pelúcias</a>
-            <a href="produto.html">Carrinho</a>
+
+            <a href="../../../index.html">
+                Início
+            </a>
+
+            <a href="../../../index.html#produtos">
+                Pulseiras
+            </a>
+
+            <a href="../../missões/missoes.html">
+                Missões
+            </a>
+
+            <a href="../../../index.html#pelucias"
+               class="ativo">
+                Pelúcias
+            </a>
+
+            <a href="../../produto/produto.html">
+                Carrinho
+            </a>
+
         </nav>
 
     </header>
 
 
-    <!-- ==============================
+
+    <!-- =================================
          PRODUTO
-    =============================== -->
+    ================================== -->
 
     <main class="pagina-pelucia">
 
+
         <section class="produto-pelucia">
+
 
             <!-- IMAGEM -->
 
@@ -51,8 +94,8 @@
 
                     <img
                         id="imagemPelucia"
-                        src="./img/peluciaLoboGuaraTecido.jpeg"
-                        alt="Pelúcia de Lobo-guará"
+                        src=""
+                        alt=""
                     >
 
                 </div>
@@ -60,22 +103,31 @@
             </div>
 
 
+
             <!-- INFORMAÇÕES -->
 
             <div class="informacoes-pelucia">
 
-                <span class="categoria-produto">
+
+                <span
+                    id="categoriaPelucia"
+                    class="categoria-produto"
+                >
                     PELÚCIA WILDTRACK
                 </span>
 
+
                 <h1 id="nomePelucia">
-                    Pelúcia Lobo-guará
+                    Carregando...
                 </h1>
 
-                <p class="descricao-pelucia">
-                    Uma representação carinhosa de um dos animais
-                    mais importantes da fauna brasileira.
+
+                <p
+                    id="descricaoPelucia"
+                    class="descricao-pelucia"
+                >
                 </p>
+
 
 
                 <!-- PREÇO -->
@@ -83,13 +135,14 @@
                 <div class="preco-pelucia">
 
                     <span id="precoPelucia">
-                        R$ 89,90
+                        R$ 0,00
                     </span>
 
                 </div>
 
 
-                <!-- VERSÃO -->
+
+                <!-- VERSÕES -->
 
                 <div class="opcoes-produto">
 
@@ -97,58 +150,20 @@
                         Escolha a versão
                     </h2>
 
-                    <div class="opcoes-versao">
 
-                        <button
-                            class="opcao-versao selecionado"
-                            data-tipo="tecido"
-                        >
+                    <div
+                        id="opcoesVersao"
+                        class="opcoes-versao"
+                    >
 
-                            <span class="icone-versao">
-                                🧸
-                            </span>
-
-                            <span class="texto-versao">
-
-                                <strong>
-                                    Tecido comum
-                                </strong>
-
-                                <small>
-                                    R$ 89,90
-                                </small>
-
-                            </span>
-
-                        </button>
-
-
-                        <button
-                            class="opcao-versao"
-                            data-tipo="croche"
-                        >
-
-                            <span class="icone-versao">
-                                🧶
-                            </span>
-
-                            <span class="texto-versao">
-
-                                <strong>
-                                    Crochê
-                                </strong>
-
-                                <small>
-                                    R$ 119,90
-                                </small>
-
-                            </span>
-
-                        </button>
+                        <!--
+                            Criado pelo JavaScript
+                        -->
 
                     </div>
 
                 </div>
+
 
 
                 <!-- QUANTIDADE -->
@@ -159,17 +174,26 @@
                         Quantidade
                     </h2>
 
+
                     <div class="controle-quantidade">
 
-                        <button id="diminuirQuantidade">
+                        <button
+                            id="diminuirQuantidade"
+                            type="button"
+                        >
                             −
                         </button>
+
 
                         <span id="quantidade">
                             1
                         </span>
 
-                        <button id="aumentarQuantidade">
+
+                        <button
+                            id="aumentarQuantidade"
+                            type="button"
+                        >
                             +
                         </button>
 
@@ -178,133 +202,102 @@
                 </div>
 
 
-                <!-- BOTÃO -->
+
+                <!-- COMPRAR -->
 
                 <button
                     id="adicionarCarrinho"
                     class="btn-comprar"
+                    type="button"
                 >
+
                     Adicionar ao carrinho
+
                 </button>
 
 
-                <!-- INFORMAÇÕES -->
 
-                <div class="informacoes-extra">
+                <!-- INFORMAÇÕES EXTRAS -->
 
-                    <div class="info-extra">
+                <div
+                    id="informacoesExtra"
+                    class="informacoes-extra"
+                >
 
-                        <strong>
-                            🐾 Produto educativo
-                        </strong>
-
-                        <p>
-                            Cada pelúcia representa um animal
-                            presente nas missões de conservação
-                            da WildTrack.
-                        </p>
-
-                    </div>
-
-
-                    <div class="info-extra">
-
-                        <strong>
-                            🌱 Compra consciente
-                        </strong>
-
-                        <p>
-                            A compra contribui para manter o
-                            projeto de conscientização sobre
-                            a conservação da fauna.
-                        </p>
-
-                    </div>
+                    <!-- Criado pelo JavaScript -->
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- ==============================
-             SOBRE O ANIMAL
-        =============================== -->
 
-        <section class="sobre-animal">
+        <!-- =================================
+             CARACTERÍSTICAS
+        ================================== -->
+
+        <section class="caracteristicas-pelucia">
 
             <div class="titulo-secao">
 
                 <h2>
-                    Sobre o Lobo-guará
+                    Características
                 </h2>
 
                 <p>
-                    Conheça um pouco mais sobre o animal
-                    representado pela sua pelúcia.
+                    Conheça melhor esta pelúcia.
                 </p>
 
             </div>
 
 
-            <div class="informacoes-animal">
+            <div
+                id="listaCaracteristicas"
+                class="lista-caracteristicas"
+            >
 
-                <article>
-                    <span>🐾</span>
-
-                    <h3>
-                        Onde vive?
-                    </h3>
-
-                    <p>
-                        O lobo-guará é encontrado principalmente
-                        em ambientes do Cerrado e em outras áreas
-                        abertas da América do Sul.
-                    </p>
-
-                </article>
-
-
-                <article>
-                    <span>🌱</span>
-
-                    <h3>
-                        Do que se alimenta?
-                    </h3>
-
-                    <p>
-                        Possui uma alimentação variada, incluindo
-                        frutos, pequenos animais e outros recursos
-                        encontrados em seu ambiente.
-                    </p>
-
-                </article>
-
-
-                <article>
-                    <span>⚠️</span>
-
-                    <h3>
-                        Quais são as ameaças?
-                    </h3>
-
-                    <p>
-                        Perda de habitat, atropelamentos, doenças
-                        e conflitos com atividades humanas estão
-                        entre os problemas enfrentados pela espécie.
-                    </p>
-
-                </article>
+                <!-- Criado pelo JavaScript -->
 
             </div>
 
         </section>
 
 
-        <!-- ==============================
+
+        <!-- =================================
+             SOBRE O ANIMAL
+        ================================== -->
+
+        <section class="sobre-animal">
+
+            <div class="titulo-secao">
+
+                <h2 id="tituloAnimal">
+                    Sobre o animal
+                </h2>
+
+            </div>
+
+
+            <div
+                id="informacoesAnimal"
+                class="informacoes-animal"
+            >
+
+                <!-- Criado pelo JavaScript -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
              VOLTAR
-        =============================== -->
+        ================================== -->
 
         <section class="voltar-produtos">
 
@@ -320,9 +313,10 @@
     </main>
 
 
-    <!-- ==============================
-         CARRINHO
-    =============================== -->
+
+    <!-- =================================
+         MODAL DO CARRINHO
+    ================================== -->
 
     <div
         id="modalCarrinho"
@@ -331,20 +325,27 @@
 
         <div class="conteudo-carrinho">
 
+
             <button
                 id="fecharCarrinho"
                 class="fechar-carrinho"
+                type="button"
             >
                 ×
             </button>
 
+
             <h2>
-                Carrinho
+                Seu carrinho
             </h2>
 
+
             <div id="listaCarrinho">
-                <!-- preenchido pelo JavaScript -->
+
+                <!-- JavaScript -->
+
             </div>
+
 
             <div class="total-carrinho">
 
@@ -352,15 +353,18 @@
                     Total
                 </span>
 
+
                 <strong id="totalCarrinho">
                     R$ 0,00
                 </strong>
 
             </div>
 
+
             <button
                 id="finalizarCompra"
                 class="btn-finalizar"
+                type="button"
             >
                 Finalizar compra
             </button>
@@ -370,9 +374,10 @@
     </div>
 
 
-    <!-- ==============================
-         PAGAMENTO
-    =============================== -->
+
+    <!-- =================================
+         MODAL PAGAMENTO
+    ================================== -->
 
     <div
         id="modalPagamento"
@@ -381,32 +386,37 @@
 
         <div class="conteudo-pagamento">
 
+
             <button
                 id="fecharPagamento"
                 class="fechar-carrinho"
+                type="button"
             >
                 ×
             </button>
+
 
             <h2>
                 Forma de pagamento
             </h2>
 
+
             <p>
                 Escolha como deseja realizar o pagamento.
             </p>
 
+
             <div class="opcoes-pagamento">
 
-                <button>
+                <button type="button">
                     💳 Cartão de crédito
                 </button>
 
-                <button>
+                <button type="button">
                     💳 Cartão de débito
                 </button>
 
-                <button>
+                <button type="button">
                     🔑 Pix
                 </button>
 
@@ -416,6 +426,11 @@
 
     </div>
 
+
+
+    <!-- =================================
+         RODAPÉ
+    ================================== -->
 
     <footer>
 
@@ -432,6 +447,7 @@
         </p>
 
     </footer>
+   <script src="../../../js/bancoDeDados.js"></script>
 
 
     <script src="../../../js/pelucia.js"></script>

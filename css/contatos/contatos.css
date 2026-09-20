@@ -1,0 +1,580 @@
+/* ========================================
+   HOMENAGEM — WILDTRACK
+======================================== */
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero-homenagem {
+
+    min-height: 420px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    color: var(--branco-missao);
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-image:
+        url("../../img/GabrielMandrake.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+.hero-homenagem::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(21, 101, 192, 0.70),
+            rgba(46, 125, 50, 0.65)
+        );
+
+}
+
+
+.hero-homenagem-conteudo {
+
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 850px;
+
+}
+
+
+.hero-homenagem-conteudo h1 {
+
+    margin: 18px 0;
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+}
+
+
+.hero-homenagem-conteudo p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ========================================
+   FOTOS
+======================================== */
+
+.fotos-homenagem {
+
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.fotos-primeiras {
+
+    padding: 70px 0 20px;
+
+}
+
+
+.fotos-segundas {
+
+    padding: 20px 0 80px;
+
+}
+
+
+.foto-homenagem {
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: var(--branco-missao);
+
+    border: 1px solid var(--borda-missao);
+
+    box-shadow:
+        0 7px 25px rgba(0, 0, 0, 0.10);
+
+}
+
+
+.foto-homenagem img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 380px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+.foto-homenagem:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* ========================================
+   TEXTO
+======================================== */
+
+.texto-homenagem {
+
+    width: min(900px, 90%);
+
+    margin: 0 auto;
+
+    padding: 70px 0;
+
+}
+
+
+.texto-homenagem .titulo-secao {
+
+    margin-bottom: 35px;
+
+}
+
+
+.carta-homenagem {
+
+    background: var(--branco-missao);
+
+    border: 1px solid var(--borda-missao);
+
+    border-left: 5px solid var(--azul-missao);
+
+    border-radius: 20px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.carta-homenagem p {
+
+    margin: 0 0 24px;
+
+    color: var(--preto-missao);
+
+    font-size: 17px;
+
+    line-height: 1.85;
+
+    font-weight: 600;
+
+}
+
+
+.carta-homenagem p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.carta-homenagem .assinatura {
+
+    padding-top: 25px;
+
+    margin-top: 35px;
+
+    border-top: 1px solid var(--borda-missao);
+
+}
+
+
+.carta-homenagem .assinatura strong {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--verde-missao);
+
+    font-size: 19px;
+
+}
+
+
+/* ========================================
+   INTRODUÇÃO DO GRUPO
+======================================== */
+
+.introducao-grupo {
+
+    background: #eef5f7;
+
+    padding: 80px 20px 50px;
+
+}
+
+
+.introducao-grupo .titulo-secao {
+
+    max-width: 750px;
+
+    margin: auto;
+
+}
+
+
+/* ========================================
+   GALERIA DAS PELÚCIAS
+======================================== */
+
+.galeria-pelucias-homenagem {
+
+    background: #eef5f7;
+
+    padding: 20px 20px 90px;
+
+}
+
+
+.galeria-pelucias-homenagem
+.titulo-secao {
+
+    margin-bottom: 45px;
+
+}
+
+
+.grid-pelucias-homenagem {
+
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.foto-pelucia {
+
+    margin: 0;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: var(--branco-missao);
+
+    border: 1px solid var(--borda-missao);
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.foto-pelucia:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.foto-pelucia img {
+
+    width: 100%;
+
+    height: 330px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.foto-pelucia figcaption {
+
+    padding: 16px 20px;
+
+    color: var(--verde-missao);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    border-top: 1px solid var(--borda-missao);
+
+}
+
+
+/* ========================================
+   AGRADECIMENTO FINAL
+======================================== */
+
+.agradecimento-final {
+
+    padding: 80px 20px;
+
+    color: var(--branco-missao);
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--azul-missao),
+            var(--verde-missao)
+        );
+
+}
+
+
+.agradecimento-conteudo {
+
+    max-width: 750px;
+
+    margin: auto;
+
+}
+
+
+.icone-homenagem {
+
+    display: block;
+
+    font-size: 50px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.agradecimento-conteudo h2 {
+
+    margin: 0 0 20px;
+
+    font-size: 32px;
+
+}
+
+
+.agradecimento-conteudo p {
+
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+.agradecimento-conteudo strong {
+
+    font-size: 18px;
+
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .hero-homenagem-conteudo h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .foto-homenagem img {
+
+        height: 320px;
+
+    }
+
+
+    .grid-pelucias-homenagem {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-homenagem {
+
+        min-height: 360px;
+
+        padding: 60px 20px;
+
+    }
+
+
+    .hero-homenagem-conteudo h1 {
+
+        font-size: 33px;
+
+    }
+
+
+    .hero-homenagem-conteudo p {
+
+        font-size: 16px;
+
+    }
+
+
+    .fotos-homenagem {
+
+        grid-template-columns: 1fr;
+
+        width: 92%;
+
+    }
+
+
+    .fotos-primeiras {
+
+        padding-top: 50px;
+
+    }
+
+
+    .fotos-segundas {
+
+        padding-bottom: 60px;
+
+    }
+
+
+    .foto-homenagem img {
+
+        height: 300px;
+
+    }
+
+
+    .texto-homenagem {
+
+        width: 92%;
+
+        padding: 50px 0;
+
+    }
+
+
+    .carta-homenagem {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .carta-homenagem p {
+
+        font-size: 16px;
+
+        line-height: 1.75;
+
+    }
+
+
+    .galeria-pelucias-homenagem {
+
+        padding-bottom: 60px;
+
+    }
+
+
+    .foto-pelucia img {
+
+        height: 280px;
+
+    }
+
+
+    .agradecimento-final {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .agradecimento-conteudo h2 {
+
+        font-size: 27px;
+
+    }
+
+}
