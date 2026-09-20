@@ -330,48 +330,34 @@ const pelucias = [
     descricao:
       "Uma representação carinhosa do Lobo-Guará, um dos animais mais característicos da fauna brasileira.",
 
-      versoes: {
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
 
-            tecido: {
+        preco: 89.9,
 
-                nome: "Tecido comum",
+        imagem: "../img/PeluciaLoboGuará.jpeg",
+      },
 
-                preco: 89.90,
+      croche: {
+        nome: "Crochê",
 
-                imagem:
-                  "../img/PeluciaLoboGuará.jpeg"
+        preco: 119.9,
 
-            },
-
-            croche: {
-
-                nome: "Crochê",
-
-                preco: 119.90,
-
-                imagem:
-                    "../img/LoboGuaráDeCrochê.jpeg"
-
-            }
-
-        },
+        imagem: "../img/LoboGuaráDeCrochê.jpeg",
+      },
+    },
   },
 
   {
     id: 103,
 
     nome: "Pelúcia Onça-Pintada",
-
     animal: "Panthera onca",
-
     categoria: "Mamíferos",
-
     preco: 650.8,
-
     estoque: 6,
-
     imagem: "./img/PeluciaOnçaPintada.jpeg",
-
     descricao:
       "Uma pelúcia inspirada na Onça-Pintada, símbolo da força e biodiversidade brasileira.",
   },
@@ -508,11 +494,9 @@ const pelucias = [
     descricao:
       "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
   },
-
-  
 ];
 const peluciasCroche = [
-{
+  {
     id: 111,
 
     nome: "Pelúcia Arara Azul",
@@ -701,6 +685,6 @@ const peluciasCroche = [
     descricao:
       "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
   },
-]
+];
 
 const usuarios = [];
