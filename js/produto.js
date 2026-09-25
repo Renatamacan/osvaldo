@@ -8,7 +8,6 @@ const idProduto = Number(parametros.get("id"));
 
 const todosProdutos = [
     ...produtos,
-    ...pelucias
 ];
 
 const produto = todosProdutos.find(
@@ -95,7 +94,7 @@ function carregarProduto(){
 
     document.title = produto.nome + " | WildTrack";
 
-    imagemProduto.src = `../../${produto.imagem}`;
+    imagemProduto.src = `../../img/pulseiras/${produto.imagem}`;
 
     imagemProduto.alt = produto.nome;
 
@@ -157,7 +156,7 @@ function carregarRelacionados(){
             <div class="card">
 
                 <img
-                    src="../../${item.imagem}"
+                    src="../../img/pulseiras/${item.imagem}"
                     alt="${item.nome}"
                 >
 
@@ -207,7 +206,7 @@ carregarRelacionados();
 function abrirProduto(id){
 
     window.location.href =
-        `./pages/produto.html?id=${id}`;
+        `./produto.html?id=${id}`;
 
 }
 

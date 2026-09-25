@@ -14,7 +14,7 @@ const produtos = [
 
     status: "Vulnerável",
 
-    imagem: "./img/pulseiraArarajuba.jpeg",
+    imagem: "pulseiraArarajuba.jpeg",
 
     descricao:
       "A pulseira Guaruba representa uma das aves mais emblemáticas da Amazônia. Ao adquirir esta pulseira, você contribui para projetos de conservação e recebe acesso ao acompanhamento de um exemplar monitorado.",
@@ -43,7 +43,7 @@ const produtos = [
 
     status: "Quase ameaçado",
 
-    imagem: "./img/pulseiraGaviaoReal.jpeg",
+    imagem: "pulseiraGaviaoReal.jpeg",
 
     descricao:
       "Inspirada no maior predador das florestas brasileiras, esta pulseira ajuda a financiar programas de monitoramento da espécie.",
@@ -73,7 +73,7 @@ const produtos = [
 
     status: "Vulnerável",
 
-    imagem: "./img/pulseiraArara-Azul.jpeg",
+    imagem: "pulseiraAraraAzul.jpeg",
 
     descricao:
       "A pulseira Arara Azul representa uma das espécies mais conhecidas do Pantanal brasileiro.",
@@ -102,7 +102,7 @@ const produtos = [
 
     status: "Em perigo",
 
-    imagem: "./img/pulseiraOncaPintada.jpeg",
+    imagem: "pulseiraOncaPintada.jpeg",
 
     descricao:
       "Ajude a proteger o maior felino das Américas adquirindo uma pulseira exclusiva inspirada na Onça-Pintada.",
@@ -132,7 +132,7 @@ const produtos = [
 
     status: "Quase ameaçado",
 
-    imagem: "./img/pulseiraLoboGuara.jpeg",
+    imagem: "pulseiraLoboGuara.jpeg",
 
     descricao:
       "Uma pulseira criada para apoiar a preservação do maior canídeo da América do Sul.",
@@ -162,7 +162,7 @@ const produtos = [
 
     status: "Quase ameaçado",
 
-    imagem: "./img/pulseiraGatoMaracaja.jpeg",
+    imagem: "pulseiraGatoMaracaja.jpeg",
 
     descricao: "Ajude na conservação do discreto e ágil Gato-Maracajá.",
 
@@ -190,7 +190,7 @@ const produtos = [
 
     status: "Em perigo",
 
-    imagem: "./img/pulseiraAriranha.jpeg",
+    imagem: "pulseiraAriranha.jpeg",
 
     descricao:
       "Contribua com projetos que preservam um dos maiores mamíferos aquáticos da América do Sul.",
@@ -220,7 +220,7 @@ const produtos = [
 
     status: "Vulnerável",
 
-    imagem: "./img/pulseiraTubaraoBranco.jpeg",
+    imagem: "pulseiraTubaraoBranco.jpeg",
 
     descricao:
       "Ajude a proteger um dos animais marinhos mais importantes dos oceanos.",
@@ -249,7 +249,7 @@ const produtos = [
 
     status: "Vulnerável",
 
-    imagem: "./img/pulseiraDeAbelha.jpeg",
+    imagem: "pulseiraAbelha.jpeg",
 
     descricao:
       "Ajude a proteger um dos animais marinhos mais importantes dos oceanos.",
@@ -277,7 +277,7 @@ const produtos = [
 
     status: "Vulnerável",
 
-    imagem: "./img/pulseiraArarinha-Azul.jpeg",
+    imagem: "pulseiraArarinhaAzul.jpeg",
 
     descricao:
       "Ajude a proteger um dos animais marinhos mais importantes dos oceanos.",
@@ -292,399 +292,670 @@ const produtos = [
   },
 ];
 
-const pelucias = [
-  {
-    id: 101,
-
-    nome: "Pelúcia Arara Azul",
-
-    animal: "Anodorhynchus hyacinthinus",
-
-    categoria: "Aves",
-
-    preco: 680.99,
-
-    estoque: 10,
-
-    imagem: "./img/PeluciaArara-Azul.jpeg",
+const pelucias = {
+  "guaruba": {
+    nome: "Pelúcia Guaruba",
+    animal: "Guaruba",
+    categoria: "Ave Aérea",
 
     descricao:
-      "Uma pelúcia inspirada na Arara Azul, perfeita para acompanhar quem apoia a conservação da espécie.",
-  },
-
-  {
-    id: 102,
-
-    nome: "Pelúcia Lobo-Guará",
-
-    animal: "Chrysocyon brachyurus",
-
-    categoria: "Mamíferos",
-
-    preco: 700.57,
-
-    estoque: 8,
-
-    imagem: "./img/PeluciaLoboGuará.jpeg",
-
-    descricao:
-      "Uma representação carinhosa do Lobo-Guará, um dos animais mais característicos da fauna brasileira.",
+      "A guaruba, também conhecida como ararajuba, é uma ave brasileira de plumagem predominantemente amarela e verde. É encontrada principalmente na região amazônica e se destaca por viver em grupos e formar fortes vínculos sociais.",
 
     versoes: {
       tecido: {
         nome: "Tecido comum",
-
-        preco: 89.9,
-
-        imagem: "../img/PeluciaLoboGuará.jpeg",
+        preco: 49.9,
+        imagem: "peluciaGuaruba.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-
-        preco: 119.9,
-
-        imagem: "../img/LoboGuaráDeCrochê.jpeg",
+        preco: 69.9,
+        imagem: "peluciaGuarubaCroche.jpeg",
       },
     },
+
+    caracteristicas: [
+      {
+        titulo: "Material",
+        texto:
+          "Produzida com tecido macio e enchimento confortável, adequada para decoração e contato cuidadoso.",
+      },
+      {
+        titulo: "Tamanho",
+        texto:
+          "Tamanho compacto, pensado para ser facilmente transportado e utilizado como objeto decorativo.",
+      },
+      {
+        titulo: "Produção",
+        texto:
+          "Produção artesanal e cuidadosa, com detalhes inspirados nas cores características da guaruba.",
+      },
+      {
+        titulo: "Indicação",
+        texto:
+          "Indicada para pessoas que gostam de aves, animais brasileiros e iniciativas de conservação da fauna.",
+      },
+    ],
+
+    informacoes: [
+      {
+        icone: "🐾",
+        titulo: "Onde vive?",
+        texto:
+          "Vive principalmente em áreas de floresta da Amazônia brasileira, utilizando árvores para alimentação, abrigo e reprodução.",
+      },
+      {
+        icone: "🌱",
+        titulo: "Alimentação",
+        texto:
+          "Alimenta-se principalmente de frutos, sementes, flores e outros recursos vegetais encontrados na floresta.",
+      },
+      {
+        icone: "⚠️",
+        titulo: "Ameaças",
+        texto:
+          "Entre as principais ameaças estão a perda de habitat e a captura ilegal para o comércio de animais silvestres.",
+      },
+    ],
   },
 
-  {
-    id: 103,
-
-    nome: "Pelúcia Onça-Pintada",
-    animal: "Panthera onca",
-    categoria: "Mamíferos",
-    preco: 650.8,
-    estoque: 6,
-    imagem: "./img/PeluciaOnçaPintada.jpeg",
-    descricao:
-      "Uma pelúcia inspirada na Onça-Pintada, símbolo da força e biodiversidade brasileira.",
-  },
-
-  {
-    id: 104,
-
-    nome: "Pelúcia Ariranha",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Marinhos",
-
-    preco: 739.99,
-
-    estoque: 7,
-
-    imagem: "./img/PeluciaAriranha.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 105,
-
-    nome: "Pelúcia Gato Maracajá",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Mamíferos",
-
-    preco: 800.51,
-
-    estoque: 7,
-
-    imagem: "./img/PeluciaGatoMaracajá.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 106,
-
-    nome: "Pelúcia Gavião Real",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Aves",
-
-    preco: 680.75,
-
-    estoque: 7,
-
-    imagem: "./img/PeluciaGaviãoReal.jpeg",
+  "gaviao-real": {
+    nome: "Pelúcia Gavião-Real",
+    animal: "Gavião-Real",
+    categoria: "Ave Aérea",
 
     descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+      "O gavião-real é uma das maiores e mais poderosas aves de rapina das Américas. Possui grandes garras, visão aguçada e capacidade de capturar animais de médio porte.",
+
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
+        preco: 54.9,
+        imagem: "peluciaGaviaoReal.jpeg",
+      },
+
+      croche: {
+        nome: "Crochê",
+        preco: 74.9,
+        imagem: "peluciaGaviaoRealCroche.jpeg",
+      },
+    },
+
+    caracteristicas: [
+      {
+        titulo: "Material",
+        texto:
+          "Produzida com tecido macio e enchimento leve, com detalhes inspirados na aparência da espécie.",
+      },
+      {
+        titulo: "Tamanho",
+        texto:
+          "Tamanho compacto, adequado para decoração, coleção e transporte.",
+      },
+      {
+        titulo: "Produção",
+        texto:
+          "Produção artesanal com atenção aos detalhes da cabeça, das asas e das cores da ave.",
+      },
+      {
+        titulo: "Indicação",
+        texto:
+          "Indicada para admiradores de aves de rapina e da fauna brasileira.",
+      },
+    ],
+
+    informacoes: [
+      {
+        icone: "🐾",
+        titulo: "Onde vive?",
+        texto:
+          "Habita principalmente grandes áreas de floresta tropical da América Central e do Sul, incluindo regiões da Amazônia.",
+      },
+      {
+        icone: "🌱",
+        titulo: "Alimentação",
+        texto:
+          "É um predador que se alimenta principalmente de mamíferos arborícolas, aves e outros animais.",
+      },
+      {
+        icone: "⚠️",
+        titulo: "Ameaças",
+        texto:
+          "A perda e fragmentação das florestas, além da perseguição e redução de suas presas, podem prejudicar suas populações.",
+      },
+    ],
   },
 
-  {
-    id: 107,
-
-    nome: "Pelúcia Guaruba",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Aves",
-
-    preco: 650.39,
-
-    estoque: 7,
-
-    imagem: "./img/PeluciaGuaruba.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 108,
-
-    nome: "Pelúcia Tubarão",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Marinhos",
-
-    preco: 999.999,
-
-    estoque: 7,
-
-    imagem: "./img/PeluciaTubarão.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 109,
-
-    nome: "Pelúcia Colmeia",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Insetos",
-
-    preco: 979.99,
-
-    estoque: 7,
-
-    imagem: "./img/PeluciaColmeiaAbelha.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 110,
-
-    nome: "Pelúcia Ararinha Azul",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Aves",
-
-    preco: 999.999,
-
-    estoque: 7,
-
-    imagem: "./img/PeluciaArarinha-Azul.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-];
-const peluciasCroche = [
-  {
-    id: 111,
-
+  "arara-azul": {
     nome: "Pelúcia Arara Azul",
-
-    animal: "Anodorhynchus hyacinthinus",
-
-    categoria: "Aves",
-
-    preco: 750.99,
-
-    estoque: 7,
-
-    imagem: "./img/Arara-AzulCrochê.jpeg",
+    animal: "Arara Azul",
+    categoria: "Ave Aérea",
 
     descricao:
-      "Uma pelúcia inspirada na Arara Azul, perfeita para acompanhar quem apoia a conservação da espécie.",
+      "A arara-azul é uma grande ave brasileira conhecida por sua plumagem azul intensa e pelo bico extremamente forte. É uma das espécies mais emblemáticas da fauna brasileira.",
+
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
+        preco: 49.9,
+        imagem: "peluciaAraraAzul.jpeg",
+      },
+
+      croche: {
+        nome: "Crochê",
+        preco: 69.9,
+        imagem: "peluciaAraraAzulCroche.jpeg",
+      },
+    },
+
+    caracteristicas: [
+      {
+        titulo: "Material",
+        texto:
+          "Produzida com tecido macio e enchimento confortável, com cores inspiradas na plumagem da espécie.",
+      },
+      {
+        titulo: "Tamanho",
+        texto: "Tamanho compacto, adequado para decoração e coleção.",
+      },
+      {
+        titulo: "Produção",
+        texto:
+          "Produção artesanal com detalhes inspirados nas asas, no bico e na plumagem azul.",
+      },
+      {
+        titulo: "Indicação",
+        texto:
+          "Indicada para crianças, colecionadores e pessoas interessadas na conservação das aves brasileiras.",
+      },
+    ],
+
+    informacoes: [
+      {
+        icone: "🐾",
+        titulo: "Onde vive?",
+        texto:
+          "Pode ser encontrada em diferentes ambientes brasileiros, especialmente no Pantanal e em áreas de cerrado e floresta.",
+      },
+      {
+        icone: "🌱",
+        titulo: "Alimentação",
+        texto:
+          "Alimenta-se principalmente de sementes e frutos, especialmente aqueles encontrados em palmeiras.",
+      },
+      {
+        icone: "⚠️",
+        titulo: "Ameaças",
+        texto:
+          "A perda de habitat e o tráfico de animais silvestres estão entre os principais riscos enfrentados pela espécie.",
+      },
+    ],
   },
 
-  {
-    id: 112,
-
-    nome: "Pelúcia Lobo Guará",
-
-    animal: "Chrysocyon brachyurus",
-
-    categoria: "Mamífero",
-
-    preco: 775.4,
-
-    estoque: 7,
-
-    imagem: "./img/LoboGuaráDeCrochê.jpeg",
-
-    descricao:
-      "Uma representação carinhosa do Lobo-Guará, um dos animais mais característicos da fauna brasileira.",
-  },
-
-  {
-    id: 113,
-
-    nome: "Pelúcia Onça-Pintada",
-
-    animal: "Panthera onca",
-
-    categoria: "Mamíferos",
-
-    preco: 950.9,
-
-    estoque: 6,
-
-    imagem: "./img/OnçaPintadaDeCrochê.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Onça-Pintada, símbolo da força e biodiversidade brasileira.",
-  },
-
-  {
-    id: 114,
-
-    nome: "Pelúcia Ariranha",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Marinhos",
-
-    preco: 860.78,
-
-    estoque: 7,
-
-    imagem: "./img/AriranhaDeCrochê.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 115,
-
-    nome: "Pelúcia Gato Maracajá",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Mamíferos",
-
-    preco: 1058.999,
-
-    estoque: 7,
-
-    imagem: "./img/GatoMaracajáDeCrochê.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 116,
-
-    nome: "Pelúcia Gavião Real",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Aves",
-
-    preco: 720.49,
-
-    estoque: 7,
-
-    imagem: "./img/GaviãoRealDeCrochê.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 117,
-
-    nome: "Pelúcia Guaruba",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Aves",
-
-    preco: 699.99,
-
-    estoque: 7,
-
-    imagem: "./img/GuarubaDeCrochê.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 118,
-
-    nome: "Pelúcia Tubarão",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Marinhos",
-
-    preco: 1199.999,
-
-    estoque: 7,
-
-    imagem: "./img/TubarãoDeCroChê.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 119,
-
-    nome: "Pelúcia Colmeia",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Insetos",
-
-    preco: 1389.999,
-
-    estoque: 7,
-
-    imagem: "./img/ColmeiasDeCrochê.jpeg",
-
-    descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
-  },
-
-  {
-    id: 120,
-
+  "ararinha-azul": {
     nome: "Pelúcia Ararinha Azul",
-
-    animal: "Pteronura brasiliensis",
-
-    categoria: "Aves",
-
-    preco: 11499.999,
-
-    estoque: 7,
-
-    imagem: "./img/Ararinha-AzulCrochê.jpeg",
+    animal: "Ararinha Azul",
+    categoria: "Ave Aérea",
 
     descricao:
-      "Uma pelúcia inspirada na Ariranha, um dos maiores mamíferos aquáticos da América do Sul.",
+      "A ararinha-azul é uma pequena ave brasileira de plumagem azul. A espécie tornou-se símbolo da conservação da fauna brasileira após desaparecer da natureza e passar por programas de reprodução e reintrodução.",
+
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
+        preco: 49.9,
+        imagem: "peluciaArarinhaAzul.jpeg",
+      },
+
+      croche: {
+        nome: "Crochê",
+        preco: 69.9,
+        imagem: "peluciaArarinhaAzulCroche.jpeg",
+      },
+    },
+
+    caracteristicas: [
+      {
+        titulo: "Material",
+        texto:
+          "Produzida com tecido macio e enchimento leve, representando as características visuais da espécie.",
+      },
+      {
+        titulo: "Tamanho",
+        texto: "Tamanho compacto, adequado para decoração e coleção.",
+      },
+      {
+        titulo: "Produção",
+        texto:
+          "Produção artesanal com detalhes inspirados na plumagem azul da ararinha.",
+      },
+      {
+        titulo: "Indicação",
+        texto:
+          "Indicada para pessoas interessadas em conservação ambiental e proteção de espécies ameaçadas.",
+      },
+    ],
+
+    informacoes: [
+      {
+        icone: "🐾",
+        titulo: "Onde vive?",
+        texto:
+          "Historicamente era encontrada na região de Curaçá, na Bahia, associada a áreas de caatinga próximas a cursos de água.",
+      },
+      {
+        icone: "🌱",
+        titulo: "Alimentação",
+        texto:
+          "Alimenta-se principalmente de sementes, frutos e outros recursos vegetais.",
+      },
+      {
+        icone: "⚠️",
+        titulo: "Ameaças",
+        texto:
+          "A captura para o comércio ilegal e a perda de habitat foram fatores importantes para seu desaparecimento da natureza.",
+      },
+    ],
   },
-];
+
+  "lobo-guara": {
+    nome: "Pelúcia Lobo-Guará",
+    animal: "Lobo-Guará",
+    categoria: "Mamífero Terrestre",
+
+    descricao:
+      "O lobo-guará é o maior canídeo da América do Sul. Possui pernas longas, pelagem avermelhada e uma aparência bastante característica, sendo um dos animais mais conhecidos do Cerrado brasileiro.",
+
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
+        preco: 49.9,
+        imagem: "peluciaLoboGuara.jpeg",
+      },
+
+      croche: {
+        nome: "Crochê",
+        preco: 69.9,
+        imagem: "peluciaLoboGuaraCroche.jpeg",
+      },
+    },
+
+    caracteristicas: [
+      {
+        titulo: "Material",
+        texto:
+          "Produzida com tecido macio e enchimento confortável, com pelagem inspirada nas cores do lobo-guará.",
+      },
+      {
+        titulo: "Tamanho",
+        texto: "Tamanho compacto, adequado para decoração e coleção.",
+      },
+      {
+        titulo: "Produção",
+        texto:
+          "Produção artesanal com detalhes inspirados nas pernas longas, orelhas e pelagem do animal.",
+      },
+      {
+        titulo: "Indicação",
+        texto:
+          "Indicada para admiradores da fauna brasileira e interessados na conservação do Cerrado.",
+      },
+    ],
+
+    informacoes: [
+      {
+        icone: "🐾",
+        titulo: "Onde vive?",
+        texto:
+          "É encontrado principalmente em áreas abertas do Cerrado, mas também pode ocorrer em outros ambientes da América do Sul.",
+      },
+      {
+        icone: "🌱",
+        titulo: "Alimentação",
+        texto:
+          "É onívoro e alimenta-se de frutos, especialmente da lobeira, além de pequenos animais e outros recursos.",
+      },
+      {
+        icone: "⚠️",
+        titulo: "Ameaças",
+        texto:
+          "A perda e fragmentação do habitat, atropelamentos e conflitos com atividades humanas estão entre os problemas enfrentados pela espécie.",
+      },
+    ],
+  },
+
+  "onca-pintada": {
+    nome: "Pelúcia Onça-Pintada",
+    animal: "Onça-Pintada",
+    categoria: "Mamífero Terrestre",
+
+    descricao:
+      "A onça-pintada é o maior felino das Américas. Possui grande força física, excelente capacidade de natação e um padrão de manchas característico.",
+
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
+        preco: 54.9,
+        imagem: "peluciaOncaPintada.jpeg",
+      },
+
+      croche: {
+        nome: "Crochê",
+        preco: 74.9,
+        imagem: "peluciaOncaPintadaCroche.jpeg",
+      },
+    },
+
+    caracteristicas: [
+      {
+        titulo: "Material",
+        texto:
+          "Produzida com tecido macio e enchimento confortável, com estampa inspirada na pelagem da espécie.",
+      },
+      {
+        titulo: "Tamanho",
+        texto:
+          "Tamanho compacto, adequado para decoração, coleção e transporte.",
+      },
+      {
+        titulo: "Produção",
+        texto:
+          "Produção artesanal com atenção ao padrão de manchas e às características do felino.",
+      },
+      {
+        titulo: "Indicação",
+        texto:
+          "Indicada para admiradores de grandes felinos e da biodiversidade brasileira.",
+      },
+    ],
+
+    informacoes: [
+      {
+        icone: "🐾",
+        titulo: "Onde vive?",
+        texto:
+          "Pode ocupar diferentes ambientes, incluindo florestas, áreas de cerrado e regiões alagáveis como o Pantanal.",
+      },
+      {
+        icone: "🌱",
+        titulo: "Alimentação",
+        texto:
+          "É carnívora e pode se alimentar de uma grande variedade de mamíferos, répteis, aves e outros animais.",
+      },
+      {
+        icone: "⚠️",
+        titulo: "Ameaças",
+        texto:
+          "A perda e fragmentação do habitat, a redução de presas e conflitos com atividades humanas estão entre suas principais ameaças.",
+      },
+    ],
+  },
+
+  "gato-maracaja": {
+    nome: "Pelúcia Gato-Maracajá",
+    animal: "Gato-Maracajá",
+    categoria: "Mamífero Terrestre",
+
+    descricao:
+      "O gato-maracajá é um pequeno felino de hábitos predominantemente arborícolas. Possui grande habilidade para subir em árvores e uma pelagem marcada por manchas e rosetas.",
+
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
+        preco: 49.9,
+        imagem: "peluciaGatoMaracaja.jpeg",
+      },
+
+      croche: {
+        nome: "Crochê",
+        preco: 69.9,
+        imagem: "peluciaGatoMaracajaCroche.jpeg",
+      },
+    },
+
+    caracteristicas: [
+      {
+        titulo: "Material",
+        texto:
+          "Produzida com tecido macio e enchimento leve, com detalhes inspirados na pelagem do gato-maracajá.",
+      },
+      {
+        titulo: "Tamanho",
+        texto: "Tamanho compacto, adequado para decoração e coleção.",
+      },
+      {
+        titulo: "Produção",
+        texto:
+          "Produção artesanal com representação das manchas e características do pequeno felino.",
+      },
+      {
+        titulo: "Indicação",
+        texto:
+          "Indicada para pessoas que gostam de felinos e da biodiversidade das florestas brasileiras.",
+      },
+    ],
+
+    informacoes: [
+      {
+        icone: "🐾",
+        titulo: "Onde vive?",
+        texto:
+          "Vive principalmente em áreas florestais da América Central e da América do Sul, incluindo diferentes regiões do Brasil.",
+      },
+      {
+        icone: "🌱",
+        titulo: "Alimentação",
+        texto:
+          "Alimenta-se de pequenos mamíferos, aves, répteis, anfíbios e outros pequenos animais.",
+      },
+      {
+        icone: "⚠️",
+        titulo: "Ameaças",
+        texto:
+          "A perda e fragmentação das florestas, atropelamentos e outras alterações provocadas pelas atividades humanas representam riscos para a espécie.",
+      },
+    ],
+  },
+
+  "tubarao-branco": {
+    nome: "Pelúcia Tubarão Branco",
+    animal: "Tubarão Branco",
+    categoria: "Peixe Aquático",
+
+    descricao:
+      "O tubarão-branco é um grande peixe predador encontrado principalmente em águas costeiras e temperadas de diferentes regiões do planeta. É conhecido por seu corpo robusto e pelos dentes serrilhados.",
+
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
+        preco: 54.9,
+        imagem: "peluciaTubaraoBranco.jpeg",
+      },
+
+      croche: {
+        nome: "Crochê",
+        preco: 74.9,
+        imagem: "peluciaTubaraoBrancoCroche.jpeg",
+      },
+    },
+
+    caracteristicas: [
+      {
+        titulo: "Material",
+        texto:
+          "Produzida com tecido macio e enchimento confortável, representando as cores características do animal.",
+      },
+      {
+        titulo: "Tamanho",
+        texto: "Tamanho compacto, adequado para decoração e coleção.",
+      },
+      {
+        titulo: "Produção",
+        texto:
+          "Produção artesanal com detalhes inspirados no corpo, nas nadadeiras e na cabeça do tubarão.",
+      },
+      {
+        titulo: "Indicação",
+        texto:
+          "Indicada para pessoas interessadas em animais marinhos e na conservação dos oceanos.",
+      },
+    ],
+
+    informacoes: [
+      {
+        icone: "🐾",
+        titulo: "Onde vive?",
+        texto:
+          "É encontrado em diferentes oceanos, principalmente em regiões costeiras e águas temperadas.",
+      },
+      {
+        icone: "🌱",
+        titulo: "Alimentação",
+        texto:
+          "Alimenta-se de peixes, raias, outros animais marinhos e, especialmente quando adulto, mamíferos marinhos.",
+      },
+      {
+        icone: "⚠️",
+        titulo: "Ameaças",
+        texto:
+          "Pesca acidental e direcionada, redução de presas e alterações nos ecossistemas marinhos podem afetar suas populações.",
+      },
+    ],
+  },
+
+  "abelha": {
+    nome: "Pelúcia Abelha",
+    animal: "Abelha",
+    categoria: "Inseto Aéreo",
+
+    descricao:
+      "As abelhas são insetos fundamentais para diversos ecossistemas. Muitas espécies atuam como polinizadoras, transportando pólen entre flores e contribuindo para a reprodução de numerosas plantas.",
+
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
+        preco: 44.9,
+        imagem: "peluciaAbelha.jpeg",
+      },
+
+      croche: {
+        nome: "Crochê",
+        preco: 64.9,
+        imagem: "peluciaAbelhaCroche.jpeg",
+      },
+    },
+
+    caracteristicas: [
+      {
+        titulo: "Material",
+        texto:
+          "Produzida com tecido macio e enchimento leve, utilizando cores inspiradas no corpo das abelhas.",
+      },
+      {
+        titulo: "Tamanho",
+        texto:
+          "Tamanho compacto, adequado para decoração, coleção e atividades educativas.",
+      },
+      {
+        titulo: "Produção",
+        texto:
+          "Produção artesanal com detalhes inspirados nas asas, listras e formato do corpo do inseto.",
+      },
+      {
+        titulo: "Indicação",
+        texto:
+          "Indicada para atividades educativas e para pessoas interessadas em polinização e preservação ambiental.",
+      },
+    ],
+
+    informacoes: [
+      {
+        icone: "🐾",
+        titulo: "Onde vive?",
+        texto:
+          "As abelhas podem viver em diversos ambientes onde existam flores e locais adequados para construção de seus ninhos ou colmeias.",
+      },
+      {
+        icone: "🌱",
+        titulo: "Alimentação",
+        texto:
+          "Alimentam-se principalmente de néctar e pólen das flores. O néctar fornece energia e o pólen é uma importante fonte de nutrientes.",
+      },
+      {
+        icone: "⚠️",
+        titulo: "Ameaças",
+        texto:
+          "Perda de habitat, uso inadequado de pesticidas, doenças, parasitas e alterações ambientais podem afetar diferentes espécies de abelhas.",
+      },
+    ],
+  },
+
+  "ariranha": {
+    nome: "Pelúcia Ariranha",
+    animal: "Ariranha",
+    categoria: "Mamífero Aquático",
+
+    descricao:
+      "A ariranha é um mamífero semiaquático da América do Sul. Vive em grupos familiares e apresenta excelente adaptação à vida em rios, lagos e outros ambientes de água doce.",
+
+    versoes: {
+      tecido: {
+        nome: "Tecido comum",
+        preco: 49.9,
+        imagem: "peluciaAriranha.jpeg",
+      },
+
+      croche: {
+        nome: "Crochê",
+        preco: 69.9,
+        imagem: "peluciaAriranhaCroche.jpeg",
+      },
+    },
+
+    caracteristicas: [
+      {
+        titulo: "Material",
+        texto:
+          "Produzida com tecido macio e enchimento confortável, representando a pelagem escura característica da espécie.",
+      },
+      {
+        titulo: "Tamanho",
+        texto: "Tamanho compacto, adequado para decoração e coleção.",
+      },
+      {
+        titulo: "Produção",
+        texto:
+          "Produção artesanal com detalhes inspirados no corpo alongado, nas patas e na cabeça da ariranha.",
+      },
+      {
+        titulo: "Indicação",
+        texto:
+          "Indicada para pessoas interessadas em mamíferos aquáticos e na preservação dos rios brasileiros.",
+      },
+    ],
+
+    informacoes: [
+      {
+        icone: "🐾",
+        titulo: "Onde vive?",
+        texto:
+          "Vive principalmente em rios, lagos, igarapés e outros ambientes de água doce da América do Sul.",
+      },
+      {
+        icone: "🌱",
+        titulo: "Alimentação",
+        texto:
+          "Alimenta-se principalmente de peixes, mas também pode consumir crustáceos e outros animais aquáticos.",
+      },
+      {
+        icone: "⚠️",
+        titulo: "Ameaças",
+        texto:
+          "A degradação dos ambientes aquáticos, poluição, perda de habitat e conflitos relacionados à atividade humana podem afetar suas populações.",
+      },
+    ],
+  },
+};
 
 const usuarios = [];

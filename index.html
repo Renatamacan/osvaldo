@@ -28,7 +28,7 @@
 
           <li><a href="#produtos">Pulseiras</a></li>
 
-          <li><a href="#missoes">Missão</a></li>
+          <li><a href="#missoes">Missões</a></li>
 
           <li><a href="./pages/contatos/contato.html">Contato</a></li>
 
@@ -92,7 +92,7 @@
           <!-- MISSÃO AÉREA -->
 
           <div class="card missao-card">
-            <img src="./img/araraAzulRosto.jpeg" alt="Animais aéreos" />
+            <img src="./img/missoes/araraAzul.jpeg" alt="Animais aéreos" />
 
             <div class="missao-conteudo">
               <span class="missao-tipo"> AÉREOS </span>
@@ -104,7 +104,7 @@
                 preservação dos céus e das florestas.
               </p>
 
-              <a href="./pages/missões/aereo/aereo.html" class="btn-card"
+              <a href="./pages/missões/aereo.html" class="btn-card"
                 >Explorar</a
               >
             </div>
@@ -113,7 +113,7 @@
           <!-- MISSÃO TERRESTRE -->
 
           <div class="card missao-card">
-            <img src="./img/loboGuaraRosto.jpeg" alt="Animais terrestres" />
+            <img src="./img/missoes/loboGuara.jpeg" alt="Animais terrestres" />
 
             <div class="missao-conteudo">
               <span class="missao-tipo"> TERRESTRES </span>
@@ -126,7 +126,7 @@
               </p>
 
               <a
-                href="./pages/missões/terrestre/terrestre.html"
+                href="./pages/missões/terrestre.html"
                 class="btn-card"
                 >Explorar</a
               >
@@ -136,7 +136,7 @@
           <!-- MISSÃO AQUÁTICA -->
 
           <div class="card missao-card">
-            <img src="./img/tubarãoBranco.jpeg" alt="Animais aquáticos" />
+            <img src="./img/missoes/tubaraoBranco.jpeg" alt="Animais aquáticos" />
 
             <div class="missao-conteudo">
               <span class="missao-tipo"> AQUÁTICOS </span>
@@ -148,7 +148,7 @@
                 aquáticos.
               </p>
 
-              <a href="./pages/missões/aquático/aquatico.html" class="btn-card"
+              <a href="./pages/missões/aquatico.html" class="btn-card"
                 >Explorar</a
               >
             </div>
@@ -192,7 +192,7 @@
                 <div class="card">
 
                     <img
-                        src="${produto.imagem}"
+                        src="./img/pulseiras/${produto.imagem}"
                         alt="${produto.nome}"
                     >
 
@@ -250,67 +250,48 @@
 
       const listaPelucias = document.getElementById("listaPelucias");
 
-      pelucias.forEach((pelucia) => {
-        listaPelucias.innerHTML += `
+      for (let i = 0; i < Object.keys(pelucias).length; i++) {
+        const chaveAtual = Object.keys(pelucias)[i];
+        const peluciaAtual = pelucias[chaveAtual];
+        const nomePelucia = peluciaAtual.nome;
+        const animalPelucia = peluciaAtual.animal;
+        const categoriaPelucia = peluciaAtual.categoria;
+        const descricaoPelucia = peluciaAtual.descricao;
+        const versoesPelucia = peluciaAtual.versoes;
 
+        listaPelucias.innerHTML += `
             <div class="card">
 
                 <img
-                    src="${pelucia.imagem}"
-                    alt="${pelucia.nome}"
+                    src="./img/pelucias/tecido/${versoesPelucia.tecido.imagem}"
+                    alt="${nomePelucia}"
                 >
 
                 <div class="card-body">
-
                     <span class="categoria">
-
-                        ${pelucia.categoria}
-
+                        ${categoriaPelucia}
                     </span>
 
                     <h3>
-
-                        ${pelucia.nome}
-
+                        ${nomePelucia}
                     </h3>
 
-                    <p>
-
-                        ${pelucia.descricao.substring(0, 90)}...
-
-                    </p>
-
-                    <div class="status">
-
-                        ${pelucia.estoque > 0 ? "Disponível" : "Esgotado"}
-
-                    </div>
-
                     <div class="rodape-card">
-
                         <span class="preco">
-
-                            R$ ${pelucia.preco.toFixed(2).replace(".", ",")}
-
+                            R$ ${versoesPelucia.tecido.preco.toFixed(2).replace(".", ",")}
                         </span>
 
                         <a
-                            href="./pages/produto/pelúcias/pelucia.html?id=${pelucia.id}"
+                            href="./pages/produto/pelúcias/pelucia.html?id=${chaveAtual}"
                             class="btn-card"
                         >
-
                             Ver Produto
-
                         </a>
-
                     </div>
-
                 </div>
-
             </div>
-
         `;
-      });
+      }
     </script>
   </body>
 </html>

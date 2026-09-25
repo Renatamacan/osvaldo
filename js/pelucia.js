@@ -1,300 +1,4 @@
 /* ========================================
-   BANCO DE DADOS DAS PELÚCIAS
-======================================== */
-
-// const pelucias = {
-
-//     "lobo-guara": {
-
-//         nome: "Pelúcia Lobo-guará",
-
-//         animal: "Lobo-guará",
-
-//         categoria: "MAMÍFERO TERRESTRE",
-
-//         descricao:
-//             "Uma representação carinhosa do lobo-guará, " +
-//             "um dos animais mais conhecidos da fauna brasileira.",
-
-
-//         versoes: {
-
-//             tecido: {
-
-//                 nome: "Tecido comum",
-
-//                 preco: 89.90,
-
-//                 imagem:
-//                     "./img/peluciaLoboGuaraTecido.jpeg"
-
-//             },
-
-//             croche: {
-
-//                 nome: "Crochê",
-
-//                 preco: 119.90,
-
-//                 imagem:
-//                     "./img/peluciaLoboGuaraCroche.jpeg"
-
-//             }
-
-//         },
-
-
-//         caracteristicas: [
-
-//             {
-//                 titulo: "Material",
-//                 texto: "Tecido macio e resistente."
-//             },
-
-//             {
-//                 titulo: "Tamanho",
-//                 texto: "Tamanho ideal para decoração e coleção."
-//             },
-
-//             {
-//                 titulo: "Produção",
-//                 texto: "Produto desenvolvido para representar a fauna brasileira."
-//             },
-
-//             {
-//                 titulo: "Indicação",
-//                 texto: "Produto decorativo e educativo."
-//             }
-
-//         ],
-
-
-//         informacoes: [
-
-//             {
-//                 icone: "🐾",
-//                 titulo: "Onde vive?",
-//                 texto:
-//                     "O lobo-guará vive principalmente em áreas abertas " +
-//                     "do Cerrado e em outras regiões da América do Sul."
-//             },
-
-//             {
-//                 icone: "🌱",
-//                 titulo: "Alimentação",
-//                 texto:
-//                     "Sua alimentação é bastante variada, incluindo frutos " +
-//                     "e pequenos animais."
-//             },
-
-//             {
-//                 icone: "⚠️",
-//                 titulo: "Ameaças",
-//                 texto:
-//                     "A perda de habitat, atropelamentos e conflitos com " +
-//                     "atividades humanas estão entre as ameaças enfrentadas."
-//             }
-
-//         ]
-
-//     },
-
-
-//     "arara-azul": {
-
-//         nome: "Pelúcia Arara-azul",
-
-//         animal: "Arara-azul",
-
-//         categoria: "AVE",
-
-//         descricao:
-//             "Uma pelúcia inspirada na beleza da arara-azul, " +
-//             "uma das aves mais marcantes da fauna brasileira.",
-
-
-//         versoes: {
-
-//             tecido: {
-
-//                 nome: "Tecido comum",
-
-//                 preco: 84.90,
-
-//                 imagem:
-//                     "./img/peluciaAraraAzulTecido.jpeg"
-
-//             },
-
-//             croche: {
-
-//                 nome: "Crochê",
-
-//                 preco: 114.90,
-
-//                 imagem:
-//                     "./img/peluciaAraraAzulCroche.jpeg"
-
-//             }
-
-//         },
-
-
-//         caracteristicas: [
-
-//             {
-//                 titulo: "Material",
-//                 texto: "Tecido macio e confortável."
-//             },
-
-//             {
-//                 titulo: "Formato",
-//                 texto: "Modelo inspirado nas características da arara-azul."
-//             },
-
-//             {
-//                 titulo: "Produção",
-//                 texto: "Produto desenvolvido com finalidade educativa."
-//             },
-
-//             {
-//                 titulo: "Indicação",
-//                 texto: "Coleção, decoração e atividades educativas."
-//             }
-
-//         ],
-
-
-//         informacoes: [
-
-//             {
-//                 icone: "🦜",
-//                 titulo: "Onde vive?",
-//                 texto:
-//                     "A arara-azul pode ser encontrada em diferentes " +
-//                     "regiões da América do Sul."
-//             },
-
-//             {
-//                 icone: "🌱",
-//                 titulo: "Alimentação",
-//                 texto:
-//                     "Alimenta-se principalmente de sementes, frutos " +
-//                     "e castanhas."
-//             },
-
-//             {
-//                 icone: "⚠️",
-//                 titulo: "Ameaças",
-//                 texto:
-//                     "A perda de habitat e a captura ilegal estão entre " +
-//                     "os fatores que podem afetar suas populações."
-//             }
-
-//         ]
-
-//     },
-
-
-//     "onca-pintada": {
-
-//         nome: "Pelúcia Onça-pintada",
-
-//         animal: "Onça-pintada",
-
-//         categoria: "MAMÍFERO TERRESTRE",
-
-//         descricao:
-//             "Uma pelúcia inspirada na maior espécie de felino " +
-//             "das Américas.",
-
-
-//         versoes: {
-
-//             tecido: {
-
-//                 nome: "Tecido comum",
-
-//                 preco: 99.90,
-
-//                 imagem:
-//                     "./img/peluciaOncaPintadaTecido.jpeg"
-
-//             },
-
-//             croche: {
-
-//                 nome: "Crochê",
-
-//                 preco: 129.90,
-
-//                 imagem:
-//                     "./img/peluciaOncaPintadaCroche.jpeg"
-
-//             }
-
-//         },
-
-
-//         caracteristicas: [
-
-//             {
-//                 titulo: "Material",
-//                 texto: "Tecido macio e resistente."
-//             },
-
-//             {
-//                 titulo: "Formato",
-//                 texto: "Modelo inspirado na aparência da onça-pintada."
-//             },
-
-//             {
-//                 titulo: "Produção",
-//                 texto: "Produto educativo relacionado à conservação."
-//             },
-
-//             {
-//                 titulo: "Indicação",
-//                 texto: "Decoração, coleção e atividades educativas."
-//             }
-
-//         ],
-
-
-//         informacoes: [
-
-//             {
-//                 icone: "🐆",
-//                 titulo: "Onde vive?",
-//                 texto:
-//                     "A onça-pintada ocorre em diferentes ambientes " +
-//                     "da América Latina, incluindo biomas brasileiros."
-//             },
-
-//             {
-//                 icone: "🌱",
-//                 titulo: "Alimentação",
-//                 texto:
-//                     "É um predador e alimenta-se de diferentes espécies " +
-//                     "de animais."
-//             },
-
-//             {
-//                 icone: "⚠️",
-//                 titulo: "Ameaças",
-//                 texto:
-//                     "A perda e fragmentação de habitats, conflitos " +
-//                     "e outras pressões humanas podem afetar a espécie."
-//             }
-
-//         ]
-
-//     }
-
-// };
-
-
-/* ========================================
    IDENTIFICAR PRODUTO
 ======================================== */
 
@@ -303,12 +7,9 @@ const parametros =
 
 const idPelucia =
     parametros.get("id");
-console.log (idPelucia)
 
 const pelucia =
     pelucias[idPelucia];
-
-    console.log (pelucia)
 
 /* ========================================
    VERIFICAR PRODUTO
@@ -443,7 +144,7 @@ function carregarProduto() {
 
 
     tituloAnimal.textContent =
-        `Sobre o ${pelucia.animal}`;
+        `Sobre ${pelucia.animal}`;
 
 
     carregarVersoes();
@@ -462,19 +163,14 @@ function carregarProduto() {
 ======================================== */
 
 function carregarVersoes() {
-
     opcoesVersao.innerHTML = "";
-
 
     Object.entries(
         pelucia.versoes
     ).forEach(
         ([id, versao]) => {
-
-
             const botao =
                 document.createElement("button");
-
 
             botao.type = "button";
 
@@ -482,18 +178,13 @@ function carregarVersoes() {
                 "opcao-versao"
             );
 
-
             if (id === versaoSelecionada) {
-
                 botao.classList.add(
                     "selecionado"
                 );
-
             }
 
-
             botao.dataset.tipo = id;
-
 
             const icone =
                 id === "croche"
@@ -502,7 +193,6 @@ function carregarVersoes() {
 
 
             botao.innerHTML = `
-
                 <span class="icone-versao">
                     ${icone}
                 </span>
@@ -518,19 +208,14 @@ function carregarVersoes() {
                     </small>
 
                 </span>
-
             `;
-
 
             botao.addEventListener(
                 "click",
                 () => {
-
                     selecionarVersao(id);
-
                 }
             );
-
 
             opcoesVersao.appendChild(
                 botao
@@ -538,7 +223,6 @@ function carregarVersoes() {
 
         }
     );
-
 }
 
 
@@ -547,10 +231,8 @@ function carregarVersoes() {
 ======================================== */
 
 function selecionarVersao(tipo) {
-
     versaoSelecionada =
         tipo;
-
 
     document
         .querySelectorAll(".opcao-versao")
@@ -562,24 +244,18 @@ function selecionarVersao(tipo) {
 
         });
 
-
     const botaoSelecionado =
         document.querySelector(
             `[data-tipo="${tipo}"]`
         );
 
-
     if (botaoSelecionado) {
-
         botaoSelecionado.classList.add(
             "selecionado"
         );
-
     }
 
-
     atualizarVersao();
-
 }
 
 
@@ -594,19 +270,17 @@ function atualizarVersao() {
             versaoSelecionada
         ];
 
-
     if (!versao) {
         return;
     }
-
 
     imagemPelucia.style.opacity = "0";
 
 
     setTimeout(() => {
 
-        imagemPelucia.src =
-            versao.imagem;
+        imagemPelucia.src = `../../../img/pelucias/${versaoSelecionada}/` + 
+            pelucia.versoes[versaoSelecionada].imagem;
 
         imagemPelucia.alt =
             `${pelucia.nome} - ${versao.nome}`;

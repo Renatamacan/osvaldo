@@ -57,21 +57,21 @@
 ======================================== */
 
 .hero-aerea {
-    background-image: url("../img/araraAzulRosto.jpeg");
+    background-image: url("../img/missoes/araraAzul.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .hero-terrestre {
-    background-image: url("../img/loboGuaraRosto.jpeg");
+    background-image: url("../img/missoes/loboGuara.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .hero-aquatica {
-    background-image: url("../img/tubarãoBranco.jpeg");
+    background-image: url("../img/missoes/tubaraoBranco.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
