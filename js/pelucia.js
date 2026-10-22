@@ -1,24 +1,50 @@
 /* ========================================
-   DADOS DO PRODUTO
+   IDENTIFICAR PRODUTO
 ======================================== */
 
-const produto = {
+const parametros =
+    new URLSearchParams(window.location.search);
 
-    nome: "Pelúcia Lobo-guará",
+const idPelucia =
+    parametros.get("id");
 
-    tecido: {
-        tipo: "Tecido comum",
-        preco: 89.90,
-        imagem: "./img/peluciaLoboGuaraTecido.jpeg"
-    },
+const pelucia =
+    pelucias[idPelucia];
 
-    croche: {
-        tipo: "Crochê",
-        preco: 119.90,
-        imagem: "./img/peluciaLoboGuaraCroche.jpeg"
-    }
+/* ========================================
+   VERIFICAR PRODUTO
+======================================== */
 
-};
+if (!pelucia) {
+
+    document.querySelector("main").innerHTML = `
+
+        <section class="produto-nao-encontrado">
+
+            <h1>
+                Pelúcia não encontrada
+            </h1>
+
+            <p>
+                Não foi possível encontrar o produto solicitado.
+            </p>
+
+            <a
+                href="index.html#pelucias"
+                class="btn-principal"
+            >
+                Voltar para Pelúcias
+            </a>
+
+        </section>
+
+    `;
+
+    throw new Error(
+        "Pelúcia não encontrada."
+    );
+
+}
 
 
 /* ========================================
@@ -28,44 +54,35 @@ const produto = {
 const imagemPelucia =
     document.getElementById("imagemPelucia");
 
+const nomePelucia =
+    document.getElementById("nomePelucia");
+
+const categoriaPelucia =
+    document.getElementById("categoriaPelucia");
+
+const descricaoPelucia =
+    document.getElementById("descricaoPelucia");
+
 const precoPelucia =
     document.getElementById("precoPelucia");
 
-const botoesVersao =
-    document.querySelectorAll(".opcao-versao");
+const opcoesVersao =
+    document.getElementById("opcoesVersao");
 
 const quantidadeElemento =
     document.getElementById("quantidade");
 
-const aumentarQuantidade =
-    document.getElementById("aumentarQuantidade");
+const listaCaracteristicas =
+    document.getElementById("listaCaracteristicas");
 
-const diminuirQuantidade =
-    document.getElementById("diminuirQuantidade");
+const informacoesAnimal =
+    document.getElementById("informacoesAnimal");
 
-const adicionarCarrinho =
-    document.getElementById("adicionarCarrinho");
+const tituloAnimal =
+    document.getElementById("tituloAnimal");
 
-const modalCarrinho =
-    document.getElementById("modalCarrinho");
-
-const fecharCarrinho =
-    document.getElementById("fecharCarrinho");
-
-const listaCarrinho =
-    document.getElementById("listaCarrinho");
-
-const totalCarrinho =
-    document.getElementById("totalCarrinho");
-
-const finalizarCompra =
-    document.getElementById("finalizarCompra");
-
-const modalPagamento =
-    document.getElementById("modalPagamento");
-
-const fecharPagamento =
-    document.getElementById("fecharPagamento");
+const informacoesExtra =
+    document.getElementById("informacoesExtra");
 
 
 /* ========================================
@@ -76,150 +93,445 @@ let versaoSelecionada = "tecido";
 
 let quantidade = 1;
 
-let carrinho = [];
+
+/* ========================================
+   CARRINHO
+======================================== */
+
+let carrinho =
+    JSON.parse(
+        localStorage.getItem("carrinhoWildTrack")
+    ) || [];
 
 
 /* ========================================
-   FORMATAÇÃO DE PREÇO
+   FORMATAÇÃO
 ======================================== */
 
 function formatarPreco(valor) {
 
-    return valor.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    });
+    return valor.toLocaleString(
+        "pt-BR",
+        {
+            style: "currency",
+            currency: "BRL"
+        }
+    );
 
 }
 
 
 /* ========================================
-   ATUALIZAR PRODUTO
+   CARREGAR DADOS PRINCIPAIS
 ======================================== */
 
-function atualizarProduto() {
+function carregarProduto() {
 
-    const versao =
-        produto[versaoSelecionada];
+    document.title =
+        `${pelucia.nome} | WildTrack`;
 
-    precoPelucia.textContent =
-        formatarPreco(versao.preco);
 
-    imagemPelucia.src =
-        versao.imagem;
+    nomePelucia.textContent =
+        pelucia.nome;
 
-    imagemPelucia.alt =
-        `${produto.nome} - ${versao.tipo}`;
+
+    categoriaPelucia.textContent =
+        pelucia.categoria;
+
+
+    descricaoPelucia.textContent =
+        pelucia.descricao;
+
+
+    tituloAnimal.textContent =
+        `Sobre ${pelucia.animal}`;
+
+
+    carregarVersoes();
+
+    carregarCaracteristicas();
+
+    carregarInformacoes();
+
+    atualizarVersao();
 
 }
 
 
 /* ========================================
-   SELEÇÃO DE VERSÃO
+   CARREGAR VERSÕES
 ======================================== */
 
-botoesVersao.forEach(botao => {
+function carregarVersoes() {
+    opcoesVersao.innerHTML = "";
 
-    botao.addEventListener("click", () => {
+    Object.entries(
+        pelucia.versoes
+    ).forEach(
+        ([id, versao]) => {
+            const botao =
+                document.createElement("button");
 
-        versaoSelecionada =
-            botao.dataset.tipo;
+            botao.type = "button";
 
-        botoesVersao.forEach(item => {
+            botao.classList.add(
+                "opcao-versao"
+            );
 
-            item.classList.remove("selecionado");
+            if (id === versaoSelecionada) {
+                botao.classList.add(
+                    "selecionado"
+                );
+            }
+
+            botao.dataset.tipo = id;
+
+            const icone =
+                id === "croche"
+                    ? "🧶"
+                    : "🧸";
+
+
+            botao.innerHTML = `
+                <span class="icone-versao">
+                    ${icone}
+                </span>
+
+                <span class="texto-versao">
+
+                    <strong>
+                        ${versao.nome}
+                    </strong>
+
+                    <small>
+                        ${formatarPreco(versao.preco)}
+                    </small>
+
+                </span>
+            `;
+
+            botao.addEventListener(
+                "click",
+                () => {
+                    selecionarVersao(id);
+                }
+            );
+
+            opcoesVersao.appendChild(
+                botao
+            );
+
+        }
+    );
+}
+
+
+/* ========================================
+   SELECIONAR VERSÃO
+======================================== */
+
+function selecionarVersao(tipo) {
+    versaoSelecionada =
+        tipo;
+
+    document
+        .querySelectorAll(".opcao-versao")
+        .forEach(botao => {
+
+            botao.classList.remove(
+                "selecionado"
+            );
 
         });
 
-        botao.classList.add("selecionado");
+    const botaoSelecionado =
+        document.querySelector(
+            `[data-tipo="${tipo}"]`
+        );
 
-        atualizarProduto();
+    if (botaoSelecionado) {
+        botaoSelecionado.classList.add(
+            "selecionado"
+        );
+    }
 
-    });
+    atualizarVersao();
+}
 
-});
+
+/* ========================================
+   ATUALIZAR VERSÃO
+======================================== */
+
+function atualizarVersao() {
+
+    const versao =
+        pelucia.versoes[
+            versaoSelecionada
+        ];
+
+    if (!versao) {
+        return;
+    }
+
+    imagemPelucia.style.opacity = "0";
+
+
+    setTimeout(() => {
+
+        imagemPelucia.src = `../../../img/pelucias/${versaoSelecionada}/` + 
+            pelucia.versoes[versaoSelecionada].imagem;
+
+        imagemPelucia.alt =
+            `${pelucia.nome} - ${versao.nome}`;
+
+        imagemPelucia.style.opacity = "1";
+
+    }, 150);
+
+
+    precoPelucia.textContent =
+        formatarPreco(
+            versao.preco
+        );
+
+}
+
+
+/* ========================================
+   CARACTERÍSTICAS
+======================================== */
+
+function carregarCaracteristicas() {
+
+    listaCaracteristicas.innerHTML = "";
+
+
+    pelucia.caracteristicas.forEach(
+        caracteristica => {
+
+
+            const card =
+                document.createElement("article");
+
+
+            card.classList.add(
+                "caracteristica"
+            );
+
+
+            card.innerHTML = `
+
+                <h3>
+                    ${caracteristica.titulo}
+                </h3>
+
+                <p>
+                    ${caracteristica.texto}
+                </p>
+
+            `;
+
+
+            listaCaracteristicas.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+/* ========================================
+   INFORMAÇÕES SOBRE O ANIMAL
+======================================== */
+
+function carregarInformacoes() {
+
+    informacoesAnimal.innerHTML = "";
+
+
+    pelucia.informacoes.forEach(
+        informacao => {
+
+
+            const card =
+                document.createElement("article");
+
+
+            card.innerHTML = `
+
+                <span>
+                    ${informacao.icone}
+                </span>
+
+                <h3>
+                    ${informacao.titulo}
+                </h3>
+
+                <p>
+                    ${informacao.texto}
+                </p>
+
+            `;
+
+
+            informacoesAnimal.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
 
 
 /* ========================================
    QUANTIDADE
 ======================================== */
 
-aumentarQuantidade.addEventListener(
-    "click",
-    () => {
+document
+    .getElementById("aumentarQuantidade")
+    .addEventListener(
+        "click",
+        () => {
 
-        quantidade++;
+            quantidade++;
 
-        quantidadeElemento.textContent =
-            quantidade;
+            quantidadeElemento.textContent =
+                quantidade;
 
-    }
-);
-
-
-diminuirQuantidade.addEventListener(
-    "click",
-    () => {
-
-        if (quantidade <= 1) {
-            return;
         }
+    );
 
-        quantidade--;
 
-        quantidadeElemento.textContent =
-            quantidade;
+document
+    .getElementById("diminuirQuantidade")
+    .addEventListener(
+        "click",
+        () => {
 
-    }
-);
+            if (quantidade <= 1) {
+                return;
+            }
+
+            quantidade--;
+
+            quantidadeElemento.textContent =
+                quantidade;
+
+        }
+    );
 
 
 /* ========================================
    ADICIONAR AO CARRINHO
 ======================================== */
 
-adicionarCarrinho.addEventListener(
-    "click",
-    () => {
-
-        const versao =
-            produto[versaoSelecionada];
-
-        const itemExistente =
-            carrinho.find(item =>
-                item.nome === produto.nome &&
-                item.tipo === versao.tipo
-            );
+document
+    .getElementById("adicionarCarrinho")
+    .addEventListener(
+        "click",
+        () => {
 
 
-        if (itemExistente) {
+            const versao =
+                pelucia.versoes[
+                    versaoSelecionada
+                ];
 
-            itemExistente.quantidade +=
-                quantidade;
 
-        } else {
+            const produtoCarrinho = {
 
-            carrinho.push({
+                id: idPelucia,
 
-                nome: produto.nome,
+                nome: pelucia.nome,
 
-                tipo: versao.tipo,
+                tipo: versao.nome,
+
+                versaoId: versaoSelecionada,
 
                 preco: versao.preco,
 
+                imagem: versao.imagem,
+
                 quantidade: quantidade
 
-            });
+            };
+
+
+            const existente =
+                carrinho.find(
+                    item =>
+                        item.id === idPelucia &&
+                        item.versaoId ===
+                            versaoSelecionada
+                );
+
+
+            if (existente) {
+
+                existente.quantidade +=
+                    quantidade;
+
+            } else {
+
+                carrinho.push(
+                    produtoCarrinho
+                );
+
+            }
+
+
+            salvarCarrinho();
+
+            atualizarCarrinho();
+
+            abrirCarrinho();
+
+
+            quantidade = 1;
+
+            quantidadeElemento.textContent =
+                quantidade;
 
         }
+    );
 
 
-        atualizarCarrinho();
+/* ========================================
+   SALVAR CARRINHO
+======================================== */
 
-        abrirCarrinho();
+function salvarCarrinho() {
 
-    }
-);
+    localStorage.setItem(
+        "carrinhoWildTrack",
+        JSON.stringify(carrinho)
+    );
+
+}
+
+
+/* ========================================
+   ELEMENTOS DO CARRINHO
+======================================== */
+
+const modalCarrinho =
+    document.getElementById(
+        "modalCarrinho"
+    );
+
+const listaCarrinho =
+    document.getElementById(
+        "listaCarrinho"
+    );
+
+const totalCarrinho =
+    document.getElementById(
+        "totalCarrinho"
+    );
 
 
 /* ========================================
@@ -230,80 +542,95 @@ function atualizarCarrinho() {
 
     listaCarrinho.innerHTML = "";
 
-    let total = 0;
-
 
     if (carrinho.length === 0) {
 
         listaCarrinho.innerHTML = `
+
             <p>
                 Seu carrinho está vazio.
             </p>
+
         `;
 
         totalCarrinho.textContent =
             formatarPreco(0);
 
         return;
+
     }
 
 
-    carrinho.forEach((item, indice) => {
-
-        const subtotal =
-            item.preco * item.quantidade;
-
-        total += subtotal;
+    let total = 0;
 
 
-        const elemento =
-            document.createElement("div");
-
-        elemento.classList.add(
-            "item-carrinho"
-        );
+    carrinho.forEach(
+        (item, indice) => {
 
 
-        elemento.innerHTML = `
-
-            <div>
-
-                <strong>
-                    ${item.nome}
-                </strong>
-
-                <small>
-                    ${item.tipo}
-                </small>
-
-                <small>
-                    Quantidade:
-                    ${item.quantidade}
-                </small>
-
-            </div>
-
-            <div>
-
-                <strong>
-                    ${formatarPreco(subtotal)}
-                </strong>
-
-                <button
-                    class="remover-item"
-                    data-indice="${indice}"
-                >
-                    Remover
-                </button>
-
-            </div>
-
-        `;
+            const subtotal =
+                item.preco *
+                item.quantidade;
 
 
-        listaCarrinho.appendChild(elemento);
+            total += subtotal;
 
-    });
+
+            const elemento =
+                document.createElement(
+                    "div"
+                );
+
+
+            elemento.classList.add(
+                "item-carrinho"
+            );
+
+
+            elemento.innerHTML = `
+
+                <div>
+
+                    <strong>
+                        ${item.nome}
+                    </strong>
+
+                    <small>
+                        ${item.tipo}
+                    </small>
+
+                    <small>
+                        Quantidade:
+                        ${item.quantidade}
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        ${formatarPreco(subtotal)}
+                    </strong>
+
+                    <button
+                        class="remover-item"
+                        data-indice="${indice}"
+                    >
+                        Remover
+                    </button>
+
+                </div>
+
+            `;
+
+
+            listaCarrinho.appendChild(
+                elemento
+            );
+
+        }
+    );
 
 
     totalCarrinho.textContent =
@@ -321,31 +648,36 @@ function atualizarCarrinho() {
 
 function adicionarEventosRemover() {
 
-    const botoes =
-        document.querySelectorAll(
-            ".remover-item"
-        );
+    document
+        .querySelectorAll(".remover-item")
+        .forEach(botao => {
 
 
-    botoes.forEach(botao => {
+            botao.addEventListener(
+                "click",
+                () => {
 
-        botao.addEventListener(
-            "click",
-            () => {
 
-                const indice =
-                    Number(
-                        botao.dataset.indice
+                    const indice =
+                        Number(
+                            botao.dataset.indice
+                        );
+
+
+                    carrinho.splice(
+                        indice,
+                        1
                     );
 
-                carrinho.splice(indice, 1);
 
-                atualizarCarrinho();
+                    salvarCarrinho();
 
-            }
-        );
+                    atualizarCarrinho();
 
-    });
+                }
+            );
+
+        });
 
 }
 
@@ -367,66 +699,77 @@ function abrirCarrinho() {
    FECHAR CARRINHO
 ======================================== */
 
-fecharCarrinho.addEventListener(
-    "click",
-    () => {
+document
+    .getElementById("fecharCarrinho")
+    .addEventListener(
+        "click",
+        () => {
 
-        modalCarrinho.classList.remove(
-            "aberto"
-        );
-
-    }
-);
-
-
-/* ========================================
-   FINALIZAR COMPRA
-======================================== */
-
-finalizarCompra.addEventListener(
-    "click",
-    () => {
-
-        if (carrinho.length === 0) {
-
-            alert(
-                "Seu carrinho está vazio."
+            modalCarrinho.classList.remove(
+                "aberto"
             );
 
-            return;
         }
-
-
-        modalCarrinho.classList.remove(
-            "aberto"
-        );
-
-        modalPagamento.classList.add(
-            "aberto"
-        );
-
-    }
-);
+    );
 
 
 /* ========================================
-   FECHAR PAGAMENTO
+   PAGAMENTO
 ======================================== */
 
-fecharPagamento.addEventListener(
-    "click",
-    () => {
+const modalPagamento =
+    document.getElementById(
+        "modalPagamento"
+    );
 
-        modalPagamento.classList.remove(
-            "aberto"
-        );
 
-    }
-);
+document
+    .getElementById("finalizarCompra")
+    .addEventListener(
+        "click",
+        () => {
+
+
+            if (carrinho.length === 0) {
+
+                alert(
+                    "Seu carrinho está vazio."
+                );
+
+                return;
+
+            }
+
+
+            modalCarrinho.classList.remove(
+                "aberto"
+            );
+
+
+            modalPagamento.classList.add(
+                "aberto"
+            );
+
+        }
+    );
+
+
+document
+    .getElementById("fecharPagamento")
+    .addEventListener(
+        "click",
+        () => {
+
+            modalPagamento.classList.remove(
+                "aberto"
+            );
+
+        }
+    );
 
 
 /* ========================================
-   FECHAR MODAIS CLICANDO FORA
+   FECHAR CLICANDO FORA
 ======================================== */
 
 modalCarrinho.addEventListener(
@@ -495,5 +838,6 @@ document.addEventListener(
    INICIALIZAÇÃO
 ======================================== */
 
-atualizarProduto();
+carregarProduto();
+
 atualizarCarrinho();
