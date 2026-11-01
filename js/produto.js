@@ -214,11 +214,11 @@ function abrirProduto(id){
 // CARRINHO
 // ===========================================
 
-btnCarrinho.addEventListener("click",()=>{
+// btnCarrinho.addEventListener("click",()=>{
 
-    adicionarAoCarrinho(produto,qtd);
+//     adicionarAoCarrinho(produto,qtd);
 
-});
+// });
 
 // ===========================================
 // COMPRAR AGORA

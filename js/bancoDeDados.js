@@ -304,13 +304,13 @@ const pelucias = {
     versoes: {
       tecido: {
         nome: "Tecido comum",
-        preco: 49.9,
+        preco: 150.39,
         imagem: "peluciaGuaruba.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-        preco: 69.9,
+        preco: 199.99,
         imagem: "peluciaGuarubaCroche.jpeg",
       },
     },
@@ -371,13 +371,13 @@ const pelucias = {
     versoes: {
       tecido: {
         nome: "Tecido comum",
-        preco: 54.9,
+        preco: 180.75,
         imagem: "peluciaGaviaoReal.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-        preco: 74.9,
+        preco: 220.99,
         imagem: "peluciaGaviaoRealCroche.jpeg",
       },
     },
@@ -438,13 +438,13 @@ const pelucias = {
     versoes: {
       tecido: {
         nome: "Tecido comum",
-        preco: 49.9,
+        preco: 180.99,
         imagem: "peluciaAraraAzul.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-        preco: 69.9,
+        preco: 250.99,
         imagem: "peluciaAraraAzulCroche.jpeg",
       },
     },
@@ -504,13 +504,13 @@ const pelucias = {
     versoes: {
       tecido: {
         nome: "Tecido comum",
-        preco: 49.9,
+        preco: 5000.99,
         imagem: "peluciaArarinhaAzul.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-        preco: 69.9,
+        preco: 11000.99,
         imagem: "peluciaArarinhaAzulCroche.jpeg",
       },
     },
@@ -570,13 +570,13 @@ const pelucias = {
     versoes: {
       tecido: {
         nome: "Tecido comum",
-        preco: 49.9,
+        preco: 200.57,
         imagem: "peluciaLoboGuara.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-        preco: 69.9,
+        preco: 275.40,
         imagem: "peluciaLoboGuaraCroche.jpeg",
       },
     },
@@ -636,13 +636,13 @@ const pelucias = {
     versoes: {
       tecido: {
         nome: "Tecido comum",
-        preco: 54.9,
+        preco: 150.80,
         imagem: "peluciaOncaPintada.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-        preco: 74.9,
+        preco: 450.90,
         imagem: "peluciaOncaPintadaCroche.jpeg",
       },
     },
@@ -703,13 +703,13 @@ const pelucias = {
     versoes: {
       tecido: {
         nome: "Tecido comum",
-        preco: 49.9,
+        preco: 300.51,
         imagem: "peluciaGatoMaracaja.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-        preco: 69.9,
+        preco: 559.00,
         imagem: "peluciaGatoMaracajaCroche.jpeg",
       },
     },
@@ -769,13 +769,13 @@ const pelucias = {
     versoes: {
       tecido: {
         nome: "Tecido comum",
-        preco: 54.9,
+        preco: 500.99,
         imagem: "peluciaTubaraoBranco.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-        preco: 74.9,
+        preco: 700.99,
         imagem: "peluciaTubaraoBrancoCroche.jpeg",
       },
     },
@@ -835,13 +835,13 @@ const pelucias = {
     versoes: {
       tecido: {
         nome: "Tecido comum",
-        preco: 44.9,
+        preco: 479.99,
         imagem: "peluciaAbelha.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-        preco: 64.9,
+        preco: 890.99,
         imagem: "peluciaAbelhaCroche.jpeg",
       },
     },
@@ -902,13 +902,13 @@ const pelucias = {
     versoes: {
       tecido: {
         nome: "Tecido comum",
-        preco: 49.9,
+        preco: 239.99,
         imagem: "peluciaAriranha.jpeg",
       },
 
       croche: {
         nome: "Crochê",
-        preco: 69.9,
+        preco: 360.78,
         imagem: "peluciaAriranhaCroche.jpeg",
       },
     },

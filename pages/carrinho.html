@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Carrinho | WildTrack</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/missoes.css">
+    <link rel="stylesheet" href="../css/carrinho-pagina.css">
+</head>
+
+<body>
+
+    <header class="topo-missoes">
+        <a href="../index.html" class="logo">WildTrack</a>
+
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="../index.html#produtos">Pulseiras</a>
+            <a href="../pages/missões/">Missões</a>
+            <a href="../index.html#pelucias">Pelúcias</a>
+            <a href="./contatos/contato.html">Contato</a>
+            <a href="./carrinho.html" class="ativo">
+                Carrinho <span id="contador-menu">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="pagina-carrinho">
+
+        <section class="hero-carrinho">
+            <span class="tag-missao">SUA SELEÇÃO WILDTRACK</span>
+            <h1>Meu carrinho</h1>
+            <p>
+                Confira os produtos que você escolheu
+                antes de continuar.
+            </p>
+        </section>
+
+        <section class="area-compras">
+
+            <div class="lista-compras">
+                <div class="cabecalho-lista">
+                    <h2>Seus produtos</h2>
+                    <span id="quantidade-produtos">0 itens</span>
+                </div>
+
+                <div id="lista-carrinho">
+                    <!-- Os produtos serão inseridos pelo JavaScript. -->
+                </div>
+
+                <a href="../index.html" class="voltar-loja">
+                    ← Continuar explorando
+                </a>
+            </div>
+
+            <aside class="resumo-compra">
+                <h2>Resumo do pedido</h2>
+
+                <div class="linha-resumo">
+                    <span>Quantidade de itens</span>
+                    <strong id="resumo-quantidade">0</strong>
+                </div>
+
+                <div class="linha-resumo">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">R$ 0,00</strong>
+                </div>
+
+                <div class="linha-resumo">
+                    <span>Entrega</span>
+                    <strong id="valor-entrega">A calcular</strong>
+                </div>
+
+                <div class="linha-resumo total-compra">
+                    <span>Total dos produtos</span>
+                    <strong id="total-carrinho">R$ 0,00</strong>
+                </div>
+
+                <p class="aviso-entrega">
+                    O valor da entrega não está incluído nesta
+                    demonstração.
+                </p>
+
+                <button
+                    type="button"
+                    id="botao-finalizar"
+                    class="botao-finalizar-pagina"
+                    disabled
+                >
+                    Escolher pagamento
+                </button>
+
+                <p class="aviso-pagamento">
+                    A etapa de pagamento é demonstrativa e não
+                    realiza cobranças reais.
+                </p>
+            </aside>
+
+        </section>
+
+        <section
+            id="area-pagamento"
+            class="area-pagamento"
+            hidden
+        >
+            <div class="cabecalho-pagamento">
+                <span class="tag-missao">ÚLTIMA ETAPA</span>
+                <h2>Como deseja pagar?</h2>
+                <p>Selecione uma forma de pagamento para seu pedido.</p>
+            </div>
+
+            <form id="form-pagamento">
+
+                <label class="opcao-pagamento">
+                    <input type="radio" name="pagamento" value="Pix" required>
+                    <span>
+                        <strong>Pix</strong>
+                        <small>Pagamento instantâneo</small>
+                    </span>
+                </label>
+
+                <label class="opcao-pagamento">
+                    <input
+                        type="radio"
+                        name="pagamento"
+                        value="Cartão de crédito"
+                    >
+                    <span>
+                        <strong>Cartão de crédito</strong>
+                        <small>Opção de cartão de crédito</small>
+                    </span>
+                </label>
+
+                <label class="opcao-pagamento">
+                    <input
+                        type="radio"
+                        name="pagamento"
+                        value="Cartão de débito"
+                    >
+                    <span>
+                        <strong>Cartão de débito</strong>
+                        <small>Opção de cartão de débito</small>
+                    </span>
+                </label>
+
+                <div class="resumo-final">
+                    <span>Total dos produtos</span>
+                    <strong id="total-pagamento">R$ 0,00</strong>
+                </div>
+
+                <button
+                    type="submit"
+                    class="botao-finalizar-pagina"
+                >
+                    Confirmar opção de pagamento
+                </button>
+
+                <button
+                    type="button"
+                    id="voltar-resumo"
+                    class="botao-voltar-resumo"
+                >
+                    Voltar ao carrinho
+                </button>
+
+                <p id="mensagem-pagamento" role="status"></p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>WildTrack</h2>
+        <p>Conectando pessoas à conservação da vida selvagem.</p>
+        <p class="copyright">© 2026 WildTrack. Projeto educacional.</p>
+    </footer>
+
+</body>
+
+<script src="../js/carrinho.js" defer></script>
+<script src="../js/carrinho-paginas.js" defer></script>
+
+</html>
+
