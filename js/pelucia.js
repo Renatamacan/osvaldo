@@ -1,43 +1,26 @@
-/* ========================================
-   IDENTIFICAR PRODUTO
-======================================== */
+/* IDENTIFICAR PRODUTO POR ID */
 
-const parametros =
-    new URLSearchParams(window.location.search);
+const parametros = new URLSearchParams(window.location.search);
 
-const idPelucia =
-    parametros.get("id");
+const idPelucia = parametros.get("id");
 
-const pelucia =
-    pelucias[idPelucia];
+const pelucia = pelucias[idPelucia];
 
-/* ========================================
-   VERIFICAR PRODUTO
-======================================== */
+
+/* VERIFICAR SE PRODUTO EXISTE NO BANCO DE DADOS */
 
 if (!pelucia) {
 
     document.querySelector("main").innerHTML = `
-
         <section class="produto-nao-encontrado">
 
-            <h1>
-                Pelúcia não encontrada
-            </h1>
+            <h1>Pelúcia não encontrada</h1>
 
-            <p>
-                Não foi possível encontrar o produto solicitado.
-            </p>
+            <p>Não foi possível encontrar o produto solicitado.</p>
 
-            <a
-                href="index.html#pelucias"
-                class="btn-principal"
-            >
-                Voltar para Pelúcias
-            </a>
+            <a href="index.html#pelucias" class="btn-principal">Voltar para Pelúcias</a>
 
         </section>
-
     `;
 
     throw new Error(
@@ -47,9 +30,7 @@ if (!pelucia) {
 }
 
 
-/* ========================================
-   ELEMENTOS
-======================================== */
+/* ELEMENTOS DA PELÚCIA */
 
 const imagemPelucia =
     document.getElementById("imagemPelucia");
@@ -85,9 +66,7 @@ const informacoesExtra =
     document.getElementById("informacoesExtra");
 
 
-/* ========================================
-   ESTADO
-======================================== */
+/* TIPO DE TECIDO E QUANTIDADE */
 
 let versaoSelecionada = "tecido";
 
@@ -193,33 +172,23 @@ function carregarVersoes() {
 
 
             botao.innerHTML = `
-                <span class="icone-versao">
-                    ${icone}
-                </span>
+                <span class="icone-versao">${icone}</span>
 
                 <span class="texto-versao">
 
-                    <strong>
-                        ${versao.nome}
-                    </strong>
+                    <strong>${versao.nome}</strong>
 
-                    <small>
-                        ${formatarPreco(versao.preco)}
-                    </small>
+                    <small>${formatarPreco(versao.preco)}</small>
 
                 </span>
             `;
 
-            botao.addEventListener(
-                "click",
-                () => {
+            botao.addEventListener("click", () => {
                     selecionarVersao(id);
                 }
             );
 
-            opcoesVersao.appendChild(
-                botao
-            );
+            opcoesVersao.appendChild(botao);
 
         }
     );

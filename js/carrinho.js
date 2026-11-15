@@ -155,7 +155,7 @@
         atualizarContadores();
 
         // Adicionar não finaliza a compra.
-        window.location.href = "pages/carrinho.html";
+        window.location.href = "/pages/carrinho.html";
     }
 
     document.addEventListener("click", evento => {

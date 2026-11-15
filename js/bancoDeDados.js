@@ -1,4 +1,4 @@
-const produtos = [
+const pulseiras = [
   {
     id: 1,
 

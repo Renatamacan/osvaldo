@@ -32,11 +32,13 @@
     <main class="pagina-carrinho">
 
         <section class="hero-carrinho">
+
             <span class="tag-missao">SUA SELEÇÃO WILDTRACK</span>
 
             <h1>Meu carrinho</h1>
 
             <p>Confira os produtos que você escolheu antes de continuar.</p>
+
         </section>
 
         <section class="area-compras">
@@ -51,12 +53,11 @@
                     <!-- Os produtos serão inseridos pelo JavaScript. -->
                 </div>
 
-                <a href="../index.html" class="voltar-loja">
-                    ← Continuar explorando
-                </a>
+                <a href="../index.html" class="voltar-loja">← Continuar explorando</a>
             </div>
 
             <aside class="resumo-compra">
+
                 <h2>Resumo do pedido</h2>
 
                 <div class="linha-resumo">
@@ -93,10 +94,8 @@
                     Escolher pagamento
                 </button>
 
-                <p class="aviso-pagamento">
-                    A etapa de pagamento é demonstrativa e não
-                    realiza cobranças reais.
-                </p>
+                <p class="aviso-pagamento">A etapa de pagamento é demonstrativa e não realiza cobranças reais.</p>
+
             </aside>
 
         </section>
@@ -106,49 +105,65 @@
             class="area-pagamento"
             hidden
         >
+        
             <div class="cabecalho-pagamento">
+
                 <span class="tag-missao">ÚLTIMA ETAPA</span>
+
                 <h2>Como deseja pagar?</h2>
+
                 <p>Selecione uma forma de pagamento para seu pedido.</p>
+
             </div>
 
             <form id="form-pagamento">
 
                 <label class="opcao-pagamento">
+
                     <input type="radio" name="pagamento" value="Pix" required>
+
                     <span>
                         <strong>Pix</strong>
                         <small>Pagamento instantâneo</small>
                     </span>
+
                 </label>
 
                 <label class="opcao-pagamento">
+
                     <input
                         type="radio"
                         name="pagamento"
                         value="Cartão de crédito"
                     >
+
                     <span>
                         <strong>Cartão de crédito</strong>
                         <small>Opção de cartão de crédito</small>
                     </span>
+
                 </label>
 
                 <label class="opcao-pagamento">
+
                     <input
                         type="radio"
                         name="pagamento"
                         value="Cartão de débito"
                     >
+
                     <span>
                         <strong>Cartão de débito</strong>
                         <small>Opção de cartão de débito</small>
                     </span>
+
                 </label>
 
                 <div class="resumo-final">
+
                     <span>Total dos produtos</span>
                     <strong id="total-pagamento">R$ 0,00</strong>
+
                 </div>
 
                 <button
@@ -169,6 +184,7 @@
                 <p id="mensagem-pagamento" role="status"></p>
 
             </form>
+
         </section>
 
     </main>
@@ -186,4 +202,3 @@
 <script src="../js/carrinho-paginas.js" defer></script>
 
 </html>
-
