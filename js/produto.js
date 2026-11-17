@@ -7,7 +7,7 @@ const parametros = new URLSearchParams(window.location.search);
 const idProduto = Number(parametros.get("id"));
 
 const todosProdutos = [
-    ...produtos,
+    ...pulseiras,
 ];
 
 const produto = todosProdutos.find(
@@ -137,7 +137,7 @@ function carregarRelacionados(){
 
     relacionados.innerHTML = "";
 
-    const lista = produtos
+    const lista = pulseiras
 
         .filter(item =>
 

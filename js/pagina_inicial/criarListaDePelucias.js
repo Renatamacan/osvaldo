@@ -32,7 +32,7 @@ for (let i = 0; i < Object.keys(pelucias).length; i++) {
                     </span>
 
                     <a 
-                        href="./pages/produto/pelúcias/pelucia.html?id=${chaveAtual}" 
+                        href="./pages/produtos/pelucia.html?id=${chaveAtual}" 
                         class="btn-card"
                     >
                         Ver Produto

@@ -29,6 +29,8 @@
                 localStorage.getItem(CHAVE) || "[]"
             );
 
+            console.log(dados)
+
             if (!Array.isArray(dados)) return [];
 
             return dados.filter(item =>
@@ -79,7 +81,9 @@
 
         const botao = document.createElement("a");
 
-        botao.href = "pages/carrinho.html";
+        const urlCarrinho = new URL("../pages/carrinho.html", document.currentScript.src).href
+
+        botao.href = urlCarrinho;
         botao.className = "botao-carrinho-global";
         botao.dataset.cartLink = "";
         botao.setAttribute("aria-label", "Abrir carrinho");
@@ -114,6 +118,13 @@
         const tipo = dados.tipo;
         const versao = dados.versao || "";
         const preco = Number(dados.preco);
+        const categoria = "";
+
+        if (dados.nome.startsWith("Pelúcia")) {
+            categoria = "Pelúcia"
+        } else if (dados.nome.startsWith("Pulseira")) {
+            categoria = "Pulseira"
+        }
 
         if (
             !idProduto ||
@@ -135,6 +146,7 @@
         } else {
             carrinho.push({
                 id,
+                categoria,
                 produtoId: idProduto,
                 nome,
                 tipo,
@@ -155,6 +167,9 @@
         atualizarContadores();
 
         // Adicionar não finaliza a compra.
+
+        // const urlCarrinho = new URL("../pages/carrinho.html", document.currentScript.src).href
+        
         window.location.href = "/pages/carrinho.html";
     }
 

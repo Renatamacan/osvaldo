@@ -28,7 +28,7 @@ pulseiras.forEach((pulseira) => {
                     </span>
 
                     <a 
-                    href="./pages/produto/produto.html?id=${pulseira.id}" class="btn-card acoes"
+                    href="./pages/produtos/pulseiras.html?id=${pulseira.id}" class="btn-card acoes"
                     >
                     Ver Produto
                     </a>

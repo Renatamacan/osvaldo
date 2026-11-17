@@ -97,8 +97,10 @@
         itens.forEach(item => {
             const linha = criar("article", "produto-carrinho-pagina");
 
+            console.log(item)
+
             const imagem = document.createElement("img");
-            imagem.src = item.imagem || "./img/sem-imagem.png";
+            imagem.src = `/img/{item.imagem}`;
             imagem.alt = item.nome;
             imagem.loading = "lazy";
 

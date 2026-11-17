@@ -27,6 +27,9 @@
         href="../../../css/pelucia.css"
     >
 
+    <!-- FONTE POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
 
 
@@ -39,37 +42,14 @@
 
     <header class="topo-missoes">
 
-        <a
-            href="../../../index.html"
-            class="logo"
-        >
-            WildTrack
-        </a>
-
+        <a href="../../../index.html" class="logo">WildTrack</a>
 
         <nav>
-
-            <a href="../../../index.html">
-                Início
-            </a>
-
-            <a href="../../../index.html#produtos">
-                Pulseiras
-            </a>
-
-            <a href="../../missões/missoes.html">
-                Missões
-            </a>
-
-            <a href="../../../index.html#pelucias"
-               class="ativo">
-                Pelúcias
-            </a>
-
-            <a href="../../produto/produto.html">
-                Carrinho
-            </a>
-
+            <a href="/index.html">Início</a>
+            <a href="/index.html#produtos">Pulseiras</a>
+            <a href="/index.html#pelucias" class="ativo">Pelúcias</a>
+            <a href="/pages/missoes/missoes.html">Missões</a>
+            <a href="/pages/homenagem/homenagem.html">Contato</a>
         </nav>
 
     </header>
@@ -215,8 +195,6 @@
 
                 </button>
 
-
-
                 <!-- INFORMAÇÕES EXTRAS -->
 
                 <div
@@ -232,8 +210,6 @@
             </div>
 
         </section>
-
-
 
         <!-- =================================
              CARACTERÍSTICAS
@@ -265,8 +241,6 @@
 
         </section>
 
-
-
         <!-- =================================
              SOBRE O ANIMAL
         ================================== -->
@@ -293,8 +267,6 @@
 
         </section>
 
-
-
         <!-- =================================
              VOLTAR
         ================================== -->
@@ -311,122 +283,6 @@
         </section>
 
     </main>
-
-
-
-    <!-- =================================
-         MODAL DO CARRINHO
-    ================================== -->
-
-    <div
-        id="modalCarrinho"
-        class="modal-carrinho"
-    >
-
-        <div class="conteudo-carrinho">
-
-
-            <button
-                id="fecharCarrinho"
-                class="fechar-carrinho"
-                type="button"
-            >
-                ×
-            </button>
-
-
-            <h2>
-                Seu carrinho
-            </h2>
-
-
-            <div id="listaCarrinho">
-
-                <!-- JavaScript -->
-
-            </div>
-
-
-            <div class="total-carrinho">
-
-                <span>
-                    Total
-                </span>
-
-
-                <strong id="totalCarrinho">
-                    R$ 0,00
-                </strong>
-
-            </div>
-
-
-            <button
-                id="finalizarCompra"
-                class="btn-finalizar"
-                type="button"
-            >
-                Finalizar compra
-            </button>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =================================
-         MODAL PAGAMENTO
-    ================================== -->
-
-    <div
-        id="modalPagamento"
-        class="modal-pagamento"
-    >
-
-        <div class="conteudo-pagamento">
-
-
-            <button
-                id="fecharPagamento"
-                class="fechar-carrinho"
-                type="button"
-            >
-                ×
-            </button>
-
-
-            <h2>
-                Forma de pagamento
-            </h2>
-
-
-            <p>
-                Escolha como deseja realizar o pagamento.
-            </p>
-
-
-            <div class="opcoes-pagamento">
-
-                <button type="button">
-                    💳 Cartão de crédito
-                </button>
-
-                <button type="button">
-                    💳 Cartão de débito
-                </button>
-
-                <button type="button">
-                    🔑 Pix
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
 
     <!-- =================================
          RODAPÉ
@@ -448,13 +304,10 @@
 
     </footer>
 
-    
 </body>
 
 <script src="/js/bancoDeDados.js"></script>
-
 <script src="../../../js/pelucia.js"></script>
-
 <script src="../../../js/carrinho.js" defer></script>
 
 </html>
