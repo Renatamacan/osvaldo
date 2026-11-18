@@ -7,7 +7,7 @@ pulseiras.forEach((pulseira) => {
         <div class="card">
 
             <img
-                src="/img/pulseiras/${pulseira.imagem}"
+                src="./img/pulseiras/${pulseira.imagem}"
                 alt="${pulseira.nome}"
             >
 

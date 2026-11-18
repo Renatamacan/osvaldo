@@ -198,24 +198,29 @@ function carregarRelacionados(){
 carregarRelacionados();
 
 // ===========================================
-// ABRIR PRODUTO
-// ===========================================
-
-function abrirProduto(id){
-
-    window.location.href =
-        `./produto.html?id=${id}`;
-
-}
-
-// ===========================================
 // CARRINHO
 // ===========================================
 
-btnCarrinho.addEventListener("click",()=>{
+let carrinho = JSON.parse(
+        localStorage.getItem("carrinhoWildTrack")
+    ) || [];
 
-    adicionarAoCarrinho(produto,qtd);
 
+btnCarrinho.addEventListener("click",()=> {
+
+    // adicionarAoCarrinho(produto,qtd);
+
+    for (qtd; qtd > 0; qtd--) {
+        carrinho.push(produto);
+    }
+
+    localStorage.setItem(
+        "carrinhoWildTrack",
+        JSON.stringify(carrinho)
+    )
+            
+            /*
+    */
 });
 
 
