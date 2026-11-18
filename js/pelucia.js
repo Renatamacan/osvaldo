@@ -1,43 +1,26 @@
-/* ========================================
-   IDENTIFICAR PRODUTO
-======================================== */
+/* IDENTIFICAR PRODUTO POR ID */
 
-const parametros =
-    new URLSearchParams(window.location.search);
+const parametros = new URLSearchParams(window.location.search);
 
-const idPelucia =
-    parametros.get("id");
+const idPelucia = parametros.get("id");
 
-const pelucia =
-    pelucias[idPelucia];
+const pelucia = pelucias[idPelucia];
 
-/* ========================================
-   VERIFICAR PRODUTO
-======================================== */
+
+/* VERIFICAR SE PRODUTO EXISTE NO BANCO DE DADOS */
 
 if (!pelucia) {
 
     document.querySelector("main").innerHTML = `
-
         <section class="produto-nao-encontrado">
 
-            <h1>
-                Pelúcia não encontrada
-            </h1>
+            <h1>Pelúcia não encontrada</h1>
 
-            <p>
-                Não foi possível encontrar o produto solicitado.
-            </p>
+            <p>Não foi possível encontrar o produto solicitado.</p>
 
-            <a
-                href="index.html#pelucias"
-                class="btn-principal"
-            >
-                Voltar para Pelúcias
-            </a>
+            <a href="index.html#pelucias" class="btn-principal">Voltar para Pelúcias</a>
 
         </section>
-
     `;
 
     throw new Error(
@@ -47,9 +30,7 @@ if (!pelucia) {
 }
 
 
-/* ========================================
-   ELEMENTOS
-======================================== */
+/* ELEMENTOS DA PELÚCIA */
 
 const imagemPelucia =
     document.getElementById("imagemPelucia");
@@ -85,9 +66,7 @@ const informacoesExtra =
     document.getElementById("informacoesExtra");
 
 
-/* ========================================
-   ESTADO
-======================================== */
+/* TIPO DE TECIDO E QUANTIDADE */
 
 let versaoSelecionada = "tecido";
 
@@ -193,33 +172,23 @@ function carregarVersoes() {
 
 
             botao.innerHTML = `
-                <span class="icone-versao">
-                    ${icone}
-                </span>
+                <span class="icone-versao">${icone}</span>
 
                 <span class="texto-versao">
 
-                    <strong>
-                        ${versao.nome}
-                    </strong>
+                    <strong>${versao.nome}</strong>
 
-                    <small>
-                        ${formatarPreco(versao.preco)}
-                    </small>
+                    <small>${formatarPreco(versao.preco)}</small>
 
                 </span>
             `;
 
-            botao.addEventListener(
-                "click",
-                () => {
+            botao.addEventListener("click", () => {
                     selecionarVersao(id);
                 }
             );
 
-            opcoesVersao.appendChild(
-                botao
-            );
+            opcoesVersao.appendChild(botao);
 
         }
     );
@@ -446,6 +415,8 @@ document
 
                 id: idPelucia,
 
+                categoria: "Pelúcia",
+
                 nome: pelucia.nome,
 
                 tipo: versao.nome,
@@ -486,11 +457,6 @@ document
 
             salvarCarrinho();
 
-            atualizarCarrinho();
-
-            abrirCarrinho();
-
-
             quantidade = 1;
 
             quantidadeElemento.textContent =
@@ -513,331 +479,5 @@ function salvarCarrinho() {
 
 }
 
-
-/* ========================================
-   ELEMENTOS DO CARRINHO
-======================================== */
-
-const modalCarrinho =
-    document.getElementById(
-        "modalCarrinho"
-    );
-
-const listaCarrinho =
-    document.getElementById(
-        "listaCarrinho"
-    );
-
-const totalCarrinho =
-    document.getElementById(
-        "totalCarrinho"
-    );
-
-
-/* ========================================
-   ATUALIZAR CARRINHO
-======================================== */
-
-function atualizarCarrinho() {
-
-    listaCarrinho.innerHTML = "";
-
-
-    if (carrinho.length === 0) {
-
-        listaCarrinho.innerHTML = `
-
-            <p>
-                Seu carrinho está vazio.
-            </p>
-
-        `;
-
-        totalCarrinho.textContent =
-            formatarPreco(0);
-
-        return;
-
-    }
-
-
-    let total = 0;
-
-
-    carrinho.forEach(
-        (item, indice) => {
-
-
-            const subtotal =
-                item.preco *
-                item.quantidade;
-
-
-            total += subtotal;
-
-
-            const elemento =
-                document.createElement(
-                    "div"
-                );
-
-
-            elemento.classList.add(
-                "item-carrinho"
-            );
-
-
-            elemento.innerHTML = `
-
-                <div>
-
-                    <strong>
-                        ${item.nome}
-                    </strong>
-
-                    <small>
-                        ${item.tipo}
-                    </small>
-
-                    <small>
-                        Quantidade:
-                        ${item.quantidade}
-                    </small>
-
-                </div>
-
-
-                <div>
-
-                    <strong>
-                        ${formatarPreco(subtotal)}
-                    </strong>
-
-                    <button
-                        class="remover-item"
-                        data-indice="${indice}"
-                    >
-                        Remover
-                    </button>
-
-                </div>
-
-            `;
-
-
-            listaCarrinho.appendChild(
-                elemento
-            );
-
-        }
-    );
-
-
-    totalCarrinho.textContent =
-        formatarPreco(total);
-
-
-    adicionarEventosRemover();
-
-}
-
-
-/* ========================================
-   REMOVER ITEM
-======================================== */
-
-function adicionarEventosRemover() {
-
-    document
-        .querySelectorAll(".remover-item")
-        .forEach(botao => {
-
-
-            botao.addEventListener(
-                "click",
-                () => {
-
-
-                    const indice =
-                        Number(
-                            botao.dataset.indice
-                        );
-
-
-                    carrinho.splice(
-                        indice,
-                        1
-                    );
-
-
-                    salvarCarrinho();
-
-                    atualizarCarrinho();
-
-                }
-            );
-
-        });
-
-}
-
-
-/* ========================================
-   ABRIR CARRINHO
-======================================== */
-
-function abrirCarrinho() {
-
-    modalCarrinho.classList.add(
-        "aberto"
-    );
-
-}
-
-
-/* ========================================
-   FECHAR CARRINHO
-======================================== */
-
-document
-    .getElementById("fecharCarrinho")
-    .addEventListener(
-        "click",
-        () => {
-
-            modalCarrinho.classList.remove(
-                "aberto"
-            );
-
-        }
-    );
-
-
-/* ========================================
-   PAGAMENTO
-======================================== */
-
-const modalPagamento =
-    document.getElementById(
-        "modalPagamento"
-    );
-
-
-document
-    .getElementById("finalizarCompra")
-    .addEventListener(
-        "click",
-        () => {
-
-
-            if (carrinho.length === 0) {
-
-                alert(
-                    "Seu carrinho está vazio."
-                );
-
-                return;
-
-            }
-
-
-            modalCarrinho.classList.remove(
-                "aberto"
-            );
-
-
-            modalPagamento.classList.add(
-                "aberto"
-            );
-
-        }
-    );
-
-
-document
-    .getElementById("fecharPagamento")
-    .addEventListener(
-        "click",
-        () => {
-
-            modalPagamento.classList.remove(
-                "aberto"
-            );
-
-        }
-    );
-
-
-/* ========================================
-   FECHAR CLICANDO FORA
-======================================== */
-
-modalCarrinho.addEventListener(
-    "click",
-    event => {
-
-        if (
-            event.target ===
-            modalCarrinho
-        ) {
-
-            modalCarrinho.classList.remove(
-                "aberto"
-            );
-
-        }
-
-    }
-);
-
-
-modalPagamento.addEventListener(
-    "click",
-    event => {
-
-        if (
-            event.target ===
-            modalPagamento
-        ) {
-
-            modalPagamento.classList.remove(
-                "aberto"
-            );
-
-        }
-
-    }
-);
-
-
-/* ========================================
-   ESC
-======================================== */
-
-document.addEventListener(
-    "keydown",
-    event => {
-
-        if (event.key === "Escape") {
-
-            modalCarrinho.classList.remove(
-                "aberto"
-            );
-
-            modalPagamento.classList.remove(
-                "aberto"
-            );
-
-        }
-
-    }
-);
-
-
-/* ========================================
-   INICIALIZAÇÃO
-======================================== */
-
+// CARREGAR PELÚCIA NA PÁGINA
 carregarProduto();
-
-atualizarCarrinho();

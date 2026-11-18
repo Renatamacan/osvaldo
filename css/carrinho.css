@@ -1,0 +1,378 @@
+/* ======================================
+   PÁGINA DO CARRINHO — WILDTRACK
+====================================== */
+
+.pagina-carrinho {
+    min-height: 60vh;
+    background: #F5F7FA;
+    padding-bottom: 80px;
+}
+
+.hero-carrinho {
+    padding: 65px 20px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #1565C0, #2E7D32);
+}
+
+.hero-carrinho h1 {
+    margin: 18px 0 12px;
+    font-size: clamp(32px, 5vw, 46px);
+}
+
+.hero-carrinho p {
+    margin: auto;
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+.area-compras {
+    width: min(1150px, 92%);
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.8fr);
+    align-items: start;
+    gap: 28px;
+}
+
+.lista-compras,
+.resumo-compra,
+.area-pagamento {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.lista-compras {
+    padding: 28px;
+}
+
+.cabecalho-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.cabecalho-lista h2,
+.resumo-compra h2 {
+    margin: 0;
+    color: #1565C0;
+    font-size: 23px;
+}
+
+#quantidade-produtos {
+    color: #666;
+    font-size: 14px;
+}
+
+.produto-carrinho-pagina {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) auto;
+    gap: 18px;
+    align-items: center;
+    padding: 22px 0;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.produto-carrinho-pagina:last-child {
+    border-bottom: none;
+}
+
+.produto-carrinho-pagina img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+    background: #F5F7FA;
+}
+
+.dados-produto h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    color: #222;
+}
+
+.dados-produto p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.preco-produto {
+    color: #2E7D32 !important;
+    font-weight: 700;
+}
+
+.controles-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 13px;
+}
+
+.controles-quantidade button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #D7DEE8;
+    border-radius: 8px;
+    background: #F5F7FA;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.controles-quantidade button:hover {
+    background: #E2E8F0;
+}
+
+.controles-quantidade span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.remover-produto {
+    margin-top: 12px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #D32F2F;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.subtotal-produto {
+    align-self: start;
+    padding-top: 5px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.carrinho-vazio-pagina {
+    padding: 45px 15px;
+    text-align: center;
+    color: #666;
+    line-height: 1.8;
+}
+
+.voltar-loja {
+    display: inline-block;
+    margin-top: 25px;
+    color: #1565C0;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.voltar-loja:hover {
+    color: #2E7D32;
+}
+
+/* Resumo */
+
+.resumo-compra {
+    position: sticky;
+    top: 20px;
+    padding: 26px;
+}
+
+.resumo-compra h2 {
+    margin-bottom: 25px;
+}
+
+.linha-resumo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    margin: 18px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.linha-resumo strong {
+    color: #222;
+    text-align: right;
+}
+
+.total-compra {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #E2E8F0;
+    color: #222;
+    font-weight: 700;
+}
+
+.total-compra strong {
+    color: #2E7D32;
+    font-size: 22px;
+}
+
+.aviso-entrega,
+.aviso-pagamento {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.botao-finalizar-pagina {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #2E7D32;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.botao-finalizar-pagina:hover:not(:disabled) {
+    background: #1B5E20;
+    transform: translateY(-2px);
+}
+
+.botao-finalizar-pagina:disabled {
+    background: #A0A0A0;
+    cursor: not-allowed;
+}
+
+/* Pagamento */
+
+.area-pagamento {
+    width: min(650px, 92%);
+    margin: 45px auto;
+    padding: 30px;
+}
+
+.area-pagamento[hidden] {
+    display: none;
+}
+
+.cabecalho-pagamento {
+    margin-bottom: 25px;
+}
+
+.cabecalho-pagamento h2 {
+    margin: 15px 0 10px;
+    color: #1565C0;
+    font-size: 27px;
+}
+
+.cabecalho-pagamento p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.opcao-pagamento {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 12px 0;
+    padding: 18px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.opcao-pagamento:has(input:checked) {
+    border-color: #1565C0;
+    background: #EFF6FF;
+}
+
+.opcao-pagamento input {
+    accent-color: #1565C0;
+}
+
+.opcao-pagamento span {
+    display: grid;
+    gap: 5px;
+}
+
+.opcao-pagamento small {
+    color: #666;
+}
+
+.resumo-final {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.resumo-final strong {
+    color: #2E7D32;
+    font-size: 21px;
+}
+
+.botao-voltar-resumo {
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+    border: 1px solid #D7DEE8;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+#mensagem-pagamento {
+    color: #1565C0;
+    line-height: 1.6;
+}
+
+/* Responsividade */
+
+@media (max-width: 850px) {
+    .area-compras {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo-compra {
+        position: static;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-carrinho {
+        padding: 48px 18px;
+    }
+
+    .area-compras {
+        width: 94%;
+        margin: 25px auto;
+        gap: 18px;
+    }
+
+    .lista-compras,
+    .resumo-compra,
+    .area-pagamento {
+        padding: 20px;
+    }
+
+    .produto-carrinho-pagina {
+        grid-template-columns: 85px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .produto-carrinho-pagina img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .subtotal-produto {
+        grid-column: 2;
+        padding-top: 0;
+    }
+
+    .cabecalho-lista {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

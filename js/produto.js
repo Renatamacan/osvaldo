@@ -7,7 +7,7 @@ const parametros = new URLSearchParams(window.location.search);
 const idProduto = Number(parametros.get("id"));
 
 const todosProdutos = [
-    ...produtos,
+    ...pulseiras,
 ];
 
 const produto = todosProdutos.find(
@@ -48,9 +48,7 @@ const btnMais = document.getElementById("mais");
 
 const btnMenos = document.getElementById("menos");
 
-const btnCarrinho = document.getElementById("btnCarrinho");
-
-const btnComprar = document.getElementById("btnComprar");
+const btnCarrinho = document.getElementById("adicionarCarrinho");
 
 const relacionados = document.getElementById("produtosRelacionados");
 
@@ -137,7 +135,7 @@ function carregarRelacionados(){
 
     relacionados.innerHTML = "";
 
-    const lista = produtos
+    const lista = pulseiras
 
         .filter(item =>
 
@@ -220,17 +218,6 @@ btnCarrinho.addEventListener("click",()=>{
 
 });
 
-// ===========================================
-// COMPRAR AGORA
-// ===========================================
-
-btnComprar.addEventListener("click",()=>{
-
-    adicionarAoCarrinho(produto,qtd);
-
-    abrirCarrinho();
-
-});
 
 // ===========================================
 // ESTOQUE
@@ -240,11 +227,11 @@ if(produto.estoque <= 0){
 
     btnCarrinho.disabled = true;
 
-    btnComprar.disabled = true;
+    btnCarrinho.disabled = true;
 
     btnCarrinho.textContent = "Indisponível";
 
-    btnComprar.style.display = "none";
+    btnCarrinho.style.display = "none";
 
 }
 

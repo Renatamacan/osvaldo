@@ -28,17 +28,11 @@
       <a href="../../index.html" class="logo"> WildTrack </a>
 
       <nav>
-        <a href="../../index.html">Início</a>
-
-        <a href="../../index.html#produtos">Pulseiras</a>
-
-        <a href="../../index.html#missoes">Missão</a>
-
-        <button id="abrirCarrinho" class="btn-carrinho">
-          🛒 Carrinho
-
-          <span id="contadorCarrinho"> 0 </span>
-        </button>
+        <a href="/index.html">Início</a>
+        <a href="/index.html#produtos">Pulseiras</a>
+        <a href="/index.html#pelucias">Pelúcias</a>
+        <a href="/index.html#missoes">Missões</a>
+        <a href="/pages/homenagem/homenagem.html">Contato</a>
       </nav>
     </header>
 
@@ -78,11 +72,11 @@
           <!-- Botões -->
 
           <div class="acoes">
-            <button id="btnCarrinho" class="btn-verde">
+
+            <button id="adicionarCarrinho" class="btn-verde btn-comprar" type="button">
               Adicionar ao Carrinho
             </button>
 
-            <button id="btnComprar" class="btn-azul">Comprar Agora</button>
           </div>
         </div>
       </section>
@@ -96,57 +90,13 @@
       </section>
     </main>
 
-    <!-- ================= MODAL CARRINHO ================= -->
 
-    <aside id="modalCarrinho" class="modal-carrinho">
-      <div class="cabecalho-modal">
-        <h2>Meu Carrinho</h2>
-
-        <button id="fecharCarrinho">✕</button>
-      </div>
-
-      <div id="listaCarrinho" class="lista-carrinho"></div>
-
-      <div class="rodape-carrinho">
-        <h3>Total</h3>
-
-        <span id="valorTotal"> R$ 0,00 </span>
-
-        <button id="finalizarCompra" class="btn-verde">Finalizar Compra</button>
-      </div>
-    </aside>
-
-    <!-- Fundo escurecido -->
-
-    <div id="overlay" class="overlay"></div>
 
     <!-- ================= MODAL PAGAMENTO ================= -->
 
     <div id="modalPagamento" class="modal-pagamento">
       <div class="conteudo-pagamento">
         <button id="fecharPagamento" class="fechar">✕</button>
-
-        <h2>Escolha a forma de pagamento</h2>
-
-        <div class="opcoes">
-          <button class="opcao" data-pagamento="pix">PIX</button>
-
-          <button class="opcao" data-pagamento="credito">
-            Cartão de Crédito
-          </button>
-
-          <button class="opcao" data-pagamento="debito">
-            Cartão de Débito
-          </button>
-
-          <button class="opcao" data-pagamento="agiotagem">
-            Agiotagem
-          </button>
-
-          <button class="opcao" data-pagamento="mercado-negro">
-            Mercado Negro
-          </button>
-        </div>
 
         <!-- PIX -->
 
@@ -160,21 +110,6 @@
           <button class="btn-verde">Copiar Código</button>
         </div>
 
-        <!-- Cartão -->
-
-        <div id="cartao" class="forma-pagamento">
-          <input type="text" placeholder="Nome impresso no cartão" />
-
-          <input type="text" placeholder="Número do cartão" />
-
-          <div class="linha">
-            <input type="text" placeholder="MM/AA" />
-
-            <input type="text" placeholder="CVV" />
-          </div>
-
-          <button class="btn-azul">Confirmar Pagamento</button>
-        </div>
       </div>
     </div>
 
@@ -184,8 +119,8 @@
 
     <script src="../../js/produto.js"></script>
 
-    <script src="../../js/carrinho.js"></script>
-
     <script src="../../js/pagamento.js"></script>
+    
+    <script src="../../js/carrinho.js" defer></script>
   </body>
 </html>
