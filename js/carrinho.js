@@ -84,6 +84,7 @@
         const urlCarrinho = new URL("../pages/carrinho.html", document.currentScript.src).href
 
         botao.href = urlCarrinho;
+
         botao.className = "botao-carrinho-global";
         botao.dataset.cartLink = "";
         botao.setAttribute("aria-label", "Abrir carrinho");
@@ -165,12 +166,8 @@
         }
 
         atualizarContadores();
-
-        // Adicionar não finaliza a compra.
-
-        // const urlCarrinho = new URL("../pages/carrinho.html", document.currentScript.src).href
         
-        window.location.href = "/pages/carrinho.html";
+        window.location.href = "../pages/carrinho.html";
     }
 
     document.addEventListener("click", evento => {

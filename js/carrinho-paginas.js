@@ -102,12 +102,12 @@
             const imagem = document.createElement("img");
 
             if (item.tipo === "Tecido comum") {
-                imagem.src = `/img/pelucias/tecido/${item.imagem}`
+                imagem.src = `../img/pelucias/tecido/${item.imagem}`
                 console.log(imagem)
             } else if (item.tipo === "Crochê") {
-                imagem.src = `/img/pelucias/croche/${item.imagem}`
+                imagem.src = `../img/pelucias/croche/${item.imagem}`
             } else {
-                imagem.src = `/img/pulseiras/${item.imagem}`
+                imagem.src = `../img/pulseiras/${item.imagem}`
             }
 
             imagem.alt = item.nome;

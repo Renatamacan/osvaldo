@@ -248,7 +248,7 @@ function atualizarVersao() {
 
     setTimeout(() => {
 
-        imagemPelucia.src = `../../../img/pelucias/${versaoSelecionada}/` + 
+        imagemPelucia.src = `../../img/pelucias/${versaoSelecionada}/` + 
             pelucia.versoes[versaoSelecionada].imagem;
 
         imagemPelucia.alt =
@@ -320,14 +320,12 @@ function carregarInformacoes() {
 
     informacoesAnimal.innerHTML = "";
 
-
     pelucia.informacoes.forEach(
         informacao => {
 
 
             const card =
                 document.createElement("article");
-
 
             card.innerHTML = `
 
@@ -344,7 +342,6 @@ function carregarInformacoes() {
                 </p>
 
             `;
-
 
             informacoesAnimal.appendChild(
                 card
