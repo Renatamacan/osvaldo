@@ -97,10 +97,19 @@
         itens.forEach(item => {
             const linha = criar("article", "produto-carrinho-pagina");
 
-            console.log(item)
+            console.log(item.tipo)
 
             const imagem = document.createElement("img");
-            imagem.src = `/img/{item.imagem}`;
+
+            if (item.tipo === "Tecido comum") {
+                imagem.src = `/img/pelucias/tecido/${item.imagem}`
+                console.log(imagem)
+            } else if (item.tipo === "Crochê") {
+                imagem.src = `/img/pelucias/croche/${item.imagem}`
+            } else {
+                imagem.src = `/img/pulseiras/${item.imagem}`
+            }
+
             imagem.alt = item.nome;
             imagem.loading = "lazy";
 

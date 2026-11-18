@@ -48,9 +48,7 @@ const btnMais = document.getElementById("mais");
 
 const btnMenos = document.getElementById("menos");
 
-const btnCarrinho = document.getElementById("btnCarrinho");
-
-const btnComprar = document.getElementById("btnComprar");
+const btnCarrinho = document.getElementById("adicionarCarrinho");
 
 const relacionados = document.getElementById("produtosRelacionados");
 
@@ -214,23 +212,12 @@ function abrirProduto(id){
 // CARRINHO
 // ===========================================
 
-// btnCarrinho.addEventListener("click",()=>{
-
-//     adicionarAoCarrinho(produto,qtd);
-
-// });
-
-// ===========================================
-// COMPRAR AGORA
-// ===========================================
-
-btnComprar.addEventListener("click",()=>{
+btnCarrinho.addEventListener("click",()=>{
 
     adicionarAoCarrinho(produto,qtd);
 
-    abrirCarrinho();
-
 });
+
 
 // ===========================================
 // ESTOQUE
@@ -240,11 +227,11 @@ if(produto.estoque <= 0){
 
     btnCarrinho.disabled = true;
 
-    btnComprar.disabled = true;
+    btnCarrinho.disabled = true;
 
     btnCarrinho.textContent = "Indisponível";
 
-    btnComprar.style.display = "none";
+    btnCarrinho.style.display = "none";
 
 }
 
